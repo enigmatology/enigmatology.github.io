@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-        
-        <title>Web Title</title>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-        <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
+#open-button {
   background-color: #555;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0px;
+  width: 100%;
 }
 
 /* The popup form - hidden by default */
 .form-popup {
+  top: 12.5%;
+  left: 50%;
+  width: 75%;
+  height: 75%;
   display: none;
   position: fixed;
-  bottom: 0;
-  right: 15px;
+
   border: 3px solid #f1f1f1;
   z-index: 9;
+  margin-left: -37.5%;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  max-width: 100%;
+  max-height: 100%;
   padding: 10px;
   background-color: white;
+}
+
+.entry-content {
+  height: 125px;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Full-width input fields */
@@ -78,40 +84,39 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-        </style>
-    </head>
-    
-    <body>
-    	<button type="button">New Post</button>
-        <div class="topnav">
- 		</div>
-        
-    <div class="form-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
-        <h1>Login</h1>
+</style>
+</head>
+<body>
 
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+<button id="open-button" onclick="openForm()">Post New Entry</button>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Create New Entry</h1>
 
-        <button type="submit" class="btn">Login</button>
-        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
-  	</div>
-    
-    <button class="open-button" onclick="openForm()">Open Form</button>
-    <script>
-    function openForm() {
+    <label for="entry-title"><b>Entry Title</b></label>
+    <input type="text" placeholder="Enter Entry Title" name="entry-title" required>
+
+    <label for="entry-content"><b>Entry Content</b></label>
+    <textarea name="entry-content" class="entry-content"></textarea>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
   document.getElementById("myForm").style.display = "block";
+  document.getElementById("open-button").style.display = "none";
 }
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+  document.getElementById("open-button").style.display = "initial";
 }
-    </script>
-    </body>
-    
-    
+
+</script>
+
+</body>
 </html>
