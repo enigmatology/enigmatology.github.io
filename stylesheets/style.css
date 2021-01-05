@@ -1,72 +1,81 @@
-body {
-    background-color: rgb(235, 255, 255);
-}
+body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
+* {box-sizing: border-box;}
 
-p {
-    margin-left: 0px;
-}
-
-footer {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    padding: 15px;
-    bottom: 0;
-}
-
-.headerBig {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 75px;
-    text-align: center;
-}
-
-.headerSmall{
-    text-align: center;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-  margin: 0px;
-  padding: 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Button used to open the contact form - fixed at the bottom of the page */
+#open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0px;
   width: 100%;
-  vertical-align: middle;
-  align-items: center;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  height: 30px;
-  line-height: 30px;
+/* The popup form - hidden by default */
+.form-popup {
+  top: 12.5%;
+  left: 50%;
+  width: 75%;
+  height: 75%;
+  display: none;
+  position: fixed;
+
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  margin-left: -37.5%;
 }
 
-.navright {
-    float: right;
+/* Add styles to the form container */
+.form-container {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+  background-color: white;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #111;
+.entry-content {
+  height: 125px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
   color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: rgb(138, 147, 255);
-  color: white;
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
 }
 
-iframe {
-    margins: 0;
-    padding: 0;
-    border: none;
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }
