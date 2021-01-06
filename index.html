@@ -6,36 +6,17 @@
     <title>Soon-to-be Blog</title>
   </head>
   
-  <body>
+    <body>
 
-    <button id="open-button" onclick="openForm()">Post New Entry</button>
+      <h1 class="top-header">&lt;test blog&gt;</h1>
 
-    <div class="form-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
-        <h1>Create New Entry</h1>
-
-        <label for="entry-title"><b>Entry Title</b></label>
-        <input type="text" placeholder="Enter Entry Title" name="entry-title" required>
-
-        <label for="entry-content"><b>Entry Content</b></label>
-        <textarea name="entry-content" class="entry-content"></textarea>
-
-        <button type="submit" class="btn">Submit</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
-    </div>
-
-    <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
-        document.getElementById("open-button").style.display = "none";
-      }
-
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("open-button").style.display = "initial";
-      }
-    </script>
+      <div id="topnav">
+        <a href="#">Home</a>
+        <a href="#">Asymptote Blog</a>
+        <a href="#">CSS Blog</a>
+        <a href="#">Life Blog</a>
+        <a href="#">About Me</a>
+      </div>
 
   </body>
 </html>
