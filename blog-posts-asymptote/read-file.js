@@ -11,5 +11,10 @@
 function addFile() {
   /*
   var fileContents = readFile("test-post.txt");*/
-  document.getElementById("blog-post").textContent = "test";
+  var fr = new FileReader();
+  fr.onload = function() {
+    document.getElementById("blog-post").textContent = fr.result;
+  }
+  
+  fr.readAsText("test-post.txt");
 }
