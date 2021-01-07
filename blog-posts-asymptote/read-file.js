@@ -1,20 +1,8 @@
-/*function readFile(file) {
-  const fs = require('fs') 
-
-  fs.readFile(file, (err, data) => { 
-      if (err) throw err; 
-
-      return data.toString()); 
-  }) 
-}*/
-
 function addFile() {
-  /*
-  var fileContents = readFile("test-post.txt");*/
-  var fr = new FileReader();
-  fr.onload = function() {
-    document.getElementById("blog-post").textContent = fr.result;
+  var client = new XMLHttpRequest();
+  client.open('GET', "test-post.txt");
+  client.onreadystatechange = function() {
+  	document.getElementById("blog-post").textContent = client.responseText;
   }
-  
-  fr.readAsText("test-post.txt");
+  client.send();
 }
