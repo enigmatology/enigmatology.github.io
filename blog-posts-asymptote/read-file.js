@@ -1,4 +1,4 @@
-function readFile(file) {
+/*function readFile(file) {
   const fs = require('fs') 
 
   fs.readFile(file, (err, data) => { 
@@ -6,9 +6,10 @@ function readFile(file) {
 
       return data.toString()); 
   }) 
-}
+}*/
 
 function addFile() {
-  var fileContents = readFile("test-post.txt");
-  document.getElementById("blog-post").textContent = fileContents;
+  /*
+  var fileContents = readFile("test-post.txt");*/
+  document.getElementById("blog-post").textContent = "test";
 }
