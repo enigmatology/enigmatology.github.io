@@ -9,6 +9,6 @@ function readFile(file) {
 }
 
 function addFile() {
-  var fileContents = readFile("text-post.txt");
+  var fileContents = readFile("test-post.txt");
   document.getElementById("blog-post").textContent = fileContents;
 }
