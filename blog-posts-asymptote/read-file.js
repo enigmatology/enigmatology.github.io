@@ -1,16 +1,21 @@
 window.onload = function addFile() {
-  var para, client, node, element;
-  for (var i = 1; i <= 1; i++) {
-    client = new XMLHttpRequest();
-    client.open('GET', "https://wgvozdjak.github.io/blog-posts-asymptote/" + i + ".txt");
-    client.onreadystatechange = function() {
-      para = document.createElement("p");
-      p.id = i + "";
-      node = document.createTextNode(client.responseText);
-      para.appendChild(node);
-      element = document.getElementById(i-1 + "");
-      element.appendChild(para);
-    }
-    client.send();
+var xhttp;
+var para;
+var f = (function(){
+  for (var i = 1; i <= 3; i++) {
+    (function(i, para){
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          para = document.createElement("div");
+          para.setAttribute("id", i+"");
+          para.innerHTML = this.responseText;
+		  document.body.appendChild(para);
+        }
+      };
+      xhttp.open("GET", "https://wgvozdjak.github.io/blog-posts-asymptote/" + i + ".txt", true);
+      xhttp.send();
+    })(i, para);
   }
+})();
 }
