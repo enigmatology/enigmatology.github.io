@@ -1,9 +1,16 @@
 window.onload = function addFile() {
-  var client = new XMLHttpRequest();
-  var text = "test-post.txt";
-  client.open('GET', "https://wgvozdjak.github.io/blog-posts-asymptote/" + text);
-  client.onreadystatechange = function() {
-  	document.getElementById("blog-post").textContent = client.responseText;
+  var para, client, node, element;
+  for (var i = 1; i <= 1; i++) {
+    client = new XMLHttpRequest();
+    client.open('GET', "https://wgvozdjak.github.io/blog-posts-asymptote/" + i + ".txt");
+    client.onreadystatechange = function() {
+      para = document.createElement("p");
+      p.id = i + "";
+      node = document.createTextNode(client.responseText);
+      para.appendChild(node);
+      element = document.getElementById(i-1 + "");
+      element.appendChild(para);
+    }
+    client.send();
   }
-  client.send();
 }
