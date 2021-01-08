@@ -6,7 +6,7 @@ var NUMBER_OF_BLOG_POSTS = 3;
 
 var xhttp;
 var para;
-var f = (function(){
+var f = (function(NUMBER_OF_BLOG_POSTS){
   for (var i = NUMBER_OF_BLOG_POSTS; i <= 3; i++) {
     (function(i, para){
       xhttp = new XMLHttpRequest();
@@ -22,5 +22,5 @@ var f = (function(){
       xhttp.send();
     })(i, para);
   }
-})();
+})(NUMBER_OF_BLOG_POSTS);
 }
