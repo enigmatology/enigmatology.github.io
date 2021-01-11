@@ -1,3 +1,12 @@
 #posts {
   margin: 20px;
 }
+
+.post-header {
+  padding: 15px;
+  font-size: 25px;
+}
+
+.post-content {
+  padding: 15px;
+}
