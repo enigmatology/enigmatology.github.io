@@ -1,3 +1,5 @@
 And the final test post I have, #3!
 
 Content of 3 goes here.
+
+This is the first multi-line blog post. If this is on a separate line it worked.
