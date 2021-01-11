@@ -5,7 +5,7 @@ var text, splitText, remainingText;
 
 var post;
 var f = (function(){
-  for (var i = 1; i <= 3; i++) {
+  for (var i = 3; i >= 1; i--) {
     (function(i, para){
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
