@@ -2,6 +2,8 @@ window.onload = function addFile() {
 var xhttp;
 var para, header, content;
 var text, splitText, remainingText;
+
+var post;
 var f = (function(){
   for (var i = 1; i <= 3; i++) {
     (function(i, para){
@@ -15,8 +17,10 @@ var f = (function(){
           content = document.createElement("div");
           content.setAttribute("class", "post-content");
           document.body.appendChild(para);
-          document.getElementById(i+"").appendChild(header);
-          document.getElementById(i+"").appendChild(content);
+          
+          post = document.getElementById(i+"");
+          post.appendChild(header);
+          post.appendChild(content);
           
           text = this.responseText;
           splitText = text.split("\n");
@@ -29,6 +33,9 @@ var f = (function(){
           }
           
           content.innerHTML = remainingText;
+          post.style.backgroundColor = "rgb(214, 214, 214)";
+          post.style.margin = "20px";
+          post.style.borderRadius = "15px";
 		  
         }
       };
