@@ -31,6 +31,8 @@ var f = (function(){
           while (remainingText.includes("\n"))  {
             remainingText = remainingText.replace("\n", "<br>");
           }
+		
+	  remainingText = convertbbCode(remainingText);
           
           content.innerHTML = remainingText;
           post.style.backgroundColor = "rgb(214, 214, 214)";
@@ -44,4 +46,21 @@ var f = (function(){
     })(i, para);
   }
 })();
+}
+
+function convertbbCode(orig) {
+  var converted = orig;
+  while (converted.includes("[b]")) {
+    converted = converted.replace("[b]", "<b>");
+  }
+  while (converted.includes("[/b]")) {
+    converted = converted.replace("[/b]", "</b>");
+  }
+  while (converted.includes("[u]")) {
+    converted = converted.replace("[u]", "<u>");
+  }
+  while (converted.includes("[/u]")) {
+    converted = converted.replace("[/u]", "</u>");
+  }
+  return converted;
 }
