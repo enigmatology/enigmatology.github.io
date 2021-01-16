@@ -10,3 +10,11 @@
 .post-content {
   padding: 15px;
 }
+
+.hidden {
+  background-color: blue !important;
+}
+
+.shown {
+  background-color: orange !important;
+}
