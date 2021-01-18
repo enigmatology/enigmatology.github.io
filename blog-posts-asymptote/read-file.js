@@ -116,7 +116,7 @@ function convertbbCode(orig, i, currentcontents) {
     begbeg = converted.indexOf("[hide=");
     endend = converted.indexOf("[/hide]") + 7;
     
-    slicedhide = converted.slice(begbeg, endbeg);
+    slicedhide = converted.slice(begbeg, endend);
     
     endbeg = slicedhide.indexOf("[/hide]")
     hidelabel = slicedhide.slice(6, slicedhide.indexOf("]"));
