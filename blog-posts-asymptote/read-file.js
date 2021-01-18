@@ -110,6 +110,18 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/u]")) {
     converted = converted.replace("[/u]", "</u>");
   }
+  while (converted.includes("[i]")) {
+    converted = converted.replace("[i]", "<i>");
+  }
+  while (converted.includes("[/i]")) {
+    converted = converted.replace("[/i]", "</i>");
+  }
+  while (converted.includes("[code]")) {
+    converted = converted.replace("[code]", "<div class=\"code\">");
+  }
+  while (converted.includes("[/code]")) {
+    converted = converted.replace("[/code]", "</div>");
+  }
   
   loop = i;
   while (converted.includes("[hide=")) {
