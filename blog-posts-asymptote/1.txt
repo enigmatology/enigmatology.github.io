@@ -1,3 +1,3 @@
 Post #1!
 
-This is the [b]content[/b] of the [u]first[/u] post of this blog. [hide=Hopefully] my javascript [/hide]works!
+This is the [b]content[/b] of the [u]first[/u] post of this blog. [hide=William is awesome!]Surprise!!!![/hide]
