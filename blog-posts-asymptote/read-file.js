@@ -98,6 +98,10 @@ function convertbbCode(orig, i, currentcontents) {
   var hidelabel, hidecontent, replacetext;
   var slicedhide;
   
+  var begcolor, endcolor, endtag;
+  var slicedcolor;
+  var color, coloredtext;
+  
   while (converted.includes("[b]")) {
     converted = converted.replace("[b]", "<b>");
   }
@@ -121,6 +125,16 @@ function convertbbCode(orig, i, currentcontents) {
   }
   while (converted.includes("[/code]")) {
     converted = converted.replace("[/code]", "</div>");
+  }
+  if (converted.includes("[color=")) {
+    slicedcolor = converted.slice(converted.indexOf("[color="), converted.indexOf("[/color]") + 8);
+    begcolor = 7;
+    endcolor = slicedcolor.indexOf("]");
+    color = slicedcolor.slice(begcolor, endcolor);
+    endcolor = slicedcolor.indexOf("]") + 1;
+    endtag = slicedcolor.indexOf("[/color]");
+    colortext = slicedcolor.slice(endcolor, endtag);
+    converted = converted.replace(slicedcolor, "<div style=\"display:inline; color: " + color + ";\">" + colortext + "</div>");
   }
   
   loop = i;
