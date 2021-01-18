@@ -12,9 +12,29 @@
 }
 
 .hidden {
-  background-color: blue !important;
+  display: none;
 }
 
 .shown {
-  background-color: orange !important;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #e3e3e3;
+  margin: 15px 0 15px 0;
+  border-radius: 10px;
+  border-color: #6e6e6e;
+  border-style: solid;
+}
+
+.hide-tag {
+  background-color: #87a3ff;
+  color: black;
+  padding: 7px;
+  border-radius: 1px;
+  border-style: none;
+}
+
+.hide-tag:hover {
+  background-color: #1f3a94;
+  color: white;
 }
