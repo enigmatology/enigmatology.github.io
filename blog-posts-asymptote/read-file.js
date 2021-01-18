@@ -140,7 +140,7 @@ function convertbbCode(orig, i, currentcontents) {
     colortext = slicedcolor.slice(endcolor, endtag);
     converted = converted.replace(slicedcolor, "<div style=\"display:inline; color: " + color + ";\">" + colortext + "</div>");
   }
-  if (converted.includes("[size=")) {
+  while (converted.includes("[size=")) {
     slicedsize = converted.slice(converted.indexOf("[size="), converted.indexOf("[/size]") + 7);
     begsize = 6;
     endsize = slicedsize.indexOf("]");
