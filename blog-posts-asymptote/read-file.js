@@ -130,6 +130,12 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/code]")) {
     converted = converted.replace("[/code]", "</div>");
   }
+  while (converted.includes("[center]")) {
+    converted = converted.replace("[center]", "<div class=\"centered\">");
+  }
+  while (converted.includes("[/center]")) {
+    converted = converted.replace("[/center]", "</div>");
+  }
   while (converted.includes("[color=")) {
     slicedcolor = converted.slice(converted.indexOf("[color="), converted.indexOf("[/color]") + 8);
     begcolor = 7;
