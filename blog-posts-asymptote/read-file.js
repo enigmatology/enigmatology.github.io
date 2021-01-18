@@ -1,76 +1,9 @@
-/*window.onload = function addFile() {
-var xhttp;
-var para, header, content;
-var text, splitText, remainingText;
-
-var post;
-var f = (function(){
-  for (var i = 3; i >= 1; i--) {
-    (function(i, para){
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          para = document.createElement("div");
-          para.setAttribute("id", i+"");
-          header = document.createElement("div");
-          header.setAttribute("class", "post-header");
-          content = document.createElement("div");
-          content.setAttribute("class", "post-content");
-          document.body.appendChild(para);
-          
-          post = document.getElementById(i+"");
-          post.appendChild(header);
-          post.appendChild(content);
-          
-          text = this.responseText;
-          splitText = text.split("\n");
-          header.innerHTML = splitText[0];
-          
-          remainingText = text.slice(splitText[0].length+2, text.length);
-          
-          while (remainingText.includes("\n"))  {
-            remainingText = remainingText.replace("\n", "<br>");
-          }
-		
-	  remainingText = convertbbCode(remainingText);
-          
-          content.innerHTML = remainingText;
-          post.style.backgroundColor = "rgb(214, 214, 214)";
-          post.style.margin = "20px";
-          post.style.borderRadius = "15px";
-		  
-        }
-      };
-      xhttp.open("GET", "https://wgvozdjak.github.io/blog-posts-asymptote/" + i + ".txt", true);
-      xhttp.send();
-    })(i, para);
-  }
-})();
-}
-
-function convertbbCode(orig) {
-  var converted = orig;
-  while (converted.includes("[b]")) {
-    converted = converted.replace("[b]", "<b>");
-  }
-  while (converted.includes("[/b]")) {
-    converted = converted.replace("[/b]", "</b>");
-  }
-  while (converted.includes("[u]")) {
-    converted = converted.replace("[u]", "<u>");
-  }
-  while (converted.includes("[/u]")) {
-    converted = converted.replace("[/u]", "</u>");
-  }
-  return converted;
-}*/
-
 var hides = [];
 var posts = [];
 var iterations = 0;
 var NUMBEROFPOSTS = 3;
 
-for (var i = 0; i < NUMBEROFPOSTS - 1; i++) {
+for (var i = 0; i < NUMBEROFPOSTS; i++) {
   posts.push(0);
 }
 
@@ -105,7 +38,7 @@ function addcontent(posts, hides) {
     if (posts[i] === 0) {
       finished = false;
     }
-  }
+  }  
   
   if (finished === true) {
     for (var i = 0; i < posts.length; i++) {
@@ -119,8 +52,9 @@ function addcontent(posts, hides) {
         content = document.createElement("div");
         content.setAttribute("class", "post-content");
         document.body.appendChild(para);
-        document.getElementById(i+"").appendChild(header);
-        document.getElementById(i+"").appendChild(content);
+        post = document.getElementById(i+"");
+        post.appendChild(header);
+        post.appendChild(content);
 
         text = posts[i];
         splitText = text.split("\n");
@@ -136,8 +70,9 @@ function addcontent(posts, hides) {
         remainingText = convertbbCode(remainingText, i, []);
 
         content.innerHTML = remainingText;
-        
-        
+        post.style.backgroundColor = "rgb(214, 214, 214)";
+        post.style.margin = "20px";
+        post.style.borderRadius = "15px";
         
       }
     }
@@ -145,20 +80,11 @@ function addcontent(posts, hides) {
   
   
   if (finished === true) {
-  document.getElementById("b").textContent = document.getElementById(0).innerHTML;
     for (let i = 1; i <= hides.length; i++) {
       var element = document.getElementById(i + "hide");
       
-      /*if (i === 1) {
-        document.getElementById("a").textContent = document.getElementById("1hide-content").classList;
-      }*/
       element.addEventListener("click", function() {
-      //shown (hidden)
-                                          document.getElementById("a").textContent = String(document.getElementById(i + "thing").innerHTML)[31] + "B";
-                                          //shown -> hidden
                                           toggleshow(i);
-                                          //document.getElementById("1hide-content").classList.remove("shown");
-                                          //document.getElementById("1hide-content").classList.add("hidden");
                                         });
     }
   }
@@ -197,7 +123,7 @@ function convertbbCode(orig, i, currentcontents) {
     hidecontent = slicedhide.slice(slicedhide.indexOf("]") + 1, endbeg);
     
     slicedhide = converted.slice(begbeg, endbeg)
-    replacetext = "<button id=\"" + (hides.length+1) + "hide\">" + hidelabel + "</button><div id=\"" + (hides.length + 1) + "thing\"><div id=\"" + (hides.length+1) + "hide-content\" class=\"shown\">" + hidecontent + "</div></div>";
+    replacetext = "<button id=\"" + (hides.length+1) + "hide\" class=\"hide-tag\">" + hidelabel + "</button><div id=\"" + (hides.length+1) + "hide-content\" class=\"hidden\">" + hidecontent + "</div>";
     
     converted = converted.replace(converted.slice(begbeg, endend), replacetext);
     i += 1;
@@ -210,20 +136,12 @@ function convertbbCode(orig, i, currentcontents) {
 function toggleshow(num) {
   
   var element = document.getElementById(num + "hide-content");
-  //document.getElementById("c").innerHTML = num + " " + Math.random();
-  var thing = Math.random();
-  document.getElementById("c").innerHTML = element.classList;// + " " + thing;
   if (element.classList.contains("hidden")) {
     element.classList.remove("hidden");
     element.classList.add("shown");
-    thing += 1;
   }
   else if (element.classList.contains("shown")) {
     element.classList.remove("shown");
     element.classList.add("hidden");
-    thing += 1;
   }
-  document.getElementById("d").innerHTML = element.classList + " " + thing;
-  
-//hidden is blue, shown is orange
 }
