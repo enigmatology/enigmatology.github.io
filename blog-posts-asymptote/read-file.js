@@ -102,6 +102,10 @@ function convertbbCode(orig, i, currentcontents) {
   var slicedcolor;
   var color, coloredtext;
   
+  var begsize, endsize, endsizetag;
+  var slicedsize;
+  var size, sizedtext;
+  
   while (converted.includes("[b]")) {
     converted = converted.replace("[b]", "<b>");
   }
@@ -135,6 +139,16 @@ function convertbbCode(orig, i, currentcontents) {
     endtag = slicedcolor.indexOf("[/color]");
     colortext = slicedcolor.slice(endcolor, endtag);
     converted = converted.replace(slicedcolor, "<div style=\"display:inline; color: " + color + ";\">" + colortext + "</div>");
+  }
+  if (converted.includes("[size=")) {
+    slicedsize = converted.slice(converted.indexOf("[size="), converted.indexOf("[/size]") + 7);
+    begsize = 6;
+    endsize = slicedsize.indexOf("]");
+    size = slicedsize.slice(begsize, endsize);
+    endsize = slicedsize.indexOf("]") + 1;
+    endsizetag = slicedsize.indexOf("[/size]");
+    sizedtext = slicedsize.slice(endsize, endsizetag);
+    converted = converted.replace(slicedsize, "<div style=\"display: inline; font-size: " + size + "%;\">" + sizedtext + "</div>");
   }
   
   loop = i;
