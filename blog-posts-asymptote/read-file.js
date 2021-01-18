@@ -59,7 +59,7 @@ function addcontent(posts, hides) {
         text = posts[i];
         splitText = text.split("\n");
 
-        header.innerHTML = splitText[0];
+        header.innerHTML = splitText[0] + "<hr>";
 
         remainingText = text.slice(splitText[0].length+2, text.length);
 
