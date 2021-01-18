@@ -126,7 +126,7 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/code]")) {
     converted = converted.replace("[/code]", "</div>");
   }
-  if (converted.includes("[color=")) {
+  while (converted.includes("[color=")) {
     slicedcolor = converted.slice(converted.indexOf("[color="), converted.indexOf("[/color]") + 8);
     begcolor = 7;
     endcolor = slicedcolor.indexOf("]");
