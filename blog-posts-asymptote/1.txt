@@ -1,3 +1,3 @@
 Post #1!
 
-This is the [b]content[/b] of the [u]first[/u] post of this blog. [hide=William is awesome!]Surprise!!!![/hide] [hide=Wow cool!]There's multiple!!!![/hide]
+This is the [b]content[/b] of the [u]first[/u] post of [i]this[/i] blog. [hide=William is awesome!]Surprise!!!! [hide=test nest]inside[/hide][/hide] [hide=Wow cool!]There's multiple!!!![/hide]
