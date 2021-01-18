@@ -1,3 +1,75 @@
-Yay, post #2!
+Lesson 5: Labelling Points
 
-[hide=episode 2](Some high-quality content is supposed to be here xD)[/hide]
+[center][size=200][color=#c00]Lesson 5[/color][/size]
+[i]Customization I: Labelling Points[/i][/center]
+
+When coding in Asymptote, it's sometimes helpful to label a point or color a path or label. Asymptote has the ability to do either of those things, using special arguments and/or commands inside of a function. This lesson is going to be the first in a series of lessons that teach these commands - in this lesson we'll cover labelling points.
+
+[b][u]Labeling Pairs and Paths[/u][/b]
+There are two main ways to label something. The first is to label it while creating the pair/path itself, the other is to label it afterwards.
+
+[b]Labelling while creating.[/b] To label a pair or a path while creating the pair/path itself, all you need to do is add another argument in front of all of the arguments of the draw function. The syntax looks like this:
+[asymptote]draw("Label goes here", item);[/asymptote]
+Note the quotes around the label - these indicate that the label is a [b]string[/b], which is a data type that we haven't covered yet. A string is a sequence of characters that can't be manipulated like numbers can, but are just... characters. For example, if you wanted a string to contain Bob ate some pie, you would make that a string.
+
+If you wanted to label a point as $A$, you would do this:
+[asymptote]dot("$A$", (0, 0))[/asymptote]
+Notice that you need dollar signs around the A just as in $\LaTeX$ - otherwise the A won't turn out with the fancy formatting like you want it to.
+
+This will look like this:
+[asy]
+dot("$A$", (0, 0));
+[/asy]
+Nice! It worked out like we wanted to. What if we drew a line between $A$ and another point?
+[asy]
+dot("$A$", (0, 0));
+draw((0, 0)--(1, 0));
+[/asy]
+Uh-oh. The line just went straight through the label. How do we fix this?
+
+The answer is add another argument. This argument will tell Asymptote where to draw the label relative to your new point. The way you do it is like this:
+[asymptote]draw("label", item, direction);[/asymptote]
+The way you specify your direction is by using North, East, South, and West. North is up, South is down, East is right, and West is left. This is the key for the directions:
+[code]
+Up -> N (North)
+Up/Right -> NE (Northeast)
+Right -> E (East)
+Right/Down -> SE (Southeast)
+Down -> S (South)
+Down/Left -> SW (Southwest)
+Left -> W (West)
+Left/Up -> NW (Northwest)
+[/code]
+Now we can redo our line, using the direction W because we want the label to be on the left:
+[asy]
+dot("$A$", (0, 0), W);
+draw((0, 0)--(1, 0));
+[/asy]
+Nice! It worked.
+
+[b]Labelling afterwards.[/b] This is very similar to labelling while creating. All you do is use the label command after creating the object, like this:
+[asymptote]draw(item);
+label("label goes here", item, direction);[/asymptote]
+[b][u]Practice Problems[/u][/b]
+1. Label the point (0, 0) as point $A$ upwards directly while drawing. [hide=Solution]
+Code:
+[asymptote]
+dot("$A$", (0, 0), N);
+[/asymptote]
+Result:
+[asy]
+dot("$A$", (0, 0), N);
+[/asy]
+[/hide]
+2. Label the point (0, 0) as point $A$ to the right and down after drawing. [hide=Solution]
+Code:
+[asymptote]
+dot((0, 0));
+label("$A$", (0, 0), SE);
+[/asymptote]
+Result:
+[asy]
+dot((0, 0));
+label("$A$", (0, 0), SE);
+[/asy]
+[/hide]
