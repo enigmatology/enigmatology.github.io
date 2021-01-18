@@ -38,3 +38,8 @@
   background-color: #1f3a94;
   color: white;
 }
+
+.hide-tag:focus {
+  outline: none;
+  box-shadow: none;
+}
