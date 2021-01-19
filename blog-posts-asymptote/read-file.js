@@ -19,6 +19,7 @@ var f = (function(){
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           posts[i-1] = this.responseText;
+          
           addcontent(posts, hides);
           
         }
@@ -62,10 +63,7 @@ function addcontent(posts, hides) {
         header.innerHTML = splitText[0] + "<hr>";
 
         remainingText = text.slice(splitText[0].length+2, text.length);
-
-        while (remainingText.includes("\n"))  {
-          remainingText = remainingText.replace("\n", "<br>");
-        }
+        
 
         remainingText = convertbbCode(remainingText, i, []);
 
@@ -124,6 +122,9 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/i]")) {
     converted = converted.replace("[/i]", "</i>");
   }
+  while (converted.includes("[code]\n")) {
+    converted = converted.replace("[code]\n", "<div class=\"code\">");
+  }
   while (converted.includes("[code]")) {
     converted = converted.replace("[code]", "<div class=\"code\">");
   }
@@ -167,6 +168,9 @@ function convertbbCode(orig, i, currentcontents) {
     endbeg = slicedhide.indexOf("[/hide]")
     hidelabel = slicedhide.slice(6, slicedhide.indexOf("]"));
     hidecontent = slicedhide.slice(slicedhide.indexOf("]") + 1, endbeg);
+    if (hidecontent.slice(0, 1) === "\n") {
+      hidecontent = hidecontent.slice(1, hidecontent.length);
+    }
     
     slicedhide = converted.slice(begbeg, endbeg)
     replacetext = "<button id=\"" + (hides.length+1) + "hide\" class=\"hide-tag\">" + hidelabel + "</button><div id=\"" + (hides.length+1) + "hide-content\" class=\"hidden\">" + hidecontent + "</div>";
@@ -175,6 +179,10 @@ function convertbbCode(orig, i, currentcontents) {
     i += 1;
     hides.push(hides.length+1);
     
+  }
+  
+  while (converted.includes("\n"))  {
+    converted = converted.replace("\n", "<br>");
   }
   return converted;
 }
