@@ -2,6 +2,6 @@ Post #1!
 
 [center]CENTERED POST HEADER :D[/center]
 
-This is the [b]content[/b] of the [u]first[/u] post of [i]this[/i] blog. [hide=William is awesome!]Surprise!!!! [hide=test nest]inside[/hide][/hide] [hide=Wow cool!]There's multiple!!!![/hide]
+This is the [b]content[/b] of the [u]first[/u] post of [i]this[/i] blog. [hide=William is awesome!]Surprise!!!! [hide=test nest]inside[/hide]Some text after the nested hide.[/hide] [hide=Wow cool!]There's multiple!!!![/hide]
 
 Test [code]code tag. Hopefully works![/code] Some [color=#e66e12]colored text[/color] afterwards, as well as some [size=200]sized text[/size] afterwards.
