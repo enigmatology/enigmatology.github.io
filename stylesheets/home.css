@@ -1,0 +1,30 @@
+#header {
+  font-size: 75px;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: 125px;
+  text-align: center;
+}
+
+#header::after {
+  animation-name: flicker;
+  animation-iteration-count: infinite;
+  content: "";
+  animation-duration: 1.75s;
+  position: absolute;
+}
+
+@keyframes flicker {
+  0% {content: "_";}
+  50% {content: "";}
+  100% {content: "_"}
+}
+
+#description {
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: black;
+  color: #d6d6d6;
+  width: 300px;
+  font-style: italic;
+}
