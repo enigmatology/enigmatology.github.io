@@ -24,7 +24,7 @@ var f = (function(){
           
         }
       };
-      xhttp.open("GET", "https://wgvozdjak.github.io/blog-posts-asymptote/" + i + ".txt", true);
+      xhttp.open("GET", "https://doctypehtml.github.io/blog-posts-asymptote/" + i + ".txt", true);
       xhttp.send();
     })(i);
   }
