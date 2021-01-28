@@ -1,7 +1,7 @@
 #header {
   font-size: 75px;
   font-family: 'Source Code Pro', monospace;
-  margin-top: 155px !important;
+  margin-top: 175px !important;
   text-align: center;
   position: absolute;
   left: 0; 
@@ -32,7 +32,7 @@
   color: #d6d6d6;
   width: 300px;
   font-style: italic;
-  margin-top: 250px;
+  margin-top: 300px;
   position: absolute;
   left: 0; 
   right: 0; 
@@ -41,14 +41,14 @@
 }
 
 #top-section {
-  height: 500px;
+  height: 650px;
   width: 100%;
   position: relative;
 }
 
 #aopsuser {
   height: 150px;
-  background-color: #d3dae0;
+  background-color: #77a6d9;
   color: white;
   text-align: center;
 }
