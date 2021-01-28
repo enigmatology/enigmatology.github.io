@@ -48,7 +48,7 @@
 
 #aopsuser {
   height: 150px;
-  background-color: #2d7cc2;
+  background-color: #d3dae0;
   color: white;
   text-align: center;
 }
@@ -66,8 +66,6 @@
 }
 
 #usernametext {
-  animation: spread;
-  animation-duration: 3s;
   letter-spacing: 35px;
   font-size: 25px;
   margin-top: 50px;
@@ -77,9 +75,4 @@
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
-}
-
-@keyframes spread {
-  0% {letter-spacing: 2px;}
-  100% {letter-spacing: 35px;}
 }
