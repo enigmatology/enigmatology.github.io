@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;1,300&display=swap');
 
 #header {
   font-size: 75px;
@@ -38,7 +38,9 @@
   left: 0; 
   right: 0; 
   margin-left: auto; 
-  margin-right: auto; 
+  margin-right: auto;
+  font-family: 'Rubik', sans-serif; 
+  font-weight: 100;
 }
 
 #top-section {
@@ -51,6 +53,8 @@
   background-color: #77a6d9;
   color: white;
   text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 100;
 }
 
 #aopsuser a {
@@ -96,6 +100,7 @@
   font-family: 'Rubik', sans-serif;
   font-size: 35px;
   color: white;
+  font-weight: 600;
 }
 
 #top-links a:hover {
