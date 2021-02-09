@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 #posts {
   margin: 20px;
 }
@@ -5,12 +7,14 @@
 .post-header {
   padding: 15px;
   font-size: 25px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .post-content {
   padding: 15px;
   padding-top: 0;
   line-height: 25px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .hidden {
@@ -34,6 +38,7 @@
   padding: 7px;
   border-radius: 1px;
   border-style: none;
+  font-family: 'Rubik', sans-serif;
 }
 
 .hide-tag:hover {
@@ -50,7 +55,7 @@
   width: 100%;
   padding: 15px;
   margin: 15px 0 15px 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace !important;
   background-color: black;
   color: white;
 }
