@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="stylesheets/style.css" rel="stylesheet">
     <link href="stylesheets/asymptote-blog.css" rel="stylesheet">
+    <link href="stylesheets/scroll-arrows.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
     <title>Asymptote Blog | !doctype html</title>
     
@@ -17,8 +18,11 @@
   <body>
 
     <div id="navbar"></div>
+
+    <button id="goToTop" onclick="scrollToTop()"><i class="arrow up"></i></button>
     
     <script src="blog-posts-asymptote/read-file.js"></script>
     <script src="file-snippets/addnavbar.js"></script>
+    <script src="javascript/scroll-to-top.js"></script>
   </body>
 </html>
