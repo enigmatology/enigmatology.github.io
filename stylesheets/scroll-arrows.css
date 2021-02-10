@@ -1,0 +1,56 @@
+/*
+Right arrow: <i class="arrow right"></i>
+Left arrow: <i class="arrow left"></i>
+Up arrow: <i class="arrow up"></i>
+Down arrow: <i class="arrow down"></i>
+*/
+
+#goToTop {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #77a6d9;
+  border-style: solid;
+  border-color: black;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+}
+
+#goToTop:hover {
+  background-color: #bedaf7;
+}
+
+#goToTop:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-top: 7.5px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
