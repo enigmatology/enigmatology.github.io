@@ -1,5 +1,7 @@
 Post #1!
 
+January 8, 2021
+
 [center]CENTERED POST HEADER :D[/center]
 
 This is the [b]content[/b] of the [u]first[/u] post of [i]this[/i] blog. [hide=William is awesome!]Surprise!!!! [hide=test nest]inside[/hide]Some text after the nested hide.[/hide] [hide=Wow cool!]There's multiple!!!![/hide]
