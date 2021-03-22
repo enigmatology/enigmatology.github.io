@@ -1,5 +1,7 @@
 Lesson 5: Labelling Points
 
+January 18, 2021
+
 [center][size=200][color=#c00]Lesson 5[/color][/size]
 [i]Customization I: Labelling Points[/i][/center]
 
