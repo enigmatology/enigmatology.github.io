@@ -49,7 +49,7 @@ function addcontent(posts, hides) {
         para = document.createElement("div");
         para.setAttribute("id", i+"");
         header = document.createElement("div");
-        header.setAttribute("class", "post-header");
+        header.setAttribute("class", "full-header");
         content = document.createElement("div");
         content.setAttribute("class", "post-content");
         document.body.appendChild(para);
@@ -59,10 +59,11 @@ function addcontent(posts, hides) {
 
         text = posts[i];
         splitText = text.split("\n");
+        //header.innerHTML = splitText;
 
-        header.innerHTML = splitText[0] + "<hr>";
+        header.innerHTML = "<div class=\"post-header\">" + splitText[0] + "</div><div class=\"post-date\">" + splitText[2] + "</div><hr style=\"width: calc(100% - 30px);\">";
 
-        remainingText = text.slice(splitText[0].length+2, text.length);
+        remainingText = text.slice((splitText[0].length + splitText[2].length)+4, text.length);
         
 
         remainingText = convertbbCode(remainingText, i, []);
