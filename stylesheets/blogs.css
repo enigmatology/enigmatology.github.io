@@ -39,6 +39,7 @@
   border-radius: 1px;
   border-style: none;
   font-family: 'Rubik', sans-serif;
+  cursor: pointer;
 }
 
 .hide-tag:hover {
