@@ -1,3 +1,24 @@
-Test Post 1
+Welcome to my new blog!
 
-Hopefully this works. [b]Test bold.[/b] [hide=Test hide.]Content[/hide]
+Hopefully this post works; the JavaScript was very finicky to deal with. I actually started blogging tutorials on the <a href="https://artofproblemsolving.com/online" target=_blank>Art of Problem Solving</a> website, which uses bbCode to format forum and blog posts, and I was kind of too lazy to convert all of the images and links and bold tags by hand (oops) so I ended up just making my own rendering engine. It turned out that this was a lot harder than I expected it to be (especially converting hide tags, because there's no easy HTML tag that works for hide tags), so it turned out to be a few-week-long project.
+
+Anyways, we've gotten here now, and the super satisfying thing to see is that there is basically virtually no HTML for this page. Everything is done using GET requests to the GitHub server to retrieve posts, and then are processed client-side using JavaScript and simply appended to the end of the HTML page. If you view the source of this page, it's very plain.
+
+As a simple example, here are all of the HTML tags that I've currently implemented.
+
+[b]Bold Tag[/b]
+
+[u]Underline Tag[/b]
+
+[i]Italics Tag[/i]
+
+[center]Center Tag[/center]
+
+[color=red]Color Tag[/color]
+
+[hide=Hide Tag (Click me!)]Inside of the hide tag.[/hide]
+
+[code]Code Tag
+(multi-line too!)[/code]
+
+[size=200]Size Tag[/size]
