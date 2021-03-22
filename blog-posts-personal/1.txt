@@ -8,7 +8,7 @@ As a simple example, here are all of the HTML tags that I've currently implement
 
 [b]Bold Tag[/b]
 
-[u]Underline Tag[/b]
+[u]Underline Tag[/u]
 
 [i]Italics Tag[/i]
 
