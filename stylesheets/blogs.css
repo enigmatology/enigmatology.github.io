@@ -8,6 +8,20 @@
   padding: 15px;
   font-size: 25px;
   font-family: 'Rubik', sans-serif;
+  float: left;
+  width: 75%;
+  height: 60px;
+}
+
+.post-date {
+  font-family: 'Rubik', sans-serif;
+  padding: 15px;
+  font-style: italic;
+  float: right;
+  width: 25%;
+  text-align: right;
+  height: 60px;
+  line-height: 33px;
 }
 
 .post-content {
