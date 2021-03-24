@@ -10,3 +10,11 @@ var navbardiv = document.getElementById("navbar");
     }
   }
 })();
+
+function openNav() {
+  document.getElementById("topnav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("topnav").style.width = "0";
+}
