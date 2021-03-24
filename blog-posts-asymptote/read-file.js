@@ -61,7 +61,7 @@ function addcontent(posts, hides) {
         splitText = text.split("\n");
         //header.innerHTML = splitText;
 
-        header.innerHTML = "<div class=\"post-header\">" + splitText[0] + "</div><div class=\"post-date\">" + splitText[2] + "</div><hr style=\"width: calc(100% - 30px);\">";
+        header.innerHTML = "<div class=\"post-header\">" + splitText[0] + "</div><div class=\"post-date\">" + splitText[2] + "</div><hr style=\"width: calc(100% - 30px);\"><br>";
 
         remainingText = text.slice((splitText[0].length + splitText[2].length)+4, text.length);
         
