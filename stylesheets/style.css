@@ -1,58 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;1,300&display=swap');
 
-body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
-* {box-sizing: border-box;}
+@media only screen and (min-width: 600.0000001px) {
 
-.top-header {
-  font-family: 'Source Code Pro', monospace;
-  margin-left: 15px;
-}
+  body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
+  * {box-sizing: border-box;}
 
-#topnav {
-  width: 100%;
-  overflow: hidden;
-  height: 60px;
-}
+  .top-header {
+    font-family: 'Source Code Pro', monospace;
+    margin-left: 15px;
+  }
 
-#topnav a {
-  float: left;
-  color: white;
-  padding: 12px;
-  width: 20%;
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Source Code Pro', monospace;
-  background-color: #77a6d9;
-  border-radius: 0px 0px 15px 15px;
-  font-size: 15px;
+  #topnav {
+    width: 100% !important;
+    overflow: hidden;
+    height: 60px;
+  }
 
-  height: 40px;  
-  transition: height 0.2s, line-height 0.2s;
-  line-height: 15px;
-}
+  #topnav a {
+    float: left;
+    color: white;
+    padding: 12px;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #77a6d9;
+    border-radius: 0px 0px 15px 15px;
+    font-size: 15px;
 
-#topnav a:hover {
-  background-color: #bedaf7;
-  color: black;
-  height: 60px;  
-  transition: height 0.2s, line-height 0.2s;
-  line-height: 35px;
-}
+    height: 40px;  
+    transition: height 0.2s, line-height 0.2s;
+    line-height: 15px;
+  }
 
-hr {
-  height:1px;
-  border-width:0;
-  color:gray;
-  background-color:gray;
-}
-    
-#closebtn {
-  display: none;
-}
+  #topnav a:hover {
+    background-color: #bedaf7;
+    color: black;
+    height: 60px;  
+    transition: height 0.2s, line-height 0.2s;
+    line-height: 35px;
+  }
 
-#openbtn {
-  display: none;
+  hr {
+    height:1px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+  }
+
+  #closebtn {
+    display: none;
+  }
+
+  #openbtn {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
