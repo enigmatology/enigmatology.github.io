@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;1,300&display=swap');
 
 body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
 * {box-sizing: border-box;}
@@ -44,4 +45,95 @@ hr {
   border-width:0;
   color:gray;
   background-color:gray;
+}
+    
+#closebtn {
+  display: none;
+}
+
+#openbtn {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #top-wrapper {
+    width: 100%;
+    border-style: solid;
+    height: fit-content;
+  }
+
+  .top-header {
+    font-family: 'Source Code Pro', monospace;
+    margin: 15px 15px 15px 15px;
+    text-align: right;
+    width: calc(75% - 40px);
+    float: right;
+    height: 40px;
+    border-style: solid;
+  }
+
+  #topnav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1F487E;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  #openbtn {
+    display: block;
+    width: calc(25% - 30px);
+    float: left;
+    height: 40px;
+    background-color: #1D3461;
+    color: white;
+    border-style: none;
+    font-size: 20px;
+    line-height: 15px;
+    margin: 15px 15px 15px 15px;
+    border-style: solid;
+  }
+
+  #topnav a {
+    padding: 8px 5px 5px 8px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #c2c2c2;
+    display: block;
+    transition: 0.3s;
+    width: 170px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+  }
+
+  #topnav a:hover {
+    color: white;
+    margin-left: 30px;
+  }
+
+  #closebtn {
+    margin-top: 20px;
+  }
+
+  #closebtn:hover {
+    margin-left: 20px !important;
+  }
+
+  #topnav #closebtn {
+    font-size: 30px;
+    text-align: right;
+    width: 190px;
+  }
+
+
 }
