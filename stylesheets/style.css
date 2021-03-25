@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;1,300&display=swap');
 
+hr {
+  height:1px;
+  border-width:0;
+  color:gray;
+  background-color:gray;
+}
+
 @media only screen and (min-width: 775.0000001px) {
 
   body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
@@ -40,13 +47,6 @@
     height: 60px;  
     transition: height 0.2s, line-height 0.2s;
     line-height: 35px;
-  }
-
-  hr {
-    height:1px;
-    border-width:0;
-    color:gray;
-    background-color:gray;
   }
 
   #closebtn {
