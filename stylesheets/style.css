@@ -56,6 +56,8 @@
   #openbtn {
     display: none;
   }
+  
+  
 }
 
 @media only screen and (max-width: 775px) {
@@ -66,7 +68,8 @@
 
   #top-wrapper {
     width: 100%;
-    height: fit-content;
+    position: relative;
+    height: 100px;
   }
 
   .top-header {
@@ -78,7 +81,7 @@
     height: 60px;
     font-size: 5.7vw;
     border-style: solid;
-    border-color: #ffffff;
+    border-color: white;
     line-height: 55px;
   }
 
@@ -106,6 +109,8 @@
     line-height: 15px;
     margin: 15px 15px 15px 15px;
     border-radius: 2px;
+    cursor: pointer;
+    position: relative;
   }
   
   #openbtn:hover {
@@ -143,6 +148,7 @@
     text-align: right;
     width: 190px;
   }
-
-
+  
+  
+    
 }
