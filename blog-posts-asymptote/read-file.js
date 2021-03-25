@@ -79,6 +79,8 @@ function addcontent(posts, hides) {
   
   
   if (finished === true) {
+    // HERE IS THE EXTRA LINE
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
     for (let i = 1; i <= hides.length; i++) {
       var element = document.getElementById(i + "hide");
       
