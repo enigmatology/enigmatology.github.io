@@ -80,7 +80,7 @@ function addcontent(posts, hides) {
   
   if (finished === true) {
     
-    MathJax.typeset()
+    MathJax.typesetPromise()
     
     
     for (let i = 1; i <= hides.length; i++) {
