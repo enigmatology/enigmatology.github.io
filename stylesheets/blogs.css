@@ -78,3 +78,26 @@
 .centered {
   text-align: center;
 }
+
+@media only screen and (max-width: 775px) {
+  .post-header {
+    width: calc(100% - 35px);
+    padding-bottom: 5px;
+    height: fit-content;
+  }
+  .post-date {
+    width: calc(100% - 15px);
+    height: fit-content;
+    padding: 0;
+    padding-left: 10px !important;
+    text-align: left;
+  }
+
+  .code {
+    width: calc(100% - 30px);
+  }
+
+  .shown {
+    width: calc(100% - 30px);
+  }
+}
