@@ -80,9 +80,6 @@ function addcontent(posts, hides) {
   
   if (finished === true) {
     
-    MathJax.typesetPromise()
-    
-    
     for (let i = 1; i <= hides.length; i++) {
       var element = document.getElementById(i + "hide");
       
