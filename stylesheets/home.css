@@ -188,7 +188,7 @@
   .link-text {
     transform: rotate(-90deg);
     transform-origin: 0 0;
-    width: 200px;
+    width: 300px;
     margin-top: calc(60vh - 30px);
     margin-left: calc(12.5vw - 20px);
     
