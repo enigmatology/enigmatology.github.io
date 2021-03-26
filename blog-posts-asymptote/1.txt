@@ -5,11 +5,9 @@ March 26, 2021
 Welcome to my Asymptote tutorials blog! This page is still unfortunately under construction, so check back later for updates.
 
 [b][u]Changelog[/u][/b]
-<ul>
-<li> Mar. 26, 2021: Deleted old blogposts, added this one.
-<li> Mar. 25, 2021: Made page mobile-friendly.
-<li> Jan. 26, 2021: Finished bbCode support.
-<li> Jan. 18, 2021: Added support for more bbCode tags, added another post.
-<li> Jan. 8, 2021: Added support for first bbCode tags.
-<li> Jan. 7, 2021: Created blog.
-</ul>
+<ul><li> Mar. 26, 2021: Deleted old blogposts, added this one.
+  <li> Mar. 25, 2021: Made page mobile-friendly.
+  <li> Jan. 26, 2021: Finished bbCode support.
+  <li> Jan. 18, 2021: Added support for more bbCode tags, added another post.
+  <li> Jan. 8, 2021: Added support for first bbCode tags.
+  <li> Jan. 7, 2021: Created blog.</ul>
