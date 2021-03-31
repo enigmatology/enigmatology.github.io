@@ -1,7 +1,7 @@
 var hides = [];
 var posts = [];
 var iterations = 0;
-var NUMBEROFPOSTS = 1;
+var NUMBEROFPOSTS = 2;
 
 for (var i = 0; i < NUMBEROFPOSTS; i++) {
   posts.push(0);
@@ -24,7 +24,7 @@ var f = (function(){
           
         }
       };
-      xhttp.open("GET", "https://wgvozdjak.github.io/blog-posts-personal/" + i + ".txt", true);
+      xhttp.open("GET", "https://wgvozdjak.github.io/blog-posts-asymptote/" + i + ".txt", true);
       xhttp.send();
     })(i);
   }
@@ -61,7 +61,7 @@ function addcontent(posts, hides) {
         splitText = text.split("\n");
         //header.innerHTML = splitText;
 
-        header.innerHTML = "<div class=\"post-header\">" + splitText[0] + "</div><div class=\"post-date\">" + splitText[2] + "</div><hr style=\"width: calc(100% - 30px);\">";
+        header.innerHTML = "<div class=\"post-header\">" + splitText[0] + "</div><div class=\"post-date\">" + splitText[2] + "</div><hr style=\"width: calc(100% - 30px);\"><br>";
 
         remainingText = text.slice((splitText[0].length + splitText[2].length)+4, text.length);
         
@@ -79,6 +79,9 @@ function addcontent(posts, hides) {
   
   
   if (finished === true) {
+    document.querySelectorAll('pre code').forEach((block) => {
+     	hljs.highlightBlock(block);
+  	});
     for (let i = 1; i <= hides.length; i++) {
       var element = document.getElementById(i + "hide");
       
@@ -91,6 +94,7 @@ function addcontent(posts, hides) {
   
 
 function convertbbCode(orig, i, currentcontents) {
+    
   var converted = orig;
   
   var begbeg, endbeg, endend;
@@ -99,11 +103,15 @@ function convertbbCode(orig, i, currentcontents) {
   
   var begcolor, endcolor, endtag;
   var slicedcolor;
-  var color, coloredtext;
+  var color, colortext;
   
   var begsize, endsize, endsizetag;
   var slicedsize;
   var size, sizedtext;
+  
+  var begcode, endcode, endcodetag;
+  var slicedcode;
+  var language, codetext;
   
   while (converted.includes("[b]")) {
     converted = converted.replace("[b]", "<b>");
@@ -123,15 +131,6 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/i]")) {
     converted = converted.replace("[/i]", "</i>");
   }
-  while (converted.includes("[code]\n")) {
-    converted = converted.replace("[code]\n", "<div class=\"code\">");
-  }
-  while (converted.includes("[code]")) {
-    converted = converted.replace("[code]", "<div class=\"code\">");
-  }
-  while (converted.includes("[/code]")) {
-    converted = converted.replace("[/code]", "</div>");
-  }
   while (converted.includes("[center]")) {
     converted = converted.replace("[center]", "<div class=\"centered\">");
   }
@@ -146,7 +145,7 @@ function convertbbCode(orig, i, currentcontents) {
     endcolor = slicedcolor.indexOf("]") + 1;
     endtag = slicedcolor.indexOf("[/color]");
     colortext = slicedcolor.slice(endcolor, endtag);
-    converted = converted.replace(slicedcolor, "<div style=\"display:inline; color: " + color + ";\">" + colortext + "</div>");
+    converted = converted.replace(slicedcolor, "<div style=\"display: inline; color: " + color + ";\">" + colortext + "</div>");
   }
   while (converted.includes("[size=")) {
     slicedsize = converted.slice(converted.indexOf("[size="), converted.indexOf("[/size]") + 7);
@@ -158,6 +157,24 @@ function convertbbCode(orig, i, currentcontents) {
     sizedtext = slicedsize.slice(endsize, endsizetag);
     converted = converted.replace(slicedsize, "<div style=\"display: inline; font-size: " + size + "%;\">" + sizedtext + "</div>");
   }
+  
+  while (converted.includes("[code=")) {
+  
+  	slicedcode = converted.slice(converted.indexOf("[code="), converted.indexOf("[/code]") + 7);
+    begcode = 6;
+    endcode = slicedcode.indexOf("]");
+    language = slicedcode.slice(begcode, endcode);
+    endcode = slicedcode.indexOf("]") + 1;
+    endcodetag = slicedcode.indexOf("[/code]");
+    codetext = slicedcode.slice(endcode, endcodetag);
+    if (codetext.slice(0, 1) === "\n") {
+      codetext = codetext.slice(1, codetext.length);
+    }
+    converted = converted.replace(slicedcode, "<div><pre><code class=\"" + language + "\">" + codetext + "</code></pre></div>");
+    
+  }
+  
+  
   
   loop = i;
   while (converted.includes("[hide=")) {
