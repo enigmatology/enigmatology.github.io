@@ -20,7 +20,29 @@ As a simple example, here are all of the HTML tags that I've currently implement
 
 [hide=Hide Tag (Click me!)]Inside of the hide tag.[/hide]
 
-[code]Code Tag
-(multi-line too!)[/code]
-
 [size=200]Size Tag[/size]
+
+Code tags in multiple languages:
+[code=css]
+.test {
+  background-color: orange;
+  border-style: solid;
+}
+
+#another-test {
+  width: 100%;
+  height: 30vh;
+}
+[/code]
+
+[code=java]
+for (int i = 0; i <= 5; i++)
+{
+  System.out.println(i + "...");
+}
+[/code]
+
+[code=python]
+for i in range(50):
+  print(i + '...')
+[/code]
