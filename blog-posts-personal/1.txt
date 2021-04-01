@@ -44,5 +44,5 @@ for (int i = 0; i <= 5; i++)
 
 [code=python]
 for i in range(50):
-  print(i + '...')
+  print(str(i) + '...')
 [/code]
