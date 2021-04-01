@@ -113,6 +113,10 @@ function convertbbCode(orig, i, currentcontents) {
   var slicedcode;
   var language, codetext;
   
+  while (converted.includes("[/code]\n")) {
+  	converted = converted.replace("[/code]\n", "[/code]");
+  }
+  
   while (converted.includes("[b]")) {
     converted = converted.replace("[b]", "<b>");
   }
