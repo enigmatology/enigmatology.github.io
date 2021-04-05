@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/blogs.css" rel="stylesheet">
+    <link href="stylesheets/scroll-arrows.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+    
+    <title>CSS Blog | enigmatology</title>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['\\[','\\]'], ['$$','$$']]}});
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  
+  <body>
+    <div id="navbar"></div>
+
+    <button id="goToTop" onclick="scrollToTop()"><i class="arrow up"></i></button>
+    
+    <script src="blog-posts-css/read-file.js"></script>
+    <script src="file-snippets/addnavbar.js"></script>
+    <script src="javascript/scroll-to-top.js"></script>
+  </body>
+</html>
