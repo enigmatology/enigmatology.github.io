@@ -24,7 +24,7 @@ var f = (function(){
           
         }
       };
-      xhttp.open("GET", "https://wgvozdjak.github.io/blog-posts-personal/" + i + ".txt", true);
+      xhttp.open("GET", "https://enigmatology.github.io/blog-posts-personal/" + i + ".txt", true);
       xhttp.send();
     })(i);
   }
