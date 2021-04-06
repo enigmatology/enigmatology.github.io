@@ -105,4 +105,9 @@ code {
   .shown {
     width: calc(100% - 30px);
   }
+  
+  img {
+    width: 75%;
+    height: auto;
+  }
 }
