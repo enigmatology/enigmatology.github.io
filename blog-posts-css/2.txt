@@ -1,0 +1,22 @@
+[center][size=200][color=#3D85C6]Cascading Stylesheets[/color][/size]
+[i]The way to make everything online look nice[/i][/center]
+
+CSS, or Cascading Stylesheets, is extremely powerful. If you're familiar with basically any website, you've seen CSS in action. For example, almost every single AoPS webpage contains something like 10 CSS files, all working to make the site look like what it is now.
+
+Let's take a look at what CSS can do. I'm going to take an extremely simple design that I made (code may or may not be from w3schools because I'm lazy), one with CSS, and one without CSS.
+
+Here's what you would traditionally see, with CSS:
+<img src="https://i.ibb.co/CvBHpwG/navbar.jpg" alt="Navbar example">
+This is a very typical navbar that you can see online. It's not the most fancy thing, but it looks ok.
+
+Now let's look at it without CSS:
+<img src="https://i.ibb.co/QPH7ypf/navbarnocss.jpg" alt="Navbar without CSS">
+Whoa. That was different, and very ugly. If you look at it this way, a navbar is literally just a bunch of links that are put together. CSS is what makes it look the way it is.
+
+In this tutorial, I'm going to hopefully work from the ground up in how to build AoPS Blog CSS. Knowing how to make the CSS for a blog will hopefully also allow you to understand CSS enough that you can research and use CSS everywhere else. 
+
+Finally, I'm going to have a lot of CSS and HTML code inside of my tutorials. Unfortunately, there's no easy way to render HTML or CSS inside of a blog post. So, I recommend you to do two things as you read each lesson:
+1) If the code is in HTML, go to <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic" target="_blank">w3schools' TryIt editor</a> or some other HTML editor, paste the code into there, and run it. It's an excellent and easy way to quickly see what the HTML does, and also is much more hands-on, as you can try changing elements and CSS inside of the tryit editor to see what it does it you're curious.
+2) If the code is in CSS that I say will do something on blogs, make a test blog (I would recommend making it private) on AoPS and just paste the code into the CSS box inside of the Blog Info (click on Blog Info on the top right and scroll all the way down). Save it and go take a look at what happened to the blog. It'll help everything make more sense.
+
+Anyways, let's jump into it!
