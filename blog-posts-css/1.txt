@@ -5,4 +5,5 @@ April 5, 2021
 Welcome to my CSS tutorials blog! This page is still unfortunately under construction, so check back later for updates.
 
 [b][u]Changelog[/u][/b]
-<ul><li> April 5, 2021: Created page, added this post.</ul>
+<ul><li> Apr. 6, 2021: Added blog post #1.
+  <li> Apr. 5, 2021: Created page, added this post.</ul>
