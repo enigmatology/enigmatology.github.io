@@ -5,7 +5,7 @@ April 6, 2021
 [center][size=200][color=#6AA84F]Asymptote[/color][/size]
 [size=100][i]The Vector Graphics Language[/i][/size]
 
-<img src="/imgs/intro.png" alt="Example diagram">
+<img src="imgs/intro.png" alt="Example diagram">
 [i][size=75]Caption: Diagram for USAMO 1998 Problem #2. Coded by CoolCarsOnTheRun.[/size][/i][/center]
 
 How do I make graphs like this?, you may ask. The answer: Asymptote, a vector graphics language that allows you to draw neat geometry diagrams in your proof. This blog is going to be a blog where I post lessons for beginners. If you don't know a single thing about Asymptote, that's OK! I'm going to be starting with the basics.
