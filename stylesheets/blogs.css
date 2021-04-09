@@ -107,7 +107,7 @@ code {
   }
   
   img {
-    width: 75%;
-    height: auto;
+    width: 75% !important;
+    height: auto !important;
   }
 }
