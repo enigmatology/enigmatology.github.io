@@ -1,1 +1,78 @@
+    #content {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: 'Rubik', sans-serif;
+    }
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    a {
+      text-decoration: none;
+      color: #3474ad;
+    }
+    a:hover {
+      color: #a9cbe8;
+    }
+    @media (min-width: 600.00000000000000000000001px) {
+      table {
+        border-collapse: collapse;
+        width: 100%;
+		margin-bottom: 15px;
+      }
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #dddddd;
+        width: 20%;
+      }
 
+
+      td:first-child {
+        border-left: 1px solid #dddddd;
+      }
+
+      td:last-child {
+        border-right: 1px solid #dddddd;
+      }
+    }
+    
+    @media only screen and (max-width: 600px) {
+      table, thead, tbody, th, td, tr { 
+          display: block; 
+      }
+
+      thead tr { 
+          display: none;
+      }
+
+      tr { border: 1px solid #dddddd; }
+
+      td { 
+          border: none; 
+          position: relative;
+          padding-left: 50% !important;
+          border-right: 1px solid #dddddd;
+          padding: 5px;
+      }
+
+      td:before { 
+          position: absolute;
+          top: 0px;
+          left: 6px;
+          width: 45%; 
+          padding-right: 10px;
+          white-space: nowrap;
+      }
+
+      td:nth-of-type(1):before { content: "Release Name"; padding-top: 5px;}
+      td:nth-of-type(2):before { content: "Release Date"; }
+      td:nth-of-type(3):before { content: "Raw CSS"; }
+      td:nth-of-type(4):before { content: "Import URL"; }
+      td:nth-of-type(5):before { content: "Display Blog"; }
+      td:nth-of-type(6):before { content: "AoPS Release Link"; }
+	}
