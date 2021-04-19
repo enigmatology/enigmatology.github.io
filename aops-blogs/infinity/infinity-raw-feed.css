@@ -663,24 +663,14 @@ span.blog-num-comments {
   font-weight: 400 !important;
 }
 
-#left_navigation_box a:last-child::after {
+#left_navigation_box a:last-child::after, #right_navigation_box a:last-child::after {
   position: absolute;
   width: 100%;
   left: 0;
   border-bottom-style: solid;
   border-color: white;
   content: "";
-  top: 75px;
-}
-
-#right_navigation_box::after {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  border-bottom-style: solid;
-  border-color: white;
-  content: "";
-  top: 85px;
+  margin-top: 18.5px;
 }
 
 #left_navigation_box {
@@ -693,7 +683,7 @@ span.blog-num-comments {
 }
 
 #right_navigation_box {
-  margin-top: 138px;
+  margin-top: 160px;
   float: left;
 }
 
@@ -752,7 +742,7 @@ span.blog-num-comments {
 }
 
 #side::after {
-  top: 170px;
+  top: 190px;
 }
 }
 
