@@ -14,6 +14,16 @@ CREDITS:
 
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400&display=swap');
 
+::-moz-selection {
+  color: white;
+  background: #00237d !important;
+}
+
+::selection {
+  color: white;
+  background: #00237d !important;
+}
+
 @-webkit-keyframes bg-scrolling-reverse {
   100% { background-position: 50px 50px; }
 }
@@ -68,22 +78,15 @@ CREDITS:
   color: #00237d;
 }
 
-::-moz-selection {
-  color: white;
-  background: #00237d !important;
-}
-
-::selection {
-  color: white;
-  background: #00237d !important;
-}
-
 a {
   color: #00237d !important;
 }
 
 #wrapper {
   width: 100%;
+  background-color: white !important;
+  background-image: none !important;
+  background-size: 100% !important;
 }
 
 #content {
@@ -530,6 +533,19 @@ span.blog-num-comments {
   display: inline-block;
 }
 
+@media (min-width: 1650.0000000000000000000000001px) {
+
+#content {
+  width: 100%;
+  border-top-style: solid;
+}
+
+#main {
+  width: 80%;
+  margin-left: 10%;
+}
+}
+
 
 @media (min-width: 800.00000000000000000000000001px) {
 #header h1 {
@@ -647,7 +663,7 @@ span.blog-num-comments {
   font-weight: 400 !important;
 }
 
-#left_navigation_box::after {
+#left_navigation_box a:last-child::after {
   position: absolute;
   width: 100%;
   left: 0;
