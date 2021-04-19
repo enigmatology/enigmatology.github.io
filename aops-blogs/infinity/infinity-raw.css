@@ -18,6 +18,16 @@ CREDITS:
   display: none;
 }
 
+::-moz-selection {
+  color: white;
+  background: #00237d !important;
+}
+
+::selection {
+  color: white;
+  background: #00237d !important;
+}
+
 @-webkit-keyframes bg-scrolling-reverse {
   100% { background-position: 50px 50px; }
 }
