@@ -68,6 +68,16 @@ CREDITS:
   color: #00237d;
 }
 
+::-moz-selection {
+  color: white;
+  background: #00237d !important;
+}
+
+::selection {
+  color: white;
+  background: #00237d !important;
+}
+
 a {
   color: #00237d !important;
 }
