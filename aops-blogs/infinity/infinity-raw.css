@@ -14,6 +14,10 @@ CREDITS:
 
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400&display=swap');
 
+#feed-wrapper {
+  display: none;
+}
+
 @-webkit-keyframes bg-scrolling-reverse {
   100% { background-position: 50px 50px; }
 }
@@ -183,10 +187,6 @@ body {
   width: 340px !important;
 }
 
-.aops-scroll-outer, .aops-scrollbar-not-visible, .blog-scroll.outer {
-  width: 320px;
-}
-
 fieldset.blog-shout-wrapper {
   width: 340px !important;
   border-style: none;
@@ -197,17 +197,12 @@ fieldset.blog-shout-wrapper {
   width: 340px !important;
 }
 
-#aops-scroll-inner {
+.blog-shout-wrapper #aops-scroll-inner {
   width: 320px;
 }
 
 .blog-shout-wrapper .aops-scroll-content {
   width: 320px !important;
-  max-width: 1000px !important;
-}
-
-.aops-scroll-content {
-  width: 300px !important;
   max-width: 1000px !important;
 }
 
@@ -225,12 +220,8 @@ fieldset.blog-shout-wrapper {
   border-width: 3px;
 }
 
-div.aops-scroll-bar {
+.blog-shout-wrapper div.aops-scroll-bar {
   display: none !important;
-}
-
-#feed-wrapper {
-  display: none;
 }
 
 #side::-webkit-scrollbar {
