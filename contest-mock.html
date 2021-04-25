@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+body {
+  padding: 0;
+  margin: 0;
+}
+.latexcenter {
+  margin: auto;
+  display: block;
+  padding: 15px;
+}
+#questions {
+  padding: 15px;
+}
+.bubbles {
+  width: 20%;
+  float: left;
+}
+.problem-body {
+  margin-bottom: 25px;
+  width: 80%;
+  float: right;
+  display: block;
+}
+.problem-number {
+  font-size: 25px;
+  width: 80%;
+  float: right;
+}
+.problem {
+  overflow: auto;
+  padding: 15px;
+}
+.bubbles > button {
+  float: left;
+  border: solid black;
+  border-radius: 13px;
+  padding: 15px;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px;
+}
+.deselected {
+  background-color: white;
+}
+.selected {
+  background-color: #c0d1eb;
+}
+.deselected:hover {
+  background-color: #e3e3e3;
+}
+.deselected:active {
+  background-color: #c2c2c2;
+}
+.selected:hover {
+  background-color: #a3bde3;
+}
+.selected:active {
+  background-color: #82a2d1;
+}
+.bubbles > button:focus {
+  outline: none;
+}
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}
+#loading-questions {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+#test-choice {
+  padding: 15px;
+}
+#test-choice select:invalid{
+  color: gray;
+}
+#test-choice option {
+  color: black;
+}
+#test-choice #tests, #test-choice #year, #test-choice #start-test {
+  height: 50px;
+  box-sizing: border-box;
+  width: 30%;
+}
+#tests {
+  position: relative;
+  padding: auto;
+}
+</style>
+</head>
+
+<body>
+<div id="test-choice" class="shown">
+  <select name="tests" id="tests" required>
+    <option value="" disabled selected hidden>Choose Test</option>
+    <option value="amc10a">AMC 10A</option>
+    <option value="amc10b">AMC 10B</option>
+    <option value="amc12a">AMC 12A</option>
+    <option value="amc12b">AMC 12B</option>
+  </select>
+  <input type="text" id="year" name="year" placeholder="Choose year (e.g. 2021)" required></input>
+  <button id="start-test" onclick="starttest()">Generate Test</button>
+</div>
+<div id="loading-questions" class="hidden">Loading questions... please wait.</div>
+<div id="questions"></div>
+<script>
+let problems = [];
+function starttest() {
+  let testelement = document.getElementById("tests");
+  let chosentest = testelement.options[testelement.selectedIndex].text;
+  
+  let yearelement = document.getElementById("year");
+  let chosenyear = yearelement.value;
+  
+  let year = chosenyear;
+  
+  let test = "AMC";
+  let grade;
+  let version;
+  if (chosentest === "AMC 10A") {
+    grade = 10;
+    version = "A";
+  }
+  else if (chosentest === "AMC 10B") {
+    grade = 10;
+    version = "B";
+  }
+  else if (chosentest === "AMC 12A") {
+    grade = 12;
+    version = "A";
+  }
+  else if (chosentest === "AMC 12B") {
+    grade = 12;
+    version = "B";
+  }
+  else {
+    grade = 10;
+    version = "A";
+  }
+  
+  let numproblems = 0;
+  if (test === "AMC") {
+    numproblems = 25;
+  }
+  else if (test === "AIME") { // AIME is not supported yet
+    numproblems = 15;
+  }
+  
+  for (let i = 0; i < numproblems; i++) {
+    problems.push(0);
+  }
+  
+
+  addcontest(year, test, grade, version, numproblems);
+  let loading = document.getElementById("loading-questions");
+  loading.classList.remove("hidden");
+  loading.classList.add("shown");
+  let choosetest = document.getElementById("test-choice");
+  choosetest.classList.remove("shown");
+  choosetest.classList.add("hidden");
+}
+
+function addcontest(year, test, grade, version, numproblems) {
+  for (let i = 1; i <= numproblems; i++) { 
+    (async () => {
+      problems[i-1] = await addproblem(year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i, i);
+      addcontent(problems);
+    })()
+  }
+}
+
+async function addproblem(page, problemnumber) {
+  let endpoint = "https://artofproblemsolving.com/wiki/api.php";
+  let params = `action=parse&page=${page}&format=json`;
+
+  let response = await fetch(`${endpoint}?${params}&origin=*`);
+  
+  let responsejson = await response.json();
+
+  let pagehtml = responsejson.parse.text["*"];
+  if (pagehtml.includes("redirectMsg")) {
+    let redirectuncutstartloc = pagehtml.indexOf("<a href=\"/wiki/index.php/") + 25;
+    let redirectcut = pagehtml.substring(redirectuncutstartloc);
+    let redirectcutendloc = redirectcut.indexOf("\"");
+    let redirect = redirectcut.substring(0, redirectcutendloc);
+    params = `action=parse&page=${redirect}&format=json`;
+    response = await fetch(`${endpoint}?${params}&origin=*`);
+    responsejson = await response.json();
+    pagehtml = responsejson.parse.text["*"];
+  }
+
+  let parser = new DOMParser();
+  let htmlDoc = parser.parseFromString(pagehtml, 'text/html');
+  
+  let searchstart = pagehtml.indexOf("id=\"Problem\">");
+  let problemstartlocoriginal = pagehtml.indexOf("<p>", searchstart);
+  let pagehtmlcut = pagehtml.substring(problemstartlocoriginal);
+  let problemendloc = pagehtmlcut.indexOf("<h2><span");
+  let problemtext = pagehtmlcut.substring(0, problemendloc);
+  
+  return problemtext;
+}
+
+function addcontent(problems) {
+  var readytoappend = true;
+  for (let i = 0; i < problems.length; i++) {
+    if (problems[i] === 0) {
+      readytoappend = false;
+    }
+  }
+  if (readytoappend) {
+    for (let i = 0; i < problems.length; i++) {
+      $("#questions").append("<div class=\"problem\"><div class=\"bubbles\"><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"A-button-" + i + "\">A</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"B-button-" + i + "\">B</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"C-button-" + i + "\">C</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"D-button-" + i + "\">D</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"E-button-" + i + "\">E</button></div><div class=\"problem-number\">Problem " + (i+1) + "</div><div class=\"problem-body\">" + problems[i] + "</div></div>");
+    }
+    document.getElementById("loading-questions").classList.remove("shown");
+    document.getElementById("loading-questions").classList.add("hidden");
+  }
+}
+
+function togglecolor(id) {
+  let currentproblem = id.substring(1);
+  let choices = ["A", "B", "C", "D", "E"];
+  let runend = true;
+  for (let i = 0; i < choices.length; i++) {
+    let letter = choices[i];
+    let currentbtn = document.getElementById(letter + currentproblem);
+    if (currentbtn.classList.contains("selected") && id === (letter + currentproblem)) {
+      currentbtn.classList.remove("selected");
+      currentbtn.classList.add("deselected");
+      runend = false;
+    }
+    else if (currentbtn.classList.contains("selected")) {
+      currentbtn.classList.remove("selected");
+      currentbtn.classList.add("deselected");
+    }
+  }
+  if (runend) {
+    let nowbtn = document.getElementById(id);
+    if (nowbtn.classList.contains("deselected")) {
+      nowbtn.classList.remove("deselected");
+      nowbtn.classList.add("selected");
+    }
+  }
+}
+
+
+</script>
+
+</body>
+
+</html>
