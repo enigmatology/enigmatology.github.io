@@ -314,7 +314,7 @@ function starttimer(year, test, grade, version, numproblems) {
         let scoreelement = document.getElementById("score");
         scoreelement.classList.remove("hidden");
         scoreelement.classList.add("shown");
-        scoreelement.innerHTML = "Final Score: " + score;
+        scoreelement.innerHTML = "Final Score: " + score + "<br>Your Answers: " + selectedanswers + "<br>Correct Answers: " + correctanswers;
       })()
     }
     
