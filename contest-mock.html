@@ -104,6 +104,11 @@ body {
   right: 15px;
   background-color: white;
 }
+#score {
+  padding: 15px;
+  text-align: center;
+  font-size: 30px;
+}
 </style>
 </head>
 
@@ -122,6 +127,7 @@ body {
 <div id="timer" class="hidden"></div>
 <div id="loading-questions" class="hidden">Loading questions... please wait.</div>
 <div id="questions"></div>
+<div id="score"></div>
 <script>
 let problems = [];
 function starttest() {
@@ -183,7 +189,7 @@ function addcontest(year, test, grade, version, numproblems) {
   for (let i = 1; i <= numproblems; i++) { 
     (async () => {
       problems[i-1] = await addproblem(year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i, i);
-      addcontent(problems);
+      addcontent(problems, year, test, grade, version, numproblems);
     })()
   }
 }
@@ -207,9 +213,6 @@ async function addproblem(page, problemnumber) {
     responsejson = await response.json();
     pagehtml = responsejson.parse.text["*"];
   }
-
-  let parser = new DOMParser();
-  let htmlDoc = parser.parseFromString(pagehtml, 'text/html');
   
   let searchstart = pagehtml.indexOf("id=\"Problem\">");
   let problemstartlocoriginal = pagehtml.indexOf("<p>", searchstart);
@@ -220,7 +223,7 @@ async function addproblem(page, problemnumber) {
   return problemtext;
 }
 
-function addcontent(problems) {
+function addcontent(problems, year, test, grade, version, numproblems) {
   var readytoappend = true;
   for (let i = 0; i < problems.length; i++) {
     if (problems[i] === 0) {
@@ -233,7 +236,7 @@ function addcontent(problems) {
     }
     document.getElementById("loading-questions").classList.remove("shown");
     document.getElementById("loading-questions").classList.add("hidden");
-    starttimer();
+    starttimer(year, test, grade, version, numproblems);
   }
 }
 
@@ -263,9 +266,16 @@ function togglecolor(id) {
   }
 }
 
-function starttimer() {
+function starttimer(year, test, grade, version, numproblems) {
   let starttime = new Date().getTime();
-  let endtime = addMinutes(starttime, 0.25);
+  let length = 0;
+  if (test === "AMC") {
+    length = 0.5;
+  }
+  if (test === "AIME") {
+    length = 180;
+  }
+  let endtime = addMinutes(starttime, length);
   let timer = document.getElementById("timer");
   timer.classList.remove("hidden");
   timer.classList.add("shown");
@@ -291,7 +301,21 @@ function starttimer() {
     
     if (timetoend <= 0) {
       clearInterval(interval);
-      timer.innerHTML = "EXPIRED";
+      timer.classList.add("hidden");
+      timer.classList.remove("shown");
+      let questions = document.getElementById("questions");
+      questions.classList.add("hidden");
+      questions.classList.remove("shown");
+      timer.innerHTML = "CONTEST OVER";
+      let selectedanswers = getSelectedAnswers(year, test, grade, version, numproblems);
+      (async () => {
+        let correctanswers = await getcorrectanswers(year, test, grade, version, numproblems);
+        let score = checkanswers(selectedanswers, correctanswers);
+        let scoreelement = document.getElementById("score");
+        scoreelement.classList.remove("hidden");
+        scoreelement.classList.add("shown");
+        scoreelement.innerHTML = "Final Score: " + score;
+      })()
     }
     
   }, 1000);
@@ -301,7 +325,81 @@ function addMinutes(date, minutes) {
   return new Date(date + minutes*60000);
 }
 
+function getSelectedAnswers(year, test, grade, version, numproblems) {
+  let selectedanswers = [];
+  for (let i = 0; i < numproblems; i++) {
+    selectedanswers.push(0);
+  }
+  
+  let letters = ["A", "B", "C", "D", "E"];
+  let buttonid;
+  let currentbutton;
+  for (let i = 0; i < numproblems; i++) {
+    
+    for (let j = 0; j < letters.length; j++) {
+      buttonid = letters[j] + "-button-" + i;
+      
+      currentbutton = document.getElementById(buttonid);
+      if (currentbutton.classList.contains("selected") && !currentbutton.classList.contains("deselected")) {
+        selectedanswers[i] = letters[j];
+        
+        break;
+      }
+    }
+  }
+  return selectedanswers;
+}
 
+async function getcorrectanswers(year, test, grade, version, numproblems) {
+  let endpoint = "https://artofproblemsolving.com/wiki/api.php";
+  let page = year + "_" + test + "_" + grade + version + "_Answer_Key";
+  let params = `action=parse&page=${page}&format=json`;
+
+  let response = await fetch(`${endpoint}?${params}&origin=*`);
+  
+  let responsejson = await response.json();
+
+  let pagehtml = responsejson.parse.text["*"];
+  if (pagehtml.includes("redirectMsg")) {
+    let redirectuncutstartloc = pagehtml.indexOf("<a href=\"/wiki/index.php/") + 25;
+    let redirectcut = pagehtml.substring(redirectuncutstartloc);
+    let redirectcutendloc = redirectcut.indexOf("\"");
+    let redirect = redirectcut.substring(0, redirectcutendloc);
+    params = `action=parse&page=${redirect}&format=json`;
+    response = await fetch(`${endpoint}?${params}&origin=*`);
+    responsejson = await response.json();
+    pagehtml = responsejson.parse.text["*"];
+  }
+  
+  let correctanswers = [];  
+  let cutloc;
+  for (let i = 0; i < numproblems; i++) {
+    cutloc = pagehtml.indexOf("<li>") + 4;
+    pagehtml = pagehtml.substring(cutloc);
+    correctanswers.push(pagehtml.substring(0, 1));
+  }
+  
+  return correctanswers;
+}
+
+function checkanswers(selectedanswers, correctanswers) {
+  let correctnum = 0;
+  let skippednum = 0;
+  let wrongnum = 0;
+  for (let i = 0; i < selectedanswers.length; i++) {
+    if (selectedanswers[i] === 0) {
+      skippednum++;
+    }
+    else if (selectedanswers[i] === correctanswers[i]) {
+      correctnum++;
+    }
+    else if (selectedanswers[i] != correctanswers[i]) {
+      wrongnum++;
+    }
+  }
+  let score = 6*correctnum + 1.5*skippednum;
+  return score;
+}
 </script>
 
 </body>
