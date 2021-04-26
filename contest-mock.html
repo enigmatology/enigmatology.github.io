@@ -94,6 +94,16 @@ body {
   position: relative;
   padding: auto;
 }
+#timer {
+  position: fixed;
+  width: 200px;
+  height: 75px;
+  border: solid black;
+  padding: 15px;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+}
 </style>
 </head>
 
@@ -109,6 +119,7 @@ body {
   <input type="text" id="year" name="year" placeholder="Choose year (e.g. 2021)" required></input>
   <button id="start-test" onclick="starttest()">Generate Test</button>
 </div>
+<div id="timer" class="hidden"></div>
 <div id="loading-questions" class="hidden">Loading questions... please wait.</div>
 <div id="questions"></div>
 <script>
@@ -222,6 +233,7 @@ function addcontent(problems) {
     }
     document.getElementById("loading-questions").classList.remove("shown");
     document.getElementById("loading-questions").classList.add("hidden");
+    starttimer();
   }
 }
 
@@ -249,6 +261,44 @@ function togglecolor(id) {
       nowbtn.classList.add("selected");
     }
   }
+}
+
+function starttimer() {
+  let starttime = new Date().getTime();
+  let endtime = addMinutes(starttime, 0.25);
+  let timer = document.getElementById("timer");
+  timer.classList.remove("hidden");
+  timer.classList.add("shown");
+  let interval = setInterval(function() {
+    let currenttime = new Date().getTime();
+    let timetoend = endtime - currenttime;
+    
+    let hours = Math.floor((timetoend % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timetoend % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timetoend % (1000 * 60)) / 1000);
+    
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    
+    timer.innerHTML = "Time Remaining: " + hours + ":" + minutes + ":" + seconds;
+    
+    if (timetoend <= 0) {
+      clearInterval(interval);
+      timer.innerHTML = "EXPIRED";
+    }
+    
+  }, 1000);
+}
+
+function addMinutes(date, minutes) {
+  return new Date(date + minutes*60000);
 }
 
 
