@@ -85,10 +85,19 @@ body {
 #test-choice option {
   color: black;
 }
-#test-choice #tests, #test-choice #year, #test-choice #start-test {
+#test-choice .select-btn {
   height: 50px;
   box-sizing: border-box;
-  width: 30%;
+}
+@media (min-width: 675.0000000000000001px) {
+  #test-choice .select-btn {
+    width: calc(calc(100% - 30px) / 5);
+  }
+}
+@media (max-width: 675px) {
+  #test-choice .select-btn {
+    width: calc(calc(100% - 30px) / 3);
+  }
 }
 #tests {
   position: relative;
@@ -104,6 +113,9 @@ body {
   right: 15px;
   background-color: white;
 }
+#test-choice {
+  padding-left: auto;
+}
 #score {
   padding: 15px;
   text-align: center;
@@ -114,15 +126,17 @@ body {
 
 <body>
 <div id="test-choice" class="shown">
-  <select name="tests" id="tests" required>
-    <option value="" disabled selected hidden>Choose Test</option>
+  <select name="tests" id="tests" class="select-btn" required>
+    <option value="" disabled selected hidden>Select Test</option>
     <option value="amc10a">AMC 10A</option>
     <option value="amc10b">AMC 10B</option>
     <option value="amc12a">AMC 12A</option>
     <option value="amc12b">AMC 12B</option>
   </select>
-  <input type="text" id="year" name="year" placeholder="Choose year (e.g. 2021)" required></input>
-  <button id="start-test" onclick="starttest()">Generate Test</button>
+  <input type="text" id="year" name="year" placeholder="Select year (e.g. 2021)" class="select-btn" required></input>
+  <input type="text" name="hours" id="hours" class="select-btn" placeholder="Select hours (e.g. 1)" required></input>
+  <input type="text" name="minutes" id="minutes" class="select-btn" placeholder="Select minutes (e.g. 15)" required></input>
+  <button id="start-test" onclick="starttest()" class="select-btn">Generate Test</button>
 </div>
 <div id="timer" class="hidden"></div>
 <div id="loading-questions" class="hidden">Loading questions... please wait.</div>
@@ -135,9 +149,16 @@ function starttest() {
   let chosentest = testelement.options[testelement.selectedIndex].text;
   
   let yearelement = document.getElementById("year");
-  let chosenyear = yearelement.value;
-  
+  let chosenyear = yearelement.value;  
   let year = chosenyear;
+  
+  let hourselement = document.getElementById("hours");
+  let minuteselement = document.getElementById("minutes");
+  
+  let chosenhours = hourselement.value;
+  let chosenminutes = minuteselement.value;
+  
+  let totalseconds = 3600*chosenhours + 60*chosenminutes;
   
   let test = "AMC";
   let grade;
@@ -176,7 +197,7 @@ function starttest() {
   }
   
 
-  addcontest(year, test, grade, version, numproblems);
+  addcontest(year, test, grade, version, numproblems, totalseconds);
   let loading = document.getElementById("loading-questions");
   loading.classList.remove("hidden");
   loading.classList.add("shown");
@@ -185,11 +206,11 @@ function starttest() {
   choosetest.classList.add("hidden");
 }
 
-function addcontest(year, test, grade, version, numproblems) {
+function addcontest(year, test, grade, version, numproblems, totalseconds) {
   for (let i = 1; i <= numproblems; i++) { 
     (async () => {
       problems[i-1] = await addproblem(year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i, i);
-      addcontent(problems, year, test, grade, version, numproblems);
+      addcontent(problems, year, test, grade, version, numproblems, totalseconds);
     })()
   }
 }
@@ -223,7 +244,7 @@ async function addproblem(page, problemnumber) {
   return problemtext;
 }
 
-function addcontent(problems, year, test, grade, version, numproblems) {
+function addcontent(problems, year, test, grade, version, numproblems, totalseconds) {
   var readytoappend = true;
   for (let i = 0; i < problems.length; i++) {
     if (problems[i] === 0) {
@@ -236,7 +257,7 @@ function addcontent(problems, year, test, grade, version, numproblems) {
     }
     document.getElementById("loading-questions").classList.remove("shown");
     document.getElementById("loading-questions").classList.add("hidden");
-    starttimer(year, test, grade, version, numproblems);
+    starttimer(year, test, grade, version, numproblems, totalseconds);
   }
 }
 
@@ -247,7 +268,7 @@ function togglecolor(id) {
   for (let i = 0; i < choices.length; i++) {
     let letter = choices[i];
     let currentbtn = document.getElementById(letter + currentproblem);
-    if (currentbtn.classList.contains("selected") && id === (letter + currentproblem)) {
+    if (currentbtn.classList.contains("selected") && id === (letter + currentproblem))     {
       currentbtn.classList.remove("selected");
       currentbtn.classList.add("deselected");
       runend = false;
@@ -266,19 +287,19 @@ function togglecolor(id) {
   }
 }
 
-function starttimer(year, test, grade, version, numproblems) {
+function starttimer(year, test, grade, version, numproblems, totalseconds) {
   let starttime = new Date().getTime();
-  let length = 0;
-  if (test === "AMC") {
-    length = 0.5;
+  /*if (test === "AMC") {
+    length = 75;
   }
   if (test === "AIME") {
     length = 180;
-  }
-  let endtime = addMinutes(starttime, length);
+  }*/
+  let endtime = addSeconds(starttime, totalseconds);
   let timer = document.getElementById("timer");
   timer.classList.remove("hidden");
   timer.classList.add("shown");
+  
   let interval = setInterval(function() {
     let currenttime = new Date().getTime();
     let timetoend = endtime - currenttime;
@@ -314,15 +335,15 @@ function starttimer(year, test, grade, version, numproblems) {
         let scoreelement = document.getElementById("score");
         scoreelement.classList.remove("hidden");
         scoreelement.classList.add("shown");
-        scoreelement.innerHTML = "Final Score: " + score + "<br>Your Answers: " + selectedanswers + "<br>Correct Answers: " + correctanswers;
+        scoreelement.innerHTML = "Final Score: " + score;
       })()
     }
     
   }, 1000);
 }
 
-function addMinutes(date, minutes) {
-  return new Date(date + minutes*60000);
+function addSeconds(date, seconds) {
+  return new Date(date + seconds*1000);
 }
 
 function getSelectedAnswers(year, test, grade, version, numproblems) {
