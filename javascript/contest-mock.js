@@ -1,4 +1,5 @@
 let problems = [];
+let finishtest = false;
 function starttest() {
   let pageheader = document.getElementById("page-header");
   pageheader.classList.add("hidden");
@@ -113,10 +114,15 @@ function addcontent(problems, year, test, grade, version, numproblems, totalseco
     for (let i = 0; i < problems.length; i++) {
       $("#questions").append("<div class=\"problem\"><div class=\"bubbles\"><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"A-button-" + i + "\">A</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"B-button-" + i + "\">B</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"C-button-" + i + "\">C</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"D-button-" + i + "\">D</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"E-button-" + i + "\">E</button></div><div class=\"problem-number\">Problem " + (i+1) + "</div><div class=\"problem-body\">" + problems[i] + "</div></div>");
     }
+    $("#questions").append("<button id=\"finish-test\" onclick=\"finishTest()\">Submit Test</button>");
     document.getElementById("loading-questions").classList.remove("shown");
     document.getElementById("loading-questions").classList.add("hidden");
     starttimer(year, test, grade, version, numproblems, totalseconds);
   }
+}
+
+function finishTest() {
+  finishtest = true;
 }
 
 function togglecolor(id) {
@@ -183,7 +189,10 @@ function starttimer(year, test, grade, version, numproblems, totalseconds) {
     
     timer.innerHTML = "Time Remaining: " + hours + ":" + minutes + ":" + seconds;
     
-    if (timetoend <= 0) {
+    if (timetoend <= 0 || finishtest === true) {
+      let finishtestelement = document.getElementById("finish-test");
+      finishtestelement.classList.add("hidden");
+      finishtest = true;
       clearInterval(interval);
       timer.classList.add("hidden");
       timer.classList.remove("shown");
@@ -204,6 +213,8 @@ function addSeconds(date, seconds) {
 
 function showresults(year, test, grade, version, numproblems) {
   let selectedanswers = getSelectedAnswers(year, test, grade, version, numproblems);
+  let testdiv = document.getElementById("contest-heading");
+  testdiv.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
   (async () => {
     let correctanswers = await getcorrectanswers(year, test, grade, version, numproblems);
     let score = checkanswers(selectedanswers, correctanswers);
@@ -212,8 +223,6 @@ function showresults(year, test, grade, version, numproblems) {
     scoreelement.classList.add("shown");
     
     let answersdiv = document.getElementById("answers");
-    let testdiv = document.getElementById("contest-heading");
-    testdiv.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
     
     scoreelement.innerHTML = "Final Score: " + score;
     let viewscores = document.createElement("button");
