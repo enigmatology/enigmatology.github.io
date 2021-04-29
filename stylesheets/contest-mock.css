@@ -65,7 +65,7 @@ body {
   outline: none;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .shown {
   display: block;
@@ -205,4 +205,13 @@ button:hover {
   margin-top: 15px;
   text-align: center;
   font-size: 30px;
+}
+
+#finish-test {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: block;
 }
