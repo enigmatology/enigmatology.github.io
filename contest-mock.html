@@ -4,6 +4,11 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -77,11 +82,16 @@ body {
   margin-top: 30px;
   font-size: 30px;
 }
+#test-choice * {
+  border-radius: 0;
+  border-width: 2px;
+  border-color: #1F487E;
+}
 #test-choice {
   padding: 15px;
 }
 #test-choice select:invalid{
-  color: gray;
+  color: gray !important;
 }
 #test-choice option {
   color: black;
@@ -125,7 +135,7 @@ body {
 #view-scores {
   margin: auto;
   display: block;
-  padding: 20px;
+  padding: 7px;
 }
 #answers-table {
   border-collapse: collapse;
@@ -152,6 +162,37 @@ body {
   text-align: center;
   font-size: 30px;
   margin-top: 15px;
+}
+
+button {
+  background-color: white;
+  border-color: #1F487E;
+  border-radius: 0;
+  border-width: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button:hover {
+  background-color: #1F487E;
+  color: white;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.bubbles > button:hover {
+  transition-property: none !important;
+}
+
+.bubbles > button {
+  transition-property: none !important;
+  color: black;
+}
+
+.bubbles > button:disabled {
+  color: gray;
+}
+
+:focus {
+  outline: none;
 }
 </style>
 </head>
