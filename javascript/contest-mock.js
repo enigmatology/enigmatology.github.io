@@ -209,10 +209,8 @@ function showresults(year, test, grade, version, numproblems) {
     scoreelement.classList.add("shown");
     
     let answersdiv = document.getElementById("answers");
-    let testdiv = document.createElement("div");
-    testdiv.setAttribute("id", "contest-name");
+    let testdiv = document.getElementById("contest-heading");
     testdiv.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
-    answersdiv.appendChild(testdiv);
     
     scoreelement.innerHTML = "Final Score: " + score;
     let viewscores = document.createElement("button");
@@ -251,10 +249,6 @@ function displayresults(numproblems, selectedanswers, correctanswers, score, yea
   questions.classList.add("shown");
   
   let answersdiv = document.getElementById("answers");
-  /*let testdiv = document.createElement("div");
-  testdiv.setAttribute("id", "contest-name");
-  testdiv.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
-  answersdiv.appendChild(testdiv);*/
   
   let scorediv = document.createElement("div");
   scorediv.setAttribute("id", "score");
