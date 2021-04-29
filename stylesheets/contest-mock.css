@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+.latexcenter {
+  margin: auto;
+  display: block;
+  padding: 15px;
+}
+#questions {
+  padding: 15px;
+}
+.bubbles {
+  width: 20%;
+  float: left;
+}
+.problem-body {
+  margin-bottom: 25px;
+  width: 80%;
+  float: right;
+  display: block;
+}
+.problem-number {
+  font-size: 25px;
+  width: 80%;
+  float: right;
+}
+.problem {
+  overflow: auto;
+  padding: 15px;
+}
+.bubbles > button {
+  float: left;
+  border: solid black;
+  border-radius: 13px;
+  padding: 15px;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px;
+}
+.deselected {
+  background-color: white;
+}
+.selected {
+  background-color: #c0d1eb;
+}
+.deselected:hover {
+  background-color: #e3e3e3;
+}
+.deselected:active {
+  background-color: #c2c2c2;
+}
+.selected:hover {
+  background-color: #a3bde3;
+}
+.selected:active {
+  background-color: #82a2d1;
+}
+.bubbles > button:focus {
+  outline: none;
+}
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}
+#loading-questions {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+#test-choice * {
+  border-radius: 0;
+  border-width: 2px;
+  border-color: #1F487E;
+}
+#test-choice {
+  padding: 15px;
+}
+#test-choice select:invalid{
+  color: gray !important;
+}
+#test-choice option {
+  color: black;
+}
+#test-choice .select-btn {
+  height: 50px;
+  box-sizing: border-box;
+}
+@media (min-width: 675.0000000000000001px) {
+  #test-choice .select-btn {
+    width: calc(calc(100% - 30px) / 5);
+  }
+}
+@media (max-width: 675px) {
+  #test-choice .select-btn {
+    width: calc(calc(100% - 30px) / 3);
+  }
+}
+#tests {
+  position: relative;
+  padding: auto;
+}
+#timer {
+  position: fixed;
+  width: 200px;
+  height: 75px;
+  border: solid black;
+  padding: 15px;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+}
+#test-choice {
+  padding-left: auto;
+}
+#score {
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+}
+#view-scores {
+  margin: auto;
+  display: block;
+  padding: 7px;
+}
+#answers-table {
+  border-collapse: collapse;
+  padding: 15px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+#answers-table th, #answers-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+#answers-table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#show-table {
+  padding: 7px;
+  margin: auto;
+  display: block;
+}
+#contest-name {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+button {
+  background-color: white;
+  border-color: #1F487E;
+  border-radius: 0;
+  border-width: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button:hover {
+  background-color: #1F487E;
+  color: white;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.bubbles > button:hover {
+  transition-property: none !important;
+}
+
+.bubbles > button {
+  transition-property: none !important;
+  color: black;
+}
+
+.bubbles > button:disabled {
+  color: gray;
+}
+
+:focus {
+  outline: none;
+}
