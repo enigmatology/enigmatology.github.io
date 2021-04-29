@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,9 +129,11 @@ body {
 }
 #answers-table {
   border-collapse: collapse;
-  width: calc(100% - 30px);
   padding: 15px;
-  margin: auto;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 }
 #answers-table th, #answers-table td {
   border: 1px solid #dddddd;
@@ -139,6 +142,11 @@ body {
 }
 #answers-table tr:nth-child(even) {
   background-color: #dddddd;
+}
+#show-table {
+  padding: 7px;
+  margin: auto;
+  display: block;
 }
 </style>
 </head>
@@ -410,6 +418,7 @@ function displayresults(numproblems, selectedanswers, correctanswers, score) {
   answersdiv.appendChild(scorediv);
   
   let answerstable = document.createElement("table");
+  answerstable.classList.add("hidden");
   answerstable.setAttribute("id", "answers-table");
   let tablerow = document.createElement("tr");
   let tablecell1 = document.createElement("th");
@@ -445,7 +454,35 @@ function displayresults(numproblems, selectedanswers, correctanswers, score) {
 
     answerstable.appendChild(tablerow);
   }
+  
+  let showtablebtn = document.createElement("button");
+  showtablebtn.setAttribute("id", "show-table");
+  showtablebtn.onclick = function() {toggleTableVisibility()};
+  showtablebtn.innerHTML = "Show Score Report";
+  answersdiv.appendChild(showtablebtn);
+  
   answersdiv.appendChild(answerstable);
+  
+ 
+}
+
+function toggleTableVisibility() {
+  let table = document.getElementById("answers-table");
+  // had to get rid of adding shown class because display: block caused weird alignment behavior
+  if (table.classList.contains("hidden")) {
+    table.classList.remove("hidden");
+  }
+  else if (!table.classList.contains("hidden")) {
+    table.classList.add("hidden");
+  }
+  
+  let showtablebtn = document.getElementById("show-table");
+  if (showtablebtn.innerHTML === "Show Score Report") {
+    showtablebtn.innerHTML = "Hide Score Report";
+  }
+  else if (showtablebtn.innerHTML === "Hide Score Report") {
+    showtablebtn.innerHTML = "Show Score Report";
+  }
 }
 
 function getSelectedAnswers(year, test, grade, version, numproblems) {
