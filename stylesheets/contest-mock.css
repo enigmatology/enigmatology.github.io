@@ -109,14 +109,17 @@ body {
   padding: auto;
 }
 #timer {
-  position: fixed;
+  position: sticky;
+
+  top: 15px;
+  
+  background-color: white;
   width: 200px;
   height: 75px;
   border: solid black;
   padding: 15px;
-  top: 15px;
   right: 15px;
-  background-color: white;
+  float: right;
 }
 #test-choice {
   padding-left: auto;
@@ -187,4 +190,9 @@ button:hover {
 
 :focus {
   outline: none;
+}
+#contest-heading {
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center;
 }
