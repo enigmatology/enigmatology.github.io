@@ -430,7 +430,7 @@ function displayresults(numproblems, selectedanswers, correctanswers, score) {
     tablecell2 = document.createElement("td");
     tablecell3 = document.createElement("td");
     
-    tablecell1.innerHTML = i + ".";
+    tablecell1.innerHTML = (i+1) + ".";
     if (selectedanswers[i] === 0) {
       tablecell2.innerHTML = "Skipped";
     }
