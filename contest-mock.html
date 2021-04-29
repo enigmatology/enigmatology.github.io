@@ -126,6 +126,20 @@ body {
   display: block;
   padding: 20px;
 }
+#answers-table {
+  border-collapse: collapse;
+  width: calc(100% - 30px);
+  padding: 15px;
+  margin: auto;
+}
+#answers-table th, #answers-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+#answers-table tr:nth-child(even) {
+  background-color: #dddddd;
+}
 </style>
 </head>
 
@@ -145,6 +159,7 @@ body {
 </div>
 <div id="timer" class="hidden"></div>
 <div id="loading-questions" class="hidden">Loading questions... please wait.</div>
+<div id="answers"></div>
 <div id="questions"></div>
 <div id="results"><div id="score"></div></div>
 <script>
@@ -357,11 +372,11 @@ function showresults(year, test, grade, version, numproblems) {
     viewscores.setAttribute("id", "view-scores");
     viewscores.innerHTML = "View Results";
     document.getElementById("results").appendChild(viewscores);
-    viewscores.onclick = function() {displayresults(numproblems, selectedanswers, correctanswers)};
+    viewscores.onclick = function() {displayresults(numproblems, selectedanswers, correctanswers, score)};
   })()
 }
 
-function displayresults(numproblems, selectedanswers, correctanswers) {
+function displayresults(numproblems, selectedanswers, correctanswers, score) {
   let viewscores = document.getElementById("view-scores");
   let results = document.getElementById("results");
   results.classList.remove("shown");
@@ -380,14 +395,57 @@ function displayresults(numproblems, selectedanswers, correctanswers) {
         else {
           buttonelement.style.backgroundColor = "#f5958e";
         }
-      }
-      
+      }      
     }
   }
   
   let questions = document.getElementById("questions");
   questions.classList.remove("hidden");
   questions.classList.add("shown");
+  
+  let answersdiv = document.getElementById("answers");
+  let scorediv = document.createElement("div");
+  scorediv.setAttribute("id", "score");
+  scorediv.innerHTML = "Final Score: " + score;
+  answersdiv.appendChild(scorediv);
+  
+  let answerstable = document.createElement("table");
+  answerstable.setAttribute("id", "answers-table");
+  let tablerow = document.createElement("tr");
+  let tablecell1 = document.createElement("th");
+  let tablecell2 = document.createElement("th");
+  let tablecell3 = document.createElement("th");
+  
+  tablecell1.innerHTML = "Problem Number";
+  tablecell2.innerHTML = "Your Answer";
+  tablecell3.innerHTML = "Correct Answer";
+  tablerow.appendChild(tablecell1);
+  tablerow.appendChild(tablecell2);
+  tablerow.appendChild(tablecell3);
+  
+  answerstable.appendChild(tablerow);
+  for (let i = 0; i < numproblems; i++) {
+    tablerow = document.createElement("tr");
+    tablecell1 = document.createElement("td");
+    tablecell2 = document.createElement("td");
+    tablecell3 = document.createElement("td");
+    
+    tablecell1.innerHTML = i + ".";
+    if (selectedanswers[i] === 0) {
+      tablecell2.innerHTML = "Skipped";
+    }
+    else {
+      tablecell2.innerHTML = selectedanswers[i];
+    }
+    tablecell3.innerHTML = correctanswers[i];
+    
+    tablerow.appendChild(tablecell1);
+    tablerow.appendChild(tablecell2);
+    tablerow.appendChild(tablecell3);
+
+    answerstable.appendChild(tablerow);
+  }
+  answersdiv.appendChild(answerstable);
 }
 
 function getSelectedAnswers(year, test, grade, version, numproblems) {
