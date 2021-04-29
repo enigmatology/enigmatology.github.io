@@ -120,7 +120,7 @@ body {
 #score {
   padding: 15px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 #view-scores {
   margin: auto;
@@ -147,6 +147,11 @@ body {
   padding: 7px;
   margin: auto;
   display: block;
+}
+#contest-name {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
 }
 </style>
 </head>
@@ -375,16 +380,23 @@ function showresults(year, test, grade, version, numproblems) {
     let scoreelement = document.getElementById("score");
     scoreelement.classList.remove("hidden");
     scoreelement.classList.add("shown");
+    
+    let answersdiv = document.getElementById("answers");
+    let testdiv = document.createElement("div");
+    testdiv.setAttribute("id", "contest-name");
+    testdiv.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
+    answersdiv.appendChild(testdiv);
+    
     scoreelement.innerHTML = "Final Score: " + score;
     let viewscores = document.createElement("button");
     viewscores.setAttribute("id", "view-scores");
     viewscores.innerHTML = "View Results";
     document.getElementById("results").appendChild(viewscores);
-    viewscores.onclick = function() {displayresults(numproblems, selectedanswers, correctanswers, score)};
+    viewscores.onclick = function() {displayresults(numproblems, selectedanswers, correctanswers, score, year, test, grade, version)};
   })()
 }
 
-function displayresults(numproblems, selectedanswers, correctanswers, score) {
+function displayresults(numproblems, selectedanswers, correctanswers, score, year, test, grade, version) {
   let viewscores = document.getElementById("view-scores");
   let results = document.getElementById("results");
   results.classList.remove("shown");
@@ -412,6 +424,11 @@ function displayresults(numproblems, selectedanswers, correctanswers, score) {
   questions.classList.add("shown");
   
   let answersdiv = document.getElementById("answers");
+  /*let testdiv = document.createElement("div");
+  testdiv.setAttribute("id", "contest-name");
+  testdiv.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
+  answersdiv.appendChild(testdiv);*/
+  
   let scorediv = document.createElement("div");
   scorediv.setAttribute("id", "score");
   scorediv.innerHTML = "Final Score: " + score;
