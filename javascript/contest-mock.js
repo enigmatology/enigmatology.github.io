@@ -1,5 +1,8 @@
 let problems = [];
 function starttest() {
+  let pageheader = document.getElementById("page-header");
+  pageheader.classList.add("hidden");
+  
   let testelement = document.getElementById("tests");
   let chosentest = testelement.options[testelement.selectedIndex].text;
   
