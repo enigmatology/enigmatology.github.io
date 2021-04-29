@@ -196,3 +196,8 @@ button:hover {
   font-size: 30px;
   text-align: center;
 }
+
+#questions {
+  margin-top: 150px;
+  display: block;
+}
