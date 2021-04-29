@@ -151,9 +151,14 @@ function starttimer(year, test, grade, version, numproblems, totalseconds) {
     length = 180;
   }*/
   let endtime = addSeconds(starttime, totalseconds);
+  let contesthead = document.getElementById("contest-heading");
+  contesthead.innerHTML = year + " " + test + " " + grade + version + " Mock Contest";
+  let contesttext = document.createElement("div");
+  
   let timer = document.getElementById("timer");
   timer.classList.remove("hidden");
   timer.classList.add("shown");
+  
   
   let interval = setInterval(function() {
     let currenttime = new Date().getTime();
