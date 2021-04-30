@@ -219,3 +219,24 @@ button:hover {
 img {
   height: auto !important;
 }
+
+@media print {
+  #navbar {
+    display: none;
+  }
+  #timer {
+    display: none;
+  }
+  .bubbles {
+    display: none;
+  }
+  .problem-number {
+    width: 100%;
+  }
+  .problem-body {
+    width: 100%;
+  }
+  #questions {
+    margin-top: 0;
+  }
+}
