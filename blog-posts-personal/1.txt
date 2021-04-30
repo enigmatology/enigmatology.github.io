@@ -6,6 +6,8 @@ Hopefully this post works; the JavaScript was very finicky to deal with. I actua
 
 Anyways, we've gotten here now, and the super satisfying thing to see is that there is basically virtually no HTML for this page. Everything is done using GET requests to the GitHub server to retrieve posts, and then are processed client-side using JavaScript and simply appended to the end of the HTML page. If you view the source of this page, it's very plain.
 
+I'm also still debating on whether to use MathJax or KaTeX to render math but that's for another time because dynamic content with client-side math rendering is a mess.
+
 As a simple example, here are all of the HTML tags that I've currently implemented.
 
 [b]Bold Tag[/b]
