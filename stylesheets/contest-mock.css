@@ -239,4 +239,7 @@ img {
   #questions {
     margin-top: 0;
   }
+  #finish-test {
+    display: none;
+  }
 }
