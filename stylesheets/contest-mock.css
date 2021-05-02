@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-#mock-contest * {
-  font-family: 'Roboto', sans-serif;
-}
+
 
 body {
   padding: 0;
@@ -14,25 +12,30 @@ body {
 }
 #questions {
   padding: 15px;
+  font-family: roboto, sans-serif;
 }
 .bubbles {
   width: 20%;
   float: left;
+  font-family: roboto, sans-serif;
 }
 .problem-body {
   margin-bottom: 25px;
   width: 80%;
   float: right;
   display: block;
+  font-family: roboto, sans-serif;
 }
 .problem-number {
   font-size: 25px;
   width: 80%;
   float: right;
+  font-family: roboto, sans-serif;
 }
 .problem {
   overflow: auto;
   padding: 15px;
+  font-family: roboto, sans-serif;
 }
 .bubbles > button {
   float: left;
@@ -75,6 +78,7 @@ body {
   text-align: center;
   margin-top: 30px;
   font-size: 30px;
+  font-family: roboto, sans-serif;
 }
 #test-choice * {
   border-radius: 0;
@@ -120,6 +124,8 @@ body {
   padding: 15px;
   right: 15px;
   float: right;
+  font-family: roboto, sans-serif;
+  z-index: 100;
 }
 #test-choice {
   padding-left: auto;
@@ -205,6 +211,7 @@ button:hover {
   margin-top: 15px;
   text-align: center;
   font-size: 30px;
+  font-family: roboto, sans-serif;
 }
 
 #finish-test {
