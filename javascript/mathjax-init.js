@@ -30,11 +30,13 @@ function endprintjax() {
 }
 
 document.body.onbeforeprint = function() {
-  startprintjax();
   alert("starting print");
+  startprintjax();
+  
 }
 
 document.body.onafterprint = function() {
-  endprintjax();
   alert("ending print");
+  endprintjax();
+  
 }
