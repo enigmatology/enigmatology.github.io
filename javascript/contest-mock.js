@@ -114,9 +114,9 @@ function addmathjax(problemtext) {
     let imgstartloc = problemtext.lastIndexOf("src=\"//latex.artofproblemsolving.com", latexstartloc) - 5;
     let imgcut = problemtext.substring(imgstartloc);
     let imgendcutloc = imgcut.indexOf(" />");
-    let img = imgcut.substring(0, imgendcutloc + 4);
+    let img = imgcut.substring(0, imgendcutloc + 3);
 
-    problemtext = problemtext.replace(img, "\\(" + latex + "\\) ");
+    problemtext = problemtext.replace(img, "\\(" + latex + "\\)");
 
 
   }
@@ -130,9 +130,9 @@ function addmathjax(problemtext) {
     let imgstartloc = problemtext.lastIndexOf("src=\"//latex.artofproblemsolving.com", latexstartloc) - 5;
     let imgcut = problemtext.substring(imgstartloc);
     let imgendcutloc = imgcut.indexOf(" />");
-    let img = imgcut.substring(0, imgendcutloc + 4);
+    let img = imgcut.substring(0, imgendcutloc + 3);
 
-    problemtext = problemtext.replace(img, "\\[" + latex + "\\] ");
+    problemtext = problemtext.replace(img, "\\[" + latex + "\\]");
 
   }
   
