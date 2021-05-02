@@ -31,12 +31,12 @@ function endprintjax() {
 
 document.body.onbeforeprint = function() {
   alert("starting print");
-  //startprintjax();
+  startprintjax();
   
 }
 
 document.body.onafterprint = function() {
   alert("ending print");
-  //endprintjax();
+  endprintjax();
   
 }
