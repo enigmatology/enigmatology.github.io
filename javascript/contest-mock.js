@@ -57,12 +57,7 @@ function starttest() {
   
 
   addcontest(year, test, grade, version, numproblems, totalseconds);
-  let loading = document.getElementById("loading-questions");
-  
-  // REMOVE LINE 63 AFTER DONE WITH TESTING PURPOSES
-  loading.innerHTML = "lol test";
-  
-  
+  let loading = document.getElementById("loading-questions");  
   
   loading.classList.remove("hidden");
   loading.classList.add("shown");
