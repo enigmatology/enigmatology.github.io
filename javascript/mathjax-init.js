@@ -15,6 +15,7 @@ function startprintjax() {
   newjax.setAttribute("id", "pagejax-init");
   newjax.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
   document.head.appendChild(newjax);
+  MathJax.typeset();
 }
 
 function endprintjax() {
@@ -25,6 +26,7 @@ function endprintjax() {
   newjax.setAttribute("id", "pagejax-init");
   newjax.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
   document.head.appendChild(newjax);
+  MathJax.typeset();
 }
 
 document.body.onbeforeprint = function() {
