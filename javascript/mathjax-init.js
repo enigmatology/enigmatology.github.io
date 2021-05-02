@@ -29,8 +29,10 @@ function endprintjax() {
 
 body.onbeforeprint = function() {
   startprintjax();
+  alert("starting print");
 }
 
 body.onafterprint = function() {
   endprintjax();
+  alert("ending print");
 }
