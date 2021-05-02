@@ -27,12 +27,12 @@ function endprintjax() {
   document.head.appendChild(newjax);
 }
 
-body.onbeforeprint = function() {
+document.body.onbeforeprint = function() {
   startprintjax();
   alert("starting print");
 }
 
-body.onafterprint = function() {
+document.body.onafterprint = function() {
   endprintjax();
   alert("ending print");
 }
