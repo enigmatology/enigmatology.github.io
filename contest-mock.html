@@ -20,26 +20,30 @@
 
   <body>
     <div id="navbar"></div>
-    <div id="page-header">Mock Contest Online Testing Platform</div>
-    <div id="test-choice" class="shown">
-      <select name="tests" id="tests" class="select-btn" required>
-        <option value="" disabled selected hidden>Select test</option>
-        <option value="amc10a">AMC 10A</option>
-        <option value="amc10b">AMC 10B</option>
-        <option value="amc12a">AMC 12A</option>
-        <option value="amc12b">AMC 12B</option>
-      </select>
-      <input type="text" id="year" name="year" placeholder="Select year (e.g. 2021)" class="select-btn" required></input>
-      <input type="text" name="hours" id="hours" class="select-btn" placeholder="Select hours (e.g. 1)" required></input>
-      <input type="text" name="minutes" id="minutes" class="select-btn" placeholder="Select minutes (e.g. 15)" required></input>
-      <button id="start-test" onclick="starttest()" class="select-btn">Generate Test</button>
+    <div id="mock-contest">
+      <div id="page-header">Mock Contest Online Testing Platform</div>
+      <div id="test-choice" class="shown">
+        <select name="tests" id="tests" class="select-btn" required>
+          <option value="" disabled selected hidden>Select test</option>
+          <option value="amc10a">AMC 10A</option>
+          <option value="amc10b">AMC 10B</option>
+          <option value="amc12a">AMC 12A</option>
+          <option value="amc12b">AMC 12B</option>
+        </select>
+        <input type="text" id="year" name="year" placeholder="Select year (e.g. 2021)" class="select-btn" required></input>
+        <input type="text" name="hours" id="hours" class="select-btn" placeholder="Select hours (e.g. 1)" required></input>
+        <input type="text" name="minutes" id="minutes" class="select-btn" placeholder="Select minutes (e.g. 15)" required></input>
+        <button id="start-test" onclick="starttest()" class="select-btn">Generate Test</button>
+      </div>
+      <div id="contest-heading"></div>
+      <div id="timer" class="hidden"></div>
+      <div id="loading-questions" class="hidden">Loading questions... please wait.</div>
+      <div id="answers"></div>
+      <div id="questions"></div>
+      <div id="results">
+        <div id="score"></div>
+      </div>
     </div>
-    <div id="contest-heading"></div>
-    <div id="timer" class="hidden"></div>
-    <div id="loading-questions" class="hidden">Loading questions... please wait.</div>
-    <div id="answers"></div>
-    <div id="questions"></div>
-    <div id="results"><div id="score"></div></div>
 
     <script src="javascript/contest-mock.js"></script>
     <script src="file-snippets/addnavbar.js"></script>
