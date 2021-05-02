@@ -100,8 +100,44 @@ async function addproblem(page, problemnumber) {
   let problemendloc = pagehtmlcut.indexOf("<h2><span");
   let problemtext = pagehtmlcut.substring(0, problemendloc);
   
+  return addmathjax(problemtext);
+}
+
+function addmathjax(problemtext) {
+  while (problemtext.includes("class=\"latex\"") && (problemtext.substring(problemtext.indexOf("class=\"latex\"") + 19, problemtext.indexOf("class=\"latex\"") + 24) != "[asy]")) {
+    let latexstartloc = problemtext.indexOf("class=\"latex\"") + 20;
+    let latexcut = problemtext.substring(latexstartloc);
+    let latexendcutloc = latexcut.indexOf("\"");
+    let latex = latexcut.substring(0, latexendcutloc - 1);
+
+    let imgstartloc = problemtext.lastIndexOf("src=\"//latex.artofproblemsolving.com", latexstartloc) - 5;
+    let imgcut = problemtext.substring(imgstartloc);
+    let imgendcutloc = imgcut.indexOf(" />");
+    let img = imgcut.substring(0, imgendcutloc + 4);
+
+    problemtext = problemtext.replace(img, "\\(" + latex + "\\) ");
+
+
+  }
+
+  while (problemtext.includes("class=\"latexcenter\"") && (problemtext.substring(problemtext.indexOf("class=\"latexcenter\"") + 25, problemtext.indexOf("class=\"latexcenter\"") + 30) != "[asy]")) {
+    let latexstartloc = problemtext.indexOf("class=\"latexcenter\"") + 27;
+    let latexcut = problemtext.substring(latexstartloc);
+    let latexendcutloc = latexcut.indexOf("\"");
+    let latex = latexcut.substring(0, latexendcutloc - 2);
+
+    let imgstartloc = problemtext.lastIndexOf("src=\"//latex.artofproblemsolving.com", latexstartloc) - 5;
+    let imgcut = problemtext.substring(imgstartloc);
+    let imgendcutloc = imgcut.indexOf(" />");
+    let img = imgcut.substring(0, imgendcutloc + 4);
+
+    problemtext = problemtext.replace(img, "\\[" + latex + "\\] ");
+
+  }
+  
   return problemtext;
 }
+
 
 function addcontent(problems, year, test, grade, version, numproblems, totalseconds) {
   var readytoappend = true;
@@ -115,6 +151,7 @@ function addcontent(problems, year, test, grade, version, numproblems, totalseco
       $("#questions").append("<div class=\"problem\"><div class=\"bubbles\"><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"A-button-" + i + "\">A</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"B-button-" + i + "\">B</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"C-button-" + i + "\">C</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"D-button-" + i + "\">D</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"E-button-" + i + "\">E</button></div><div class=\"problem-number\">Problem " + (i+1) + "</div><div class=\"problem-body\">" + problems[i] + "</div></div>");
     }
     $("#questions").append("<button id=\"finish-test\" onclick=\"finishTest()\">Submit Test</button>");
+    MathJax.typeset();
     document.getElementById("loading-questions").classList.remove("shown");
     document.getElementById("loading-questions").classList.add("hidden");
     starttimer(year, test, grade, version, numproblems, totalseconds);
