@@ -79,6 +79,7 @@ function addcontent(posts, hides) {
   
   
   if (finished === true) {
+    MathJax.typeset();
     document.querySelectorAll('pre code').forEach((block) => {
      	hljs.highlightBlock(block);
   	});
