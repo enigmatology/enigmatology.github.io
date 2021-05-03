@@ -11,9 +11,15 @@
     
     <title>Asymptote Blog | enigmatology</title>
     
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['\\[','\\]'], ['$$','$$']]}});
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,7 +35,7 @@
   
   <body>
     <div id="navbar"></div>
-
+    $\frac{1}{2}$
     <button id="goToTop" onclick="scrollToTop()"><i class="arrow up"></i></button>
     
     <script src="blog-posts-asymptote/read-file.js"></script>
