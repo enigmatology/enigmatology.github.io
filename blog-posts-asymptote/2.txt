@@ -5,7 +5,7 @@ April 19, 2021
 [center][size=175][color=#c00]Lesson 1[/color][/size]
 [size=100][i]Introduction[/i][/size][/center]
 
-Before we can start coding, we need to first understand how Asymptote works. Asymptote draws using the [b]Cartesian Coordinate System[/b]. If you've taken a relatively simple geometry class, you'll know what this is: essentially there are two perpendicular axis with the origin in the middle, and every step you take in the right/left direction you increment the x value by 1, and every step you take in the up/down direction you increment the y direction by 1.
+Before we can start coding, we need to first understand how Asymptote works. Asymptote draws using the [b]Cartesian Coordinate System[/b]. If you've taken a relatively simple geometry class, you'll know what this is: essentially there are two perpendicular axis with the origin in the middle, and every step you take in the right/left direction you increment the x value by $1$, and every step you take in the up/down direction you increment the y direction by $1$.
 
 To draw, you'll need to know the coordinates of the basic points. As you get better at Asymptote, you'll learn more techniques such as dir and intersection and extension, but as of now, we'll stick to the points that require the knowledge of all coordinates.
 
