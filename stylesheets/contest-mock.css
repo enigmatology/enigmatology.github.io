@@ -1,85 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
-body {
-  padding: 0;
-  margin: 0;
-}
-.latexcenter {
-  margin: auto;
+/* --- OVERALL CSS --- */
+.shown {
   display: block;
-  padding: 15px;
-}
-#questions {
-  padding: 15px;
-  font-family: roboto, sans-serif !important;
-}
-.bubbles {
-  width: 20%;
-  float: left;
-  font-family: roboto, sans-serif !important;
-}
-.problem-body {
-  margin-bottom: 25px;
-  width: 80%;
-  float: right;
-  display: block;
-  font-family: roboto, sans-serif !important;
-}
-.problem-number {
-  font-size: 25px;
-  width: 80%;
-  float: right;
-  font-family: roboto, sans-serif !important;
-}
-.problem {
-  overflow: auto;
-  padding: 15px;
-  font-family: roboto, sans-serif !important;
-}
-.bubbles > button {
-  float: left;
-  border: solid black;
-  border-radius: 13px;
-  padding: 15px;
-  font-size: 15px;
-  width: 60px;
-  margin: 10px;
-}
-.deselected {
-  background-color: white;
-}
-.selected {
-  background-color: #c0d1eb;
-}
-.deselected:hover {
-  background-color: #e3e3e3;
-}
-.deselected:active {
-  background-color: #c2c2c2;
-}
-.selected:hover {
-  background-color: #a3bde3;
-}
-.selected:active {
-  background-color: #82a2d1;
-}
-.bubbles > button:focus {
-  outline: none;
 }
 .hidden {
   display: none !important;
 }
-.shown {
-  display: block;
+
+button {
+  background-color: white;
+  border-color: #1F487E;
+  border-radius: 0;
+  border-width: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
-#loading-questions {
-  width: 100%;
+button:hover {
+  background-color: #1F487E;
+  color: white;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+:focus {
+  outline: none;
+}
+
+/* --- HOME SCREEN CSS --- */
+/* heading */
+#page-header {
+  margin-top: 15px;
   text-align: center;
-  margin-top: 30px;
   font-size: 30px;
-  font-family: roboto, sans-serif !important;
+  font-family: roboto, sans-serif;
 }
+
+/* test selection */
 #test-choice * {
   border-radius: 0;
   border-width: 2px;
@@ -87,9 +41,6 @@ body {
 }
 #test-choice {
   padding: 15px;
-}
-#test-choice select:invalid{
-  color: gray !important;
 }
 #test-choice option {
   color: black;
@@ -108,45 +59,172 @@ body {
     width: calc(calc(100% - 30px) / 3);
   }
 }
-#tests {
-  position: relative;
-  padding: auto;
-}
-#timer {
-  position: sticky;
 
-  top: 15px;
-  
+/* --- LOADING SCREEN CSS --- */
+/* heading */
+#loading-text {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: roboto, sans-serif;
+}
+
+/* --- TEST SCREEN CSS --- */
+/* heading */
+#contest-heading-text {
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center;
+  font-family: roboto, sans-serif;
+}
+
+/* timer */
+#timer {
   background-color: white;
+  border: solid black;
   width: 250px;
   height: 100px;
-  border: solid black;
   padding: 15px;
+  font-family: roboto, sans-serif;
+
+  position: sticky;
+  top: 15px;
   right: 15px;
   float: right;
-  font-family: roboto, sans-serif !important;
+
   z-index: 100;
 }
-#test-choice {
-  padding-left: auto;
+
+/* questions */
+#questions {
+  margin-top: 150px;
 }
-#score {
+/* latexcenter is theoretically unnecessary because of mathjax */
+.latexcenter {
+  margin: auto;
+  display: block;
   padding: 15px;
-  text-align: center;
-  font-size: 20px;
 }
+.problem-body {
+  margin-bottom: 25px;
+  width: 80%;
+  float: right;
+  display: block;
+  font-family: roboto, sans-serif;
+}
+.problem-number {
+  font-size: 25px;
+  width: 80%;
+  float: right;
+  font-family: roboto, sans-serif;
+}
+.problem {
+  overflow: auto;
+  padding: 15px;
+}
+
+/* bubbles */
+.bubbles {
+  width: 20%;
+  float: left;
+  font-family: roboto, sans-serif;
+}
+.bubbles > button {
+  float: left;
+  border: solid black;
+  border-radius: 13px;
+  padding: 15px;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px;
+  transition-property: none !important;
+  color: black;
+}
+.bubbles > button:hover {
+  transition-property: none !important;
+}
+.bubbles > button:disabled {
+  color: gray;
+}
+
+.selected {
+  background-color: #c0d1eb;
+}
+.selected:hover {
+  background-color: #a3bde3;
+}
+.selected:active {
+  background-color: #82a2d1;
+}
+
+.deselected {
+  background-color: white;
+}
+.deselected:hover {
+  background-color: #e3e3e3;
+}
+.deselected:active {
+  background-color: #c2c2c2;
+}
+
+/* ending */
+#finish-test {
+  margin: auto;
+  padding: 10px 20px 10px 20px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* --- FINISHED SCREEN --- */
+/* finished heading */
 #view-scores {
   margin: auto;
   display: block;
   padding: 7px;
+  font-family: roboto, sans-serif;
+}
+#finished-score {
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-family: roboto, sans-serif;
+}
+#finished-heading-text {
+  font-size: 30px;
+  font-family: roboto, sans-serif;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* --- REVIEW SCREEN --- */
+/* review heading */
+#review-heading-text {
+  font-size: 30px;
+  font-family: roboto, sans-serif;
+  margin-top: 15px;
+  text-align: center;
+}
+#review-score {
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-family: roboto, sans-serif;
+}
+
+/* score report */
+#show-score-table {
+  padding: 7px;
+  margin: auto;
+  display: block;
 }
 #answers-table {
   border-collapse: collapse;
   padding: 15px;
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
+  margin: auto;
+  margin-top: 15px !important;
+  font-family: roboto, sans-serif;
 }
 #answers-table th, #answers-table td {
   border: 1px solid #dddddd;
@@ -156,98 +234,17 @@ body {
 #answers-table tr:nth-child(even) {
   background-color: #dddddd;
 }
-#show-table {
-  padding: 7px;
-  margin: auto;
-  display: block;
-}
-#contest-name {
-  text-align: center;
-  font-size: 30px;
-  margin-top: 15px;
-}
 
-button {
-  background-color: white;
-  border-color: #1F487E;
-  border-radius: 0;
-  border-width: 2px;
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-button:hover {
-  background-color: #1F487E;
-  color: white;
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.bubbles > button:hover {
-  transition-property: none !important;
-}
-
-.bubbles > button {
-  transition-property: none !important;
-  color: black;
-}
-
-.bubbles > button:disabled {
-  color: gray;
-}
-
-:focus {
-  outline: none;
-}
-#contest-heading {
-  margin-top: 15px;
-  font-size: 30px;
-  text-align: center;
-}
-
-#questions {
-  margin-top: 150px;
-}
-
-#page-header {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 30px;
-  font-family: roboto, sans-serif !important;
-}
-
-#finish-test {
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: block;
-}
-
-img {
-  height: auto !important;
-}
-
+/* --- PRINT CSS --- */
 @media print {
-  #navbar {
+  #navbar, #timer, .bubbles, #finish-test {
     display: none;
   }
-  #timer {
-    display: none;
-  }
-  .bubbles {
-    display: none;
-  }
-  .problem-number {
-    width: 100%;
-  }
-  .problem-body {
+  .problem-number, .problem-body {
     width: 100%;
   }
   #questions {
     margin-top: 0;
-  }
-  #finish-test {
-    display: none;
   }
   img {
     page-break-before: auto;
@@ -255,8 +252,9 @@ img {
     page-break-inside: avoid;
     display: inline-block;
   }
+  /* latexcenter is theoretically unnecessary because of mathjax */
   .latexcenter {
-    display: block !important;
+    display: block;
   }
   * {
     overflow: hidden;
