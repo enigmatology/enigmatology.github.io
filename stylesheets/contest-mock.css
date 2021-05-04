@@ -24,6 +24,10 @@ button:hover {
   outline: none;
 }
 
+img {
+  height: auto;
+}
+
 /* --- HOME SCREEN CSS --- */
 /* heading */
 #page-header {
