@@ -112,7 +112,7 @@ img {
   }
   #test-dropdown {
     width: calc(calc(calc(100% - 30px) / 3) - 11.61px);
-    top: -6px;
+    margin-top: -6px;
   }
 }
 
