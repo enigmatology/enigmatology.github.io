@@ -27,13 +27,13 @@
       <div id="home-screen" class="shown">
         <div id="page-header">Mock Contest Online Testing Platform</div>
         <div id="test-choice">
-          <select id="test-names" class="select-btn">
-            <option value="" disabled selected hidden>Select test</option>
-            <option>AMC 10A</option>
-            <option>AMC 10B</option>
-            <option>AMC 12A</option>
-            <option>AMC 12B</option>
-          </select>
+          <button id="test-names" class="select-btn" onclick="toggleselectshow()">Select test</button>
+          <div id="test-dropdown" class="dropdown-hidden no-border">
+            <button class="test" onclick="switchtest(this)">AMC 10A</button>
+            <button class="test" onclick="switchtest(this)">AMC 10B</button>
+            <button class="test" onclick="switchtest(this)">AMC 12A</button>
+            <button class="test" onclick="switchtest(this)">AMC 12B</button>
+          </div>
           <input type="text" id="test-year" placeholder="Select year (e.g. 2021)" class="select-btn"></input>
           <input type="text" id="test-length-hours" placeholder="Select hours (e.g. 1)" class="select-btn"></input>
           <input type="text" id="test-length-minutes" placeholder="Select minutes (e.g. 15)" class="select-btn"></input>
