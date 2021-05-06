@@ -1,3 +1,23 @@
+function switchtest(element) {
+  let button = document.getElementById("test-names");
+  button.innerHTML = element.innerHTML;
+  button.style.color = "black";
+  toggleselectshow();
+}
+    
+function toggleselectshow() {
+  let element = document.getElementById("test-dropdown");
+  if (element.classList.contains("dropdown-shown")) {
+    element.classList.remove("dropdown-shown");
+    window.setTimeout(function() {
+      element.classList.add("no-border");
+    }, 500);
+  }
+  else {
+    element.classList.remove("no-border");
+    element.classList.add("dropdown-shown");
+  }
+}
 let problems = [];
 let finishtest = false;
 
@@ -17,7 +37,7 @@ function starttest() {
   toggledisplay(homescreen);
 
   let testelement = document.getElementById("test-names");
-  let chosentest = testelement.options[testelement.selectedIndex].text;
+  let chosentest = testelement.innerHTML;
 
   let yearelement = document.getElementById("test-year");
   let chosenyear = yearelement.value;  
