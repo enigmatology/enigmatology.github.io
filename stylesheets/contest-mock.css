@@ -102,7 +102,7 @@ img {
     width: calc(calc(100% - 30px) / 5);
   }
   #test-dropdown {
-    width: calc(calc(calc(100% - 30px) / 5) - 7px);
+    width: calc(calc(calc(100% - 30px) / 5) - 6.5px);
   }
 }
 @media (max-width: 675px) {
