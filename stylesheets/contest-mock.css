@@ -41,7 +41,6 @@ img {
 #test-choice * {
   border-radius: 0;
   border-width: 2px;
-  border-color: #1F487E;
 }
 #test-choice {
   padding: 15px;
@@ -51,7 +50,18 @@ img {
 }
 #test-choice .select-btn {
   height: 50px;
-  box-sizing: border-box;
+  border-width: 2px;
+  border-radius: 0;
+  box-sizing: border-box !important;
+  border-color: #1F487E;
+  border-style: solid;
+}
+#test-names {
+  top: 0.2px;
+  height: 50.4px !important;
+}
+#test-year {
+  border-color: red;
 }
 @media (min-width: 675.0000000000000001px) {
   #test-choice .select-btn {
