@@ -1,1 +1,483 @@
-const _0x2108=['finish-test','getTime','redirectMsg','98762mlBgRX','Skipped','class','sXdAV','includes','ULqcY','zjEgE','shown','review-score','Problem\x20Number','CuyXj','38727fPDBut','dropdown-shown','<p>','Hide\x20Score\x20Report','sZFEo','450952fyoPYw','black','questions','floor','createElement','answers-table','setTimeout','RHDJd','_Problems/Problem_','gbiOV','action=parse&page=','AMC','indexOf','</div><div\x20class=\x22problem-body\x22>','AMC\x2012A','backgroundColor','<a\x20href=\x22/wiki/index.php/','<div\x20class=\x22problem\x22><div\x20class=\x22bubbles\x22><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22A-button-','\x20Mock\x20Contest','https://artofproblemsolving.com/wiki/api.php','oApQk','RPdCO','CONTEST\x20OVER','finished-heading-text','onclick','<li>','627619TteEQF','zASAl','&format=json','\x20Mock\x20Results','[asy]','<button\x20id=\x22finish-test\x22\x20onclick=\x22finishTest()\x22>Submit\x20Test</button>','disabled','qmrVJ','_Answer_Key','1JqsUOO','497AKoQla','table','VNumY','llfna','src=\x22//latex.artofproblemsolving.com','</div></div>','innerHTML','add','RetSw','style','\x22>E</button></div><div\x20class=\x22problem-number\x22>Problem\x20','parse','AMC\x2012B','finished-screen','timer','typeset','nzoaR','classList','test-length-minutes','length','getElementById','qPqCH','933989SpihIn','268936vDWTLF','review-answers-report','&origin=*','Correct\x20Answer','deselected','DvpDZ','contest-heading-text','lastIndexOf','test-dropdown','#f5958e','ZyCpr','Your\x20Answer','loading-screen','color','\x20/>','json','replace','class=\x22latex\x22','\x22>B</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22C-button-','-button-','KQEeH','setAttribute','704SUagvr','BTaCK','test-names','tSJfs','qgKAv','\x22>D</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22E-button-','teREE','value','contains','remove','review-heading-text','HUMWm','selected','hidden','test-screen','test-length-hours','text','10nickEo','appendChild','show-score-table','Show\x20Score\x20Report','FHpbO','push','\x22>C</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22D-button-','class=\x22latexcenter\x22','home-screen','wkKfO','\x22>A</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22B-button-','zgdEs','jcHUA','Remat','finished-score','UwZNj','substring','UXtWI','9XyMocb','review-screen','no-border'];(function(_0x539507,_0x4797eb){const _0x42349d=_0x1a39;while(!![]){try{const _0x239dfe=-parseInt(_0x42349d(0x1d9))*-parseInt(_0x42349d(0x1fc))+parseInt(_0x42349d(0x1f1))*-parseInt(_0x42349d(0x1eb))+-parseInt(_0x42349d(0x1c8))*parseInt(_0x42349d(0x225))+parseInt(_0x42349d(0x1b2))*parseInt(_0x42349d(0x224))+parseInt(_0x42349d(0x1b1))+parseInt(_0x42349d(0x21b))+-parseInt(_0x42349d(0x201));if(_0x239dfe===_0x4797eb)break;else _0x539507['push'](_0x539507['shift']());}catch(_0x44c449){_0x539507['push'](_0x539507['shift']());}}}(_0x2108,0x80ef4));function switchtest(_0x552e2f){const _0x1fd366=_0x1a39;let _0x3ae193=document[_0x1fd366(0x1af)](_0x1fd366(0x1ca));_0x3ae193['innerHTML']=_0x552e2f['innerHTML'],_0x3ae193[_0x1fd366(0x1a4)][_0x1fd366(0x1bf)]=_0x1fd366(0x202),toggleselectshow();}function _0x1a39(_0x44fa7e,_0x33c560){_0x44fa7e=_0x44fa7e-0x1a4;let _0x210839=_0x2108[_0x44fa7e];return _0x210839;}function toggleselectshow(){const _0xd7b29a=_0x1a39;let _0x1c35fb=document[_0xd7b29a(0x1af)](_0xd7b29a(0x1ba));if(_0x1c35fb[_0xd7b29a(0x1ac)][_0xd7b29a(0x1d0)](_0xd7b29a(0x1fd))){if(_0xd7b29a(0x222)!=='KzuNg')_0x1c35fb['classList'][_0xd7b29a(0x1d1)](_0xd7b29a(0x1fd)),window[_0xd7b29a(0x207)](function(){const _0x345d44=_0xd7b29a;_0x1c35fb[_0x345d44(0x1ac)][_0x345d44(0x22c)](_0x345d44(0x1ed));},0x1f4);else{function _0x275beb(){const _0x586f2f=_0xd7b29a;let _0x175188=_0x4d6ad1['getElementById']('test-names');_0x175188[_0x586f2f(0x22b)]=_0x2ce44c[_0x586f2f(0x22b)],_0x175188['style'][_0x586f2f(0x1bf)]=_0x586f2f(0x202),_0x2bfd4f();}}}else{if('xMjHg'!==_0xd7b29a(0x1b0))_0x1c35fb['classList'][_0xd7b29a(0x1d1)]('no-border'),_0x1c35fb['classList'][_0xd7b29a(0x22c)](_0xd7b29a(0x1fd));else{function _0x2ff077(){const _0x3037f3=_0xd7b29a;while(_0x1a4927['includes']('class=\x22latex\x22')&&_0x4b811a[_0x3037f3(0x1e9)](_0x4d2be0[_0x3037f3(0x20d)](_0x3037f3(0x1c3))+0x13,_0x42dc98[_0x3037f3(0x20d)](_0x3037f3(0x1c3))+0x18)!=_0x3037f3(0x21f)){let _0x269695=_0x1b40a6[_0x3037f3(0x20d)](_0x3037f3(0x1c3))+0x14,_0x5118c6=_0x2c5324[_0x3037f3(0x1e9)](_0x269695),_0x3d09b3=_0x5118c6[_0x3037f3(0x20d)]('\x22'),_0x4fedb3=_0x5118c6[_0x3037f3(0x1e9)](0x0,_0x3d09b3-0x1),_0x4e0b1a=_0x49b877[_0x3037f3(0x1b9)](_0x3037f3(0x229),_0x269695)-0x5,_0x29f75e=_0x2a9a5f['substring'](_0x4e0b1a),_0x2176cb=_0x29f75e[_0x3037f3(0x20d)](_0x3037f3(0x1c0)),_0x377fb1=_0x29f75e[_0x3037f3(0x1e9)](0x0,_0x2176cb+0x3);_0x38b98b=_0x1348f0['replace'](_0x377fb1,'\x5c('+_0x4fedb3+'\x5c)');}while(_0x5c19e7[_0x3037f3(0x1f5)](_0x3037f3(0x1e0))&&_0x350cab['substring'](_0x2ed127['indexOf'](_0x3037f3(0x1e0))+0x19,_0x1b02c3['indexOf'](_0x3037f3(0x1e0))+0x1e)!=_0x3037f3(0x21f)){let _0x9456b2=_0x3c4750[_0x3037f3(0x20d)](_0x3037f3(0x1e0))+0x1b,_0x3b0b76=_0x58baa2['substring'](_0x9456b2),_0x3c3347=_0x3b0b76['indexOf']('\x22'),_0x7dee60=_0x3b0b76['substring'](0x0,_0x3c3347-0x2),_0x4e0561=_0xb2d725['lastIndexOf'](_0x3037f3(0x229),_0x9456b2)-0x5,_0xa2be4b=_0xb63e68[_0x3037f3(0x1e9)](_0x4e0561),_0x212b0e=_0xa2be4b['indexOf']('\x20/>'),_0x38fb50=_0xa2be4b[_0x3037f3(0x1e9)](0x0,_0x212b0e+0x3);_0x523f45=_0x348fb6['replace'](_0x38fb50,'\x5c['+_0x7dee60+'\x5c]');}return _0x4807ff;}}}}let problems=[],finishtest=![];function toggledisplay(_0x41483d){const _0x5858dd=_0x1a39;if(_0x41483d[_0x5858dd(0x1ac)][_0x5858dd(0x1d0)](_0x5858dd(0x1d5))){if(_0x5858dd(0x1e4)===_0x5858dd(0x1f6)){function _0x5283ee(){if(_0x1cec2f[_0x1110f3]===0x0)_0x4e7242++;else{if(_0x162ee6[_0x2a2604]===_0x252fbb[_0x2e1ece])_0x123946++;else _0x85279c[_0x799791]!=_0x503257[_0x1640b7]&&_0x59ad25++;}}}else _0x41483d[_0x5858dd(0x1ac)]['remove'](_0x5858dd(0x1d5)),_0x41483d['classList']['add'](_0x5858dd(0x1f8));}else{if('UASkn'!==_0x5858dd(0x1ea))_0x41483d['classList'][_0x5858dd(0x1d1)](_0x5858dd(0x1f8)),_0x41483d[_0x5858dd(0x1ac)][_0x5858dd(0x22c)](_0x5858dd(0x1d5));else{function _0x278122(){const _0xf78898=_0x5858dd;_0x26965c[_0xf78898(0x1ac)][_0xf78898(0x1d1)](_0xf78898(0x1fd)),_0x5d76d6[_0xf78898(0x207)](function(){const _0x2895bc=_0xf78898;_0x148cd7[_0x2895bc(0x1ac)][_0x2895bc(0x22c)]('no-border');},0x1f4);}}}}function starttest(){const _0x54d7ff=_0x1a39;let _0x488ab0=document[_0x54d7ff(0x1af)](_0x54d7ff(0x1e1));toggledisplay(_0x488ab0);let _0x85226=document[_0x54d7ff(0x1af)](_0x54d7ff(0x1ca)),_0xd1b69d=_0x85226[_0x54d7ff(0x22b)],_0x258826=document[_0x54d7ff(0x1af)]('test-year'),_0x106d8c=_0x258826[_0x54d7ff(0x1cf)],_0x3e6ddf=_0x106d8c,_0x5c8429=document[_0x54d7ff(0x1af)](_0x54d7ff(0x1d7)),_0x3c4517=document[_0x54d7ff(0x1af)](_0x54d7ff(0x1ad)),_0xb0a9d=_0x5c8429[_0x54d7ff(0x1cf)],_0x5e89cd=_0x3c4517[_0x54d7ff(0x1cf)],_0x36a65b=0xe10*_0xb0a9d+0x3c*_0x5e89cd,_0x39e3a1,_0x49e18d,_0x3f2012;if(_0xd1b69d==='AMC\x2010A')_0x39e3a1=_0x54d7ff(0x20c),_0x49e18d=0xa,_0x3f2012='A';else{if(_0xd1b69d==='AMC\x2010B'){if(_0x54d7ff(0x1d3)===_0x54d7ff(0x1d3))_0x39e3a1=_0x54d7ff(0x20c),_0x49e18d=0xa,_0x3f2012='B';else{function _0xae6446(){const _0x39e23a=_0x54d7ff;_0x3d2a3b['classList'][_0x39e23a(0x22c)](_0x39e23a(0x1d5));}}}else{if(_0xd1b69d===_0x54d7ff(0x20f)){if('XxQMn'!==_0x54d7ff(0x20a))_0x39e3a1='AMC',_0x49e18d=0xc,_0x3f2012='A';else{function _0x33388a(){_0x37cd88['innerHTML']=_0x4d6806[_0x4df303];}}}else{if(_0xd1b69d===_0x54d7ff(0x1a7)){if(_0x54d7ff(0x1e6)!=='Remat'){function _0x17de04(){_0x3d90e4++;}}else _0x39e3a1=_0x54d7ff(0x20c),_0x49e18d=0xc,_0x3f2012='B';}else _0x39e3a1=_0x54d7ff(0x20c),_0x49e18d=0xa,_0x3f2012='A';}}}let _0x28e935=0x0;if(_0x39e3a1===_0x54d7ff(0x20c))_0x28e935=0x19;else _0x39e3a1==='AIME'&&(_0x28e935=0xf);for(let _0x2e428c=0x0;_0x2e428c<_0x28e935;_0x2e428c++){problems[_0x54d7ff(0x1de)](0x0);}let _0x5b453c=document[_0x54d7ff(0x1af)](_0x54d7ff(0x1be));toggledisplay(_0x5b453c),getcontest(_0x3e6ddf,_0x39e3a1,_0x49e18d,_0x3f2012,_0x28e935,_0x36a65b);}function getcontest(_0x4f2c9c,_0x3399c9,_0x50414f,_0x4f94f4,_0x512f77,_0x13b3d){const _0x38be7e=_0x1a39;for(let _0x242167=0x1;_0x242167<=_0x512f77;_0x242167++){if(_0x38be7e(0x1fb)!==_0x38be7e(0x1fb)){function _0x435758(){const _0x14437e=_0x38be7e;_0x1b71e9['innerHTML']+=_0x14437e(0x212)+_0x169558+_0x14437e(0x1e3)+_0x4da4e9+'\x22>B</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22C-button-'+_0x34311f+_0x14437e(0x1df)+_0x27a942+_0x14437e(0x1cd)+_0x1da93b+_0x14437e(0x1a5)+(_0x8a9bf8+0x1)+'</div><div\x20class=\x22problem-body\x22>'+_0x3770df[_0x453482]+_0x14437e(0x22a);}}else(async()=>{const _0x2deea5=_0x38be7e;if(_0x2deea5(0x227)===_0x2deea5(0x1e8)){function _0x59ffdf(){const _0x5ca5b3=_0x2deea5;_0x6e280c=_0x5ca5b3(0x20c),_0x241417=0xa,_0x5830b1='B';}}else{let _0x7bb610=_0x4f2c9c+'_'+_0x3399c9+'_'+_0x50414f+_0x4f94f4+'_Problems/Problem_'+_0x242167;problems[_0x242167-0x1]=await getproblem(_0x4f2c9c+'_'+_0x3399c9+'_'+_0x50414f+_0x4f94f4+_0x2deea5(0x209)+_0x242167,_0x242167),addcontent(problems,_0x4f2c9c,_0x3399c9,_0x50414f,_0x4f94f4,_0x512f77,_0x13b3d);}})();}}async function getproblem(_0x384b68,_0x2f35ac){const _0x5286c9=_0x1a39;let _0x528e9e=_0x5286c9(0x214),_0xb660ab=_0x5286c9(0x20b)+_0x384b68+_0x5286c9(0x21d),_0x2f5ba6=await fetch(_0x528e9e+'?'+_0xb660ab+_0x5286c9(0x1b4)),_0x521368=await _0x2f5ba6[_0x5286c9(0x1c1)](),_0x25fa58=_0x521368[_0x5286c9(0x1a6)][_0x5286c9(0x1d8)]['*'];if(_0x25fa58[_0x5286c9(0x1f5)](_0x5286c9(0x1f0))){let _0x47e5f8=_0x25fa58[_0x5286c9(0x20d)](_0x5286c9(0x211))+0x19,_0x20dc7d=_0x25fa58['substring'](_0x47e5f8),_0x2367ea=_0x20dc7d[_0x5286c9(0x20d)]('\x22'),_0xd78df0=_0x20dc7d[_0x5286c9(0x1e9)](0x0,_0x2367ea);_0xb660ab=_0x5286c9(0x20b)+_0xd78df0+_0x5286c9(0x21d),_0x2f5ba6=await fetch(_0x528e9e+'?'+_0xb660ab+_0x5286c9(0x1b4)),_0x521368=await _0x2f5ba6[_0x5286c9(0x1c1)](),_0x25fa58=_0x521368[_0x5286c9(0x1a6)][_0x5286c9(0x1d8)]['*'];}let _0x23615c=_0x25fa58[_0x5286c9(0x20d)]('id=\x22Problem\x22>'),_0x49bbcb=_0x25fa58[_0x5286c9(0x20d)](_0x5286c9(0x1fe),_0x23615c),_0x420461=_0x25fa58[_0x5286c9(0x1e9)](_0x49bbcb),_0x5bbfa6=_0x420461[_0x5286c9(0x20d)]('<h2><span'),_0x3775f1=_0x420461[_0x5286c9(0x1e9)](0x0,_0x5bbfa6);return convertmathjax(_0x3775f1);}function convertmathjax(_0x53752c){const _0x11f3a1=_0x1a39;while(_0x53752c[_0x11f3a1(0x1f5)](_0x11f3a1(0x1c3))&&_0x53752c[_0x11f3a1(0x1e9)](_0x53752c[_0x11f3a1(0x20d)](_0x11f3a1(0x1c3))+0x13,_0x53752c[_0x11f3a1(0x20d)](_0x11f3a1(0x1c3))+0x18)!=_0x11f3a1(0x21f)){if('XbGAV'!==_0x11f3a1(0x1dd)){let _0x2ccfc7=_0x53752c[_0x11f3a1(0x20d)](_0x11f3a1(0x1c3))+0x14,_0x5053bd=_0x53752c[_0x11f3a1(0x1e9)](_0x2ccfc7),_0x1e2425=_0x5053bd[_0x11f3a1(0x20d)]('\x22'),_0x53dc0f=_0x5053bd[_0x11f3a1(0x1e9)](0x0,_0x1e2425-0x1),_0x56109f=_0x53752c[_0x11f3a1(0x1b9)](_0x11f3a1(0x229),_0x2ccfc7)-0x5,_0x31e150=_0x53752c[_0x11f3a1(0x1e9)](_0x56109f),_0x2f9216=_0x31e150[_0x11f3a1(0x20d)](_0x11f3a1(0x1c0)),_0x552a74=_0x31e150[_0x11f3a1(0x1e9)](0x0,_0x2f9216+0x3);_0x53752c=_0x53752c[_0x11f3a1(0x1c2)](_0x552a74,'\x5c('+_0x53dc0f+'\x5c)');}else{function _0x12b373(){const _0x451699=_0x11f3a1;_0x4cb135[_0x451699(0x1a4)][_0x451699(0x210)]=_0x451699(0x1bb);}}}while(_0x53752c[_0x11f3a1(0x1f5)](_0x11f3a1(0x1e0))&&_0x53752c['substring'](_0x53752c[_0x11f3a1(0x20d)]('class=\x22latexcenter\x22')+0x19,_0x53752c[_0x11f3a1(0x20d)](_0x11f3a1(0x1e0))+0x1e)!=_0x11f3a1(0x21f)){let _0x55188d=_0x53752c[_0x11f3a1(0x20d)]('class=\x22latexcenter\x22')+0x1b,_0x29bacd=_0x53752c['substring'](_0x55188d),_0x28fcf4=_0x29bacd[_0x11f3a1(0x20d)]('\x22'),_0x59b88e=_0x29bacd['substring'](0x0,_0x28fcf4-0x2),_0x808da9=_0x53752c['lastIndexOf'](_0x11f3a1(0x229),_0x55188d)-0x5,_0x238c7a=_0x53752c[_0x11f3a1(0x1e9)](_0x808da9),_0x1637c4=_0x238c7a['indexOf'](_0x11f3a1(0x1c0)),_0x322d85=_0x238c7a[_0x11f3a1(0x1e9)](0x0,_0x1637c4+0x3);_0x53752c=_0x53752c[_0x11f3a1(0x1c2)](_0x322d85,'\x5c['+_0x59b88e+'\x5c]');}return _0x53752c;}function addcontent(_0x2985bd,_0xbfcc01,_0x1e1af1,_0x30a7e8,_0x2cb1d2,_0x4b5267,_0x46c32b){const _0x124f5c=_0x1a39;let _0x3e24c4=!![];for(let _0xa6aa4e=0x0;_0xa6aa4e<_0x2985bd['length'];_0xa6aa4e++){if(_0x2985bd[_0xa6aa4e]===0x0){if('OTNfZ'!=='OTNfZ'){function _0x5eeebe(){_0x13c9ea='0'+_0x4809b8;}}else _0x3e24c4=![];}}if(_0x3e24c4){let _0x55b769=document[_0x124f5c(0x1af)](_0x124f5c(0x203));for(let _0x19ed92=0x0;_0x19ed92<_0x2985bd['length'];_0x19ed92++){if(_0x124f5c(0x1ce)===_0x124f5c(0x1c6)){function _0x133310(){const _0x6361c7=_0x124f5c;let _0x410072=_0x2bb345[_0x604840],_0x649382=_0xed6201[_0x6361c7(0x1af)](_0x410072+_0x3f43a5);if(_0x649382['classList'][_0x6361c7(0x1d0)](_0x6361c7(0x1d4))&&_0x6b6bc4===_0x410072+_0x1ad0dd)_0x649382[_0x6361c7(0x1ac)][_0x6361c7(0x1d1)]('selected'),_0x649382[_0x6361c7(0x1ac)][_0x6361c7(0x22c)](_0x6361c7(0x1b6)),_0x2f5680=![];else _0x649382['classList'][_0x6361c7(0x1d0)](_0x6361c7(0x1d4))&&(_0x649382[_0x6361c7(0x1ac)]['remove'](_0x6361c7(0x1d4)),_0x649382[_0x6361c7(0x1ac)][_0x6361c7(0x22c)]('deselected'));}}else _0x1e1af1===_0x124f5c(0x20c)&&(_0x55b769[_0x124f5c(0x22b)]+=_0x124f5c(0x212)+_0x19ed92+_0x124f5c(0x1e3)+_0x19ed92+_0x124f5c(0x1c4)+_0x19ed92+_0x124f5c(0x1df)+_0x19ed92+_0x124f5c(0x1cd)+_0x19ed92+'\x22>E</button></div><div\x20class=\x22problem-number\x22>Problem\x20'+(_0x19ed92+0x1)+'</div><div\x20class=\x22problem-body\x22>'+_0x2985bd[_0x19ed92]+_0x124f5c(0x22a));}_0x55b769[_0x124f5c(0x22b)]+='<button\x20id=\x22finish-test\x22\x20onclick=\x22finishTest()\x22>Submit\x20Test</button>',MathJax[_0x124f5c(0x1aa)]();let _0x96dc70=document[_0x124f5c(0x1af)](_0x124f5c(0x1be));toggledisplay(_0x96dc70),starttimer(_0xbfcc01,_0x1e1af1,_0x30a7e8,_0x2cb1d2,_0x4b5267,_0x46c32b);}}function finishTest(){finishtest=!![];}function togglecolor(_0x1d3d79){const _0x1bc16c=_0x1a39;let _0x4c471c=_0x1d3d79['substring'](0x1),_0x40f762=['A','B','C','D','E'],_0x5ec2ea=!![];for(let _0x51364d=0x0;_0x51364d<_0x40f762[_0x1bc16c(0x1ae)];_0x51364d++){let _0x1eb3c5=_0x40f762[_0x51364d],_0x45a140=document[_0x1bc16c(0x1af)](_0x1eb3c5+_0x4c471c);if(_0x45a140[_0x1bc16c(0x1ac)][_0x1bc16c(0x1d0)](_0x1bc16c(0x1d4))&&_0x1d3d79===_0x1eb3c5+_0x4c471c)_0x45a140[_0x1bc16c(0x1ac)][_0x1bc16c(0x1d1)](_0x1bc16c(0x1d4)),_0x45a140[_0x1bc16c(0x1ac)][_0x1bc16c(0x22c)](_0x1bc16c(0x1b6)),_0x5ec2ea=![];else _0x45a140[_0x1bc16c(0x1ac)][_0x1bc16c(0x1d0)](_0x1bc16c(0x1d4))&&(_0x45a140[_0x1bc16c(0x1ac)]['remove'](_0x1bc16c(0x1d4)),_0x45a140[_0x1bc16c(0x1ac)]['add'](_0x1bc16c(0x1b6)));}if(_0x5ec2ea){if(_0x1bc16c(0x1e2)==='pObcV'){function _0xf62d83(){const _0x3bd90b=_0x1bc16c;_0x1abc4c[_0x3bd90b(0x1de)](0x0);}}else{let _0x167665=document[_0x1bc16c(0x1af)](_0x1d3d79);if(_0x167665['classList']['contains']('deselected')){if(_0x1bc16c(0x1b7)!=='McJtH')_0x167665[_0x1bc16c(0x1ac)][_0x1bc16c(0x1d1)](_0x1bc16c(0x1b6)),_0x167665['classList'][_0x1bc16c(0x22c)](_0x1bc16c(0x1d4));else{function _0x53cf90(){const _0xbbf394=_0x1bc16c;_0x13925f=_0xbbf394(0x20c),_0x3fb137=0xa,_0x126064='A';}}}}}}function starttimer(_0x3a243d,_0x456885,_0x263bfc,_0xb78f43,_0x3b1faf,_0x4bbcae){const _0x4a0a20=_0x1a39;let _0x4b063f=new Date()['getTime'](),_0x30d52d=addseconds(_0x4b063f,_0x4bbcae),_0x5dae8e=document[_0x4a0a20(0x1af)](_0x4a0a20(0x1b8));_0x5dae8e['innerHTML']=_0x3a243d+'\x20'+_0x456885+'\x20'+_0x263bfc+_0xb78f43+_0x4a0a20(0x213);let _0x16069c=document[_0x4a0a20(0x1af)]('timer'),_0x370a5c=document[_0x4a0a20(0x1af)](_0x4a0a20(0x1d6));toggledisplay(_0x370a5c);let _0x665799=setInterval(function(){const _0x25c85f=_0x4a0a20;let _0x1e289b=new Date()[_0x25c85f(0x1ef)](),_0x416323=_0x30d52d-_0x1e289b,_0x5a374d=Math[_0x25c85f(0x204)](_0x416323%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c)),_0x54308c=Math[_0x25c85f(0x204)](_0x416323%(0x3e8*0x3c*0x3c)/(0x3e8*0x3c)),_0x28e917=Math[_0x25c85f(0x204)](_0x416323%(0x3e8*0x3c)/0x3e8);if(_0x28e917<0xa){if(_0x25c85f(0x215)!==_0x25c85f(0x215)){function _0x2e852b(){const _0x56daa0=_0x25c85f;let _0x317c54=_0x14ff65[_0x56daa0(0x1af)](_0x56daa0(0x203));for(let _0x21b418=0x0;_0x21b418<_0x17534c[_0x56daa0(0x1ae)];_0x21b418++){_0x47fc47==='AMC'&&(_0x317c54['innerHTML']+=_0x56daa0(0x212)+_0x21b418+_0x56daa0(0x1e3)+_0x21b418+_0x56daa0(0x1c4)+_0x21b418+'\x22>C</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22D-button-'+_0x21b418+_0x56daa0(0x1cd)+_0x21b418+_0x56daa0(0x1a5)+(_0x21b418+0x1)+_0x56daa0(0x20e)+_0x2b71af[_0x21b418]+'</div></div>');}_0x317c54[_0x56daa0(0x22b)]+=_0x56daa0(0x220),_0x41f526[_0x56daa0(0x1aa)]();let _0x4cf2b6=_0x1f4e83['getElementById']('loading-screen');_0x5e9ffe(_0x4cf2b6),_0x460c0a(_0xd26475,_0x5a96ac,_0x4f32a1,_0x3b9506,_0x57f34d,_0x3a0116);}}else _0x28e917='0'+_0x28e917;}if(_0x54308c<0xa){if('OKAoA'==='eDCrv'){function _0x4f303c(){const _0x5cb483=_0x25c85f;_0x4479ec[_0x5cb483(0x1ac)]['remove']('selected'),_0x438f18[_0x5cb483(0x1ac)]['add'](_0x5cb483(0x1b6)),_0x1501d6=![];}}else _0x54308c='0'+_0x54308c;}_0x5a374d<0xa&&(_0x5a374d='0'+_0x5a374d),_0x16069c[_0x25c85f(0x22b)]='Time\x20Remaining:\x20'+_0x5a374d+':'+_0x54308c+':'+_0x28e917,(_0x416323<=0x0||finishtest===!![])&&(finishtest=!![],clearInterval(_0x665799),toggledisplay(_0x370a5c),_0x16069c[_0x25c85f(0x22b)]=_0x25c85f(0x217),showresults(_0x3a243d,_0x456885,_0x263bfc,_0xb78f43,_0x3b1faf));},0x3e8);}function addseconds(_0x578be1,_0x48c801){return new Date(_0x578be1+_0x48c801*0x3e8);}function showresults(_0x668e93,_0x439c46,_0x36dbac,_0x47abef,_0x263d7b){(async()=>{const _0x29c381=_0x1a39;let _0x1bef0a=await getcorrectanswers(_0x668e93,_0x439c46,_0x36dbac,_0x47abef,_0x263d7b),_0x3c681b=getselectedanswers(_0x668e93,_0x439c46,_0x36dbac,_0x47abef,_0x263d7b),_0x444691=checkanswers(_0x3c681b,_0x1bef0a),_0x3e59a1=document[_0x29c381(0x1af)](_0x29c381(0x218));_0x3e59a1[_0x29c381(0x22b)]=_0x668e93+'\x20'+_0x439c46+'\x20'+_0x36dbac+_0x47abef+_0x29c381(0x21e);let _0x7225dc=document['getElementById'](_0x29c381(0x1e7));_0x7225dc['innerHTML']='Final\x20Score:\x20'+_0x444691;let _0xdcbc0e=document[_0x29c381(0x1af)](_0x29c381(0x1a8));toggledisplay(_0xdcbc0e);let _0x3b4dd1=document[_0x29c381(0x1af)]('view-scores');_0x3b4dd1[_0x29c381(0x219)]=function(){showreview(_0x263d7b,_0x3c681b,_0x1bef0a,_0x444691,_0x668e93,_0x439c46,_0x36dbac,_0x47abef);};})();}function showreview(_0x24b94a,_0x9a4489,_0x2dd164,_0x4deda7,_0x826538,_0x4bed3f,_0x56ed4c,_0x2acd1b){const _0x380b91=_0x1a39;let _0x291ed7=document[_0x380b91(0x1af)](_0x380b91(0x1a8));toggledisplay(_0x291ed7);if(_0x4bed3f===_0x380b91(0x20c)){let _0x164863=['A','B','C','D','E'];for(let _0xdbedbc=0x0;_0xdbedbc<_0x24b94a;_0xdbedbc++){if(_0x380b91(0x1cc)!==_0x380b91(0x1cc)){function _0x3dfaf9(){const _0x4b9eac=_0x380b91;_0xbeb75['classList'][_0x4b9eac(0x1d1)]('shown'),_0x4ef85c['classList'][_0x4b9eac(0x22c)](_0x4b9eac(0x1d5));}}else for(let _0x4eac76=0x0;_0x4eac76<_0x164863[_0x380b91(0x1ae)];_0x4eac76++){if(_0x380b91(0x200)!==_0x380b91(0x200)){function _0xdd7830(){_0x5354ab=![];}}else{let _0x3910c1=_0x164863[_0x4eac76]+'-button-'+_0xdbedbc,_0x4e64c4=document[_0x380b91(0x1af)](_0x3910c1);_0x4e64c4[_0x380b91(0x221)]=!![];if(_0x9a4489[_0xdbedbc]!=0x0&&_0x4e64c4['classList'][_0x380b91(0x1d0)](_0x380b91(0x1d4))){if(_0x380b91(0x22d)!=='RetSw'){function _0x2ae78c(){const _0x251867=_0x380b91;_0x33050f[_0x251867(0x1ac)][_0x251867(0x1d1)](_0x251867(0x1d5));}}else _0x9a4489[_0xdbedbc]===_0x2dd164[_0xdbedbc]?_0x4e64c4[_0x380b91(0x1a4)][_0x380b91(0x210)]='#b1e6bc':_0x4e64c4[_0x380b91(0x1a4)]['backgroundColor']='#f5958e';}}}}}let _0xd4891b=document[_0x380b91(0x1af)](_0x380b91(0x1d2));_0xd4891b[_0x380b91(0x22b)]=_0x826538+'\x20'+_0x4bed3f+'\x20'+_0x56ed4c+_0x2acd1b+'\x20Mock\x20Results';let _0x3d98d7=document[_0x380b91(0x1af)](_0x380b91(0x1b8));toggledisplay(_0x3d98d7);let _0x3dbfc2=document[_0x380b91(0x1af)](_0x380b91(0x1a9));toggledisplay(_0x3dbfc2);let _0x5c9b0f=document['getElementById'](_0x380b91(0x1f9));_0x5c9b0f[_0x380b91(0x22b)]='Final\x20Score:\x20'+_0x4deda7;let _0x3b9acf=document['getElementById'](_0x380b91(0x1d6));toggledisplay(_0x3b9acf);let _0x12081d=document[_0x380b91(0x1af)](_0x380b91(0x1ec));toggledisplay(_0x12081d);let _0x46b725=document[_0x380b91(0x1af)](_0x380b91(0x1ee));toggledisplay(_0x46b725);let _0x57f7fd=document[_0x380b91(0x205)](_0x380b91(0x226));_0x57f7fd[_0x380b91(0x1c7)]('id',_0x380b91(0x206)),_0x57f7fd[_0x380b91(0x1c7)](_0x380b91(0x1f3),_0x380b91(0x1d5));let _0x21314f=document[_0x380b91(0x205)]('tr'),_0x2f5c07=document[_0x380b91(0x205)]('th'),_0x1676b1=document['createElement']('th'),_0x4cbf3f=document[_0x380b91(0x205)]('th');_0x2f5c07[_0x380b91(0x22b)]=_0x380b91(0x1fa),_0x1676b1[_0x380b91(0x22b)]=_0x380b91(0x1bd),_0x4cbf3f[_0x380b91(0x22b)]=_0x380b91(0x1b5),_0x21314f['appendChild'](_0x2f5c07),_0x21314f[_0x380b91(0x1da)](_0x1676b1),_0x21314f['appendChild'](_0x4cbf3f),_0x57f7fd[_0x380b91(0x1da)](_0x21314f);for(let _0x48b0c1=0x0;_0x48b0c1<_0x24b94a;_0x48b0c1++){_0x21314f=document[_0x380b91(0x205)]('tr'),_0x2f5c07=document[_0x380b91(0x205)]('td'),_0x1676b1=document[_0x380b91(0x205)]('td'),_0x4cbf3f=document[_0x380b91(0x205)]('td'),_0x2f5c07[_0x380b91(0x22b)]=_0x48b0c1+0x1+'.';if(_0x9a4489[_0x48b0c1]===0x0){if(_0x380b91(0x1ab)!==_0x380b91(0x1f4))_0x1676b1['innerHTML']=_0x380b91(0x1f2);else{function _0x53c40b(){const _0x5ed467=_0x380b91;_0x5167d3[_0x5ed467(0x1de)](0x0);}}}else{if(_0x380b91(0x216)===_0x380b91(0x216))_0x1676b1[_0x380b91(0x22b)]=_0x9a4489[_0x48b0c1];else{function _0x57e807(){_0x587e07++;}}}_0x4cbf3f[_0x380b91(0x22b)]=_0x2dd164[_0x48b0c1],_0x21314f['appendChild'](_0x2f5c07),_0x21314f['appendChild'](_0x1676b1),_0x21314f[_0x380b91(0x1da)](_0x4cbf3f),_0x57f7fd[_0x380b91(0x1da)](_0x21314f);}let _0x4207f1=document['getElementById'](_0x380b91(0x1b3));_0x4207f1[_0x380b91(0x1da)](_0x57f7fd);}function toggletablevisibility(){const _0xabb06e=_0x1a39;let _0x5016d8=document[_0xabb06e(0x1af)](_0xabb06e(0x206));if(_0x5016d8[_0xabb06e(0x1ac)][_0xabb06e(0x1d0)](_0xabb06e(0x1d5)))_0x5016d8[_0xabb06e(0x1ac)][_0xabb06e(0x1d1)](_0xabb06e(0x1d5));else!_0x5016d8[_0xabb06e(0x1ac)]['contains'](_0xabb06e(0x1d5))&&_0x5016d8[_0xabb06e(0x1ac)][_0xabb06e(0x22c)](_0xabb06e(0x1d5));let _0x98c54e=document[_0xabb06e(0x1af)](_0xabb06e(0x1db));if(_0x98c54e[_0xabb06e(0x22b)]==='Show\x20Score\x20Report')_0x98c54e['innerHTML']=_0xabb06e(0x1ff);else _0x98c54e[_0xabb06e(0x22b)]===_0xabb06e(0x1ff)&&(_0x98c54e['innerHTML']=_0xabb06e(0x1dc));}function getselectedanswers(_0xb63f84,_0x1aab44,_0x929c90,_0x174c94,_0x221538){const _0x42aaa5=_0x1a39;let _0x8099a9=[];for(let _0xa99125=0x0;_0xa99125<_0x221538;_0xa99125++){if(_0x42aaa5(0x1bc)!==_0x42aaa5(0x1cb))_0x8099a9[_0x42aaa5(0x1de)](0x0);else{function _0x295706(){return new _0x4ebba3(_0x963145+_0x34e894*0x3e8);}}}if(_0x1aab44==='AMC'){if(_0x42aaa5(0x21c)!==_0x42aaa5(0x1e5)){let _0x1da763=['A','B','C','D','E'],_0x45148a,_0x9306c;for(let _0x5e51bc=0x0;_0x5e51bc<_0x221538;_0x5e51bc++){if('zrNtg'!==_0x42aaa5(0x208))for(let _0x5d011a=0x0;_0x5d011a<_0x1da763[_0x42aaa5(0x1ae)];_0x5d011a++){_0x45148a=_0x1da763[_0x5d011a]+_0x42aaa5(0x1c5)+_0x5e51bc,_0x9306c=document[_0x42aaa5(0x1af)](_0x45148a);if(_0x9306c[_0x42aaa5(0x1ac)]['contains'](_0x42aaa5(0x1d4))&&!_0x9306c[_0x42aaa5(0x1ac)][_0x42aaa5(0x1d0)](_0x42aaa5(0x1b6))){_0x8099a9[_0x5e51bc]=_0x1da763[_0x5d011a];break;}}else{function _0x1ec0d8(){const _0x122b53=_0x42aaa5;_0xb7338=!![],_0x1d0ff9(_0x23ed02),_0x15e3a(_0x2ed256),_0x261ae0['innerHTML']=_0x122b53(0x217),_0x523d75(_0x3531f7,_0x576caa,_0x4e7c84,_0x50f478,_0xccd3ec);}}}}else{function _0x12a8a5(){const _0x47eeb5=_0x42aaa5;_0xc794b3===_0x47eeb5(0x20c)&&(_0x51a9bc['innerHTML']+=_0x47eeb5(0x212)+_0x5a5f6d+_0x47eeb5(0x1e3)+_0x2b2f6d+'\x22>B</button><button\x20onclick=\x22togglecolor(this.id)\x22\x20type=\x22button\x22\x20class=\x22deselected\x22\x20id=\x22C-button-'+_0x47f04c+_0x47eeb5(0x1df)+_0x6dcc3f+_0x47eeb5(0x1cd)+_0x546085+_0x47eeb5(0x1a5)+(_0x37cbea+0x1)+_0x47eeb5(0x20e)+_0x4015fb[_0x238799]+_0x47eeb5(0x22a));}}}return _0x8099a9;}async function getcorrectanswers(_0x14f8fe,_0x2ce0a4,_0x7eaacb,_0x3e8ac4,_0x21c565){const _0x1cc16c=_0x1a39;let _0x4b55af=_0x1cc16c(0x214),_0x330456=_0x14f8fe+'_'+_0x2ce0a4+'_'+_0x7eaacb+_0x3e8ac4+_0x1cc16c(0x223),_0x49679a=_0x1cc16c(0x20b)+_0x330456+'&format=json',_0x4494f9=await fetch(_0x4b55af+'?'+_0x49679a+_0x1cc16c(0x1b4)),_0x1a92fa=await _0x4494f9[_0x1cc16c(0x1c1)](),_0x2619c8=_0x1a92fa[_0x1cc16c(0x1a6)][_0x1cc16c(0x1d8)]['*'];if(_0x2619c8[_0x1cc16c(0x1f5)]('redirectMsg')){let _0x298af3=_0x2619c8[_0x1cc16c(0x20d)](_0x1cc16c(0x211))+0x19,_0x585a6f=_0x2619c8[_0x1cc16c(0x1e9)](_0x298af3),_0x537aa6=_0x585a6f[_0x1cc16c(0x20d)]('\x22'),_0x5e0610=_0x585a6f['substring'](0x0,_0x537aa6);_0x49679a=_0x1cc16c(0x20b)+_0x5e0610+_0x1cc16c(0x21d),_0x4494f9=await fetch(_0x4b55af+'?'+_0x49679a+'&origin=*'),_0x1a92fa=await _0x4494f9[_0x1cc16c(0x1c1)](),_0x2619c8=_0x1a92fa['parse'][_0x1cc16c(0x1d8)]['*'];}let _0x4c0a06=[],_0x200182;for(let _0x31c94c=0x0;_0x31c94c<_0x21c565;_0x31c94c++){_0x200182=_0x2619c8['indexOf'](_0x1cc16c(0x21a))+0x4,_0x2619c8=_0x2619c8[_0x1cc16c(0x1e9)](_0x200182),_0x4c0a06[_0x1cc16c(0x1de)](_0x2619c8[_0x1cc16c(0x1e9)](0x0,0x1));}return _0x4c0a06;}function checkanswers(_0x524819,_0x138bc9){const _0x105ba3=_0x1a39;let _0xa4f787=0x0,_0x16ff02=0x0,_0x5f3570=0x0;for(let _0x5658c8=0x0;_0x5658c8<_0x524819['length'];_0x5658c8++){if(_0x105ba3(0x1c9)===_0x105ba3(0x1f7)){function _0x595409(){const _0x578520=_0x105ba3;_0x247b92=_0x2a065c[_0x578520(0x205)]('tr'),_0x3e8072=_0x2f4b37[_0x578520(0x205)]('td'),_0x4bddaf=_0x1a8c83[_0x578520(0x205)]('td'),_0x3bd241=_0x2b0054[_0x578520(0x205)]('td'),_0x46b201[_0x578520(0x22b)]=_0x2c358b+0x1+'.',_0x5c52f0[_0x227c8e]===0x0?_0x330e7c[_0x578520(0x22b)]='Skipped':_0x5b493c[_0x578520(0x22b)]=_0x310ed8[_0x6c7b14],_0x3e0056[_0x578520(0x22b)]=_0x3e4069[_0x3f807b],_0x162cbe['appendChild'](_0x383f89),_0x17814e[_0x578520(0x1da)](_0x5e5675),_0x52ff5a['appendChild'](_0x49d873),_0x608bba[_0x578520(0x1da)](_0x5c16f3);}}else{if(_0x524819[_0x5658c8]===0x0)_0x16ff02++;else{if(_0x524819[_0x5658c8]===_0x138bc9[_0x5658c8]){if(_0x105ba3(0x228)!=='llfna'){function _0x207479(){const _0x54f2db=_0x105ba3;_0x2cebb9=_0x3f0848[_0x54f2db(0x20d)](_0x54f2db(0x21a))+0x4,_0x144590=_0x21fa3d[_0x54f2db(0x1e9)](_0x4617d0),_0x5c40e7[_0x54f2db(0x1de)](_0x260b8e[_0x54f2db(0x1e9)](0x0,0x1));}}else _0xa4f787++;}else _0x524819[_0x5658c8]!=_0x138bc9[_0x5658c8]&&_0x5f3570++;}}}let _0x4e3b7e=0x6*_0xa4f787+1.5*_0x16ff02;return _0x4e3b7e;}
+function switchtest(element) {
+  let button = document.getElementById("test-names");
+  button.innerHTML = element.innerHTML;
+  button.style.color = "black";
+  toggleselectshow();
+}
+    
+function toggleselectshow() {
+  let element = document.getElementById("test-dropdown");
+  if (element.classList.contains("dropdown-shown")) {
+    element.classList.remove("dropdown-shown");
+    window.setTimeout(function() {
+      element.classList.add("no-border");
+    }, 500);
+  }
+  else {
+    element.classList.remove("no-border");
+    element.classList.add("dropdown-shown");
+  }
+}
+
+
+let problems = [];
+let finishtest = false;
+
+function toggledisplay(element) {
+  if (element.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+    element.classList.add("shown");
+  }
+  else {
+    element.classList.remove("shown");
+    element.classList.add("hidden");
+  }
+}
+
+function starttest() {
+  let homescreen = document.getElementById("home-screen");
+  toggledisplay(homescreen);
+
+  let testelement = document.getElementById("test-names");
+  let chosentest = testelement.innerHTML;
+
+  let yearelement = document.getElementById("test-year");
+  let chosenyear = yearelement.value;  
+  let year = chosenyear;
+
+  let hourselement = document.getElementById("test-length-hours");
+  let minuteselement = document.getElementById("test-length-minutes");
+
+  let chosenhours = hourselement.value;
+  let chosenminutes = minuteselement.value;
+
+  let totalseconds = 3600*chosenhours + 60*chosenminutes;
+
+  let test;
+  let grade;
+  let version;
+  if (chosentest === "AMC 10A") {
+    test = "AMC";
+    grade = 10;
+    version = "A";
+  }
+  else if (chosentest === "AMC 10B") {
+    test = "AMC";
+    grade = 10;
+    version = "B";
+  }
+  else if (chosentest === "AMC 12A") {
+    test = "AMC";
+    grade = 12;
+    version = "A";
+  }
+  else if (chosentest === "AMC 12B") {
+    test = "AMC";
+    grade = 12;
+    version = "B";
+  }
+  else {
+    test = "AMC";
+    grade = 10;
+    version = "A";
+  }
+
+
+  let numproblems = 0;
+  if (test === "AMC") {
+    numproblems = 25;
+  }
+  else if (test === "AIME") { // AIME is not supported yet
+    numproblems = 15;
+  }
+
+  for (let i = 0; i < numproblems; i++) {
+    problems.push(0);
+  }
+
+  let loading = document.getElementById("loading-screen");  
+  toggledisplay(loading);
+
+
+
+  getcontest(year, test, grade, version, numproblems, totalseconds);
+}
+
+function getcontest(year, test, grade, version, numproblems, totalseconds) {
+  for (let i = 1; i <= numproblems; i++) { 
+    (async () => {
+      let apiurl = year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i;
+      problems[i-1] = await getproblem(year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i, i);
+      addcontent(problems, year, test, grade, version, numproblems, totalseconds);
+    })()
+  }
+}
+
+async function getproblem(page, problemnumber) {
+  let endpoint = "https://artofproblemsolving.com/wiki/api.php";
+  let params = `action=parse&page=${page}&format=json`;
+
+  let response = await fetch(`${endpoint}?${params}&origin=*`);
+
+  let responsejson = await response.json();
+
+  let pagehtml = responsejson.parse.text["*"];
+  if (pagehtml.includes("redirectMsg")) {
+    let redirectuncutstartloc = pagehtml.indexOf("<a href=\"/wiki/index.php/") + 25;
+    let redirectcut = pagehtml.substring(redirectuncutstartloc);
+    let redirectcutendloc = redirectcut.indexOf("\"");
+    let redirect = redirectcut.substring(0, redirectcutendloc);
+    params = `action=parse&page=${redirect}&format=json`;
+    response = await fetch(`${endpoint}?${params}&origin=*`);
+    responsejson = await response.json();
+    pagehtml = responsejson.parse.text["*"];
+  }
+
+  let searchstart = pagehtml.indexOf("id=\"Problem\">");
+  let problemstartlocoriginal = pagehtml.indexOf("<p>", searchstart);
+  let pagehtmlcut = pagehtml.substring(problemstartlocoriginal);
+  let problemendloc = pagehtmlcut.indexOf("<h2><span");
+  let problemtext = pagehtmlcut.substring(0, problemendloc);
+
+  return convertmathjax(problemtext);
+}
+
+function convertmathjax(problemtext) {
+  while (problemtext.includes("class=\"latex\"") && (problemtext.substring(problemtext.indexOf("class=\"latex\"") + 19, problemtext.indexOf("class=\"latex\"") + 24) != "[asy]")) {
+    let latexstartloc = problemtext.indexOf("class=\"latex\"") + 20;
+    let latexcut = problemtext.substring(latexstartloc);
+    let latexendcutloc = latexcut.indexOf("\"");
+    let latex = latexcut.substring(0, latexendcutloc - 1);
+
+    let imgstartloc = problemtext.lastIndexOf("src=\"//latex.artofproblemsolving.com", latexstartloc) - 5;
+    let imgcut = problemtext.substring(imgstartloc);
+    let imgendcutloc = imgcut.indexOf(" />");
+    let img = imgcut.substring(0, imgendcutloc + 3);
+
+    problemtext = problemtext.replace(img, "\\(" + latex + "\\)");
+
+
+  }
+
+  while (problemtext.includes("class=\"latexcenter\"") && (problemtext.substring(problemtext.indexOf("class=\"latexcenter\"") + 25, problemtext.indexOf("class=\"latexcenter\"") + 30) != "[asy]")) {
+    let latexstartloc = problemtext.indexOf("class=\"latexcenter\"") + 27;
+    let latexcut = problemtext.substring(latexstartloc);
+    let latexendcutloc = latexcut.indexOf("\"");
+    let latex = latexcut.substring(0, latexendcutloc - 2);
+
+    let imgstartloc = problemtext.lastIndexOf("src=\"//latex.artofproblemsolving.com", latexstartloc) - 5;
+    let imgcut = problemtext.substring(imgstartloc);
+    let imgendcutloc = imgcut.indexOf(" />");
+    let img = imgcut.substring(0, imgendcutloc + 3);
+
+    problemtext = problemtext.replace(img, "\\[" + latex + "\\]");
+
+  }
+
+  return problemtext;
+}
+
+function addcontent(problems, year, test, grade, version, numproblems, totalseconds) {    
+  let readytoappend = true;
+  for (let i = 0; i < problems.length; i++) {
+    if (problems[i] === 0) {
+      readytoappend = false;
+    }
+  }
+  if (readytoappend) {
+    let questions = document.getElementById("questions");
+    for (let i = 0; i < problems.length; i++) {
+
+      // TODO: WHEN IMPLEMENTING OTHER CONTESTS (e.g. AIME), ADD MORE TESTS
+      if (test === "AMC") {
+        questions.innerHTML += "<div class=\"problem\"><div class=\"bubbles\"><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"A-button-" + i + "\">A</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"B-button-" + i + "\">B</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"C-button-" + i + "\">C</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"D-button-" + i + "\">D</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"E-button-" + i + "\">E</button></div><div class=\"problem-number\">Problem " + (i+1) + "</div><div class=\"problem-body\">" + problems[i] + "</div></div>";
+      }
+    }
+    questions.innerHTML += "<button id=\"finish-test\" onclick=\"finishTest()\">Submit Test</button>";
+    MathJax.typeset();
+
+    let loadingdiv = document.getElementById("loading-screen");
+    toggledisplay(loadingdiv);
+
+    starttimer(year, test, grade, version, numproblems, totalseconds);
+  }
+}
+
+function finishTest() {
+  finishtest = true;
+}
+
+function togglecolor(id) {
+  let currentproblem = id.substring(1);
+  let choices = ["A", "B", "C", "D", "E"];
+  let runend = true;
+  for (let i = 0; i < choices.length; i++) {
+    let letter = choices[i];
+    let currentbtn = document.getElementById(letter + currentproblem);
+    if (currentbtn.classList.contains("selected") && id === (letter + currentproblem))    		  {
+      currentbtn.classList.remove("selected");
+      currentbtn.classList.add("deselected");
+      runend = false;
+    }
+    else if (currentbtn.classList.contains("selected")) {
+      currentbtn.classList.remove("selected");
+      currentbtn.classList.add("deselected");
+    }
+  }
+  if (runend) {
+    let nowbtn = document.getElementById(id);
+    if (nowbtn.classList.contains("deselected")) {
+      nowbtn.classList.remove("deselected");
+      nowbtn.classList.add("selected");
+    }
+  }
+}
+
+function starttimer(year, test, grade, version, numproblems, totalseconds) {
+  let starttime = new Date().getTime();
+  let endtime = addseconds(starttime, totalseconds);
+
+  let contesthead = document.getElementById("contest-heading-text");
+  contesthead.innerHTML = year + " " + test + " " + grade + version + " Mock Contest";
+
+  let timer = document.getElementById("timer");
+
+let testscreendiv = document.getElementById("test-screen");
+  toggledisplay(testscreendiv);
+
+  let interval = setInterval(function() {
+    let currenttime = new Date().getTime();
+    let timetoend = endtime - currenttime;
+
+    let hours = Math.floor((timetoend % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timetoend % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timetoend % (1000 * 60)) / 1000);
+
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+
+    timer.innerHTML = "Time Remaining: " + hours + ":" + minutes + ":" + seconds;
+
+    if (timetoend <= 0 || finishtest === true) {
+      finishtest = true;
+      clearInterval(interval);
+
+      toggledisplay(testscreendiv);
+      timer.innerHTML = "CONTEST OVER";
+
+      showresults(year, test, grade, version, numproblems);
+    }
+
+  }, 1000);
+}
+
+function addseconds(date, seconds) {
+  return new Date(date + seconds*1000);
+}
+
+function showresults(year, test, grade, version, numproblems) {
+  (async () => {
+    let correctanswers = await getcorrectanswers(year, test, grade, version, numproblems);
+    let selectedanswers = getselectedanswers(year, test, grade, version, numproblems);
+    let score = checkanswers(selectedanswers, correctanswers);
+
+    let finishedheading = document.getElementById("finished-heading-text");
+    finishedheading.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
+    let scoreelement = document.getElementById("finished-score");
+    scoreelement.innerHTML = "Final Score: " + score;
+
+    let finishedscreen = document.getElementById("finished-screen");
+    toggledisplay(finishedscreen);
+
+    let viewreport = document.getElementById("view-scores");
+    viewreport.onclick = function() {showreview(numproblems, selectedanswers, correctanswers, score, year, test, grade, version)};
+  })()
+}
+
+function showreview(numproblems, selectedanswers, correctanswers, score, year, test, grade, version) {
+  let finishedscreen = document.getElementById("finished-screen");
+  toggledisplay(finishedscreen);
+
+  // TODO: WHEN IMPLEMENTING OTHER CONTESTS (e.g. AIME), ADD MORE TESTS
+  if (test === "AMC") {
+    let letters = ["A", "B", "C", "D", "E"];
+    for (let i = 0; i < numproblems; i++) {
+      for (let j = 0; j < letters.length; j++) {
+        let buttonid = letters[j] + "-button-" + i;
+        let buttonelement = document.getElementById(buttonid);
+        buttonelement.disabled = true;
+        if (selectedanswers[i] != 0 && buttonelement.classList.contains("selected")) {
+          if (selectedanswers[i] === correctanswers[i]) {
+            buttonelement.style.backgroundColor = "#b1e6bc";
+          }
+          else {
+            buttonelement.style.backgroundColor = "#f5958e";
+          }
+        }      
+      }
+    }
+  }
+
+  let reviewheading = document.getElementById("review-heading-text");
+  reviewheading.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
+
+  let contestheading = document.getElementById("contest-heading-text");
+  toggledisplay(contestheading);
+  let timer = document.getElementById("timer");
+  toggledisplay(timer);
+  let scorediv = document.getElementById("review-score");
+  scorediv.innerHTML = "Final Score: " + score;
+  let testscreen = document.getElementById("test-screen");
+  toggledisplay(testscreen);
+  let reviewscreen = document.getElementById("review-screen");
+  toggledisplay(reviewscreen);
+  let submitbtn = document.getElementById("finish-test");
+  toggledisplay(submitbtn);
+
+  let answerstable = document.createElement("table");
+  answerstable.setAttribute("id", "answers-table");
+  answerstable.setAttribute("class", "hidden");
+
+  let tablerow = document.createElement("tr");
+  let tablecell1 = document.createElement("th");
+  let tablecell2 = document.createElement("th");
+  let tablecell3 = document.createElement("th");
+
+  tablecell1.innerHTML = "Problem Number";
+  tablecell2.innerHTML = "Your Answer";
+  tablecell3.innerHTML = "Correct Answer";
+  tablerow.appendChild(tablecell1);
+  tablerow.appendChild(tablecell2);
+  tablerow.appendChild(tablecell3);
+
+  answerstable.appendChild(tablerow);
+  for (let i = 0; i < numproblems; i++) {
+    tablerow = document.createElement("tr");
+    tablecell1 = document.createElement("td");
+    tablecell2 = document.createElement("td");
+    tablecell3 = document.createElement("td");
+
+    tablecell1.innerHTML = (i+1) + ".";
+    if (selectedanswers[i] === 0) {
+      tablecell2.innerHTML = "Skipped";
+    }
+    else {
+      tablecell2.innerHTML = selectedanswers[i];
+    }
+    tablecell3.innerHTML = correctanswers[i];
+
+    tablerow.appendChild(tablecell1);
+    tablerow.appendChild(tablecell2);
+    tablerow.appendChild(tablecell3);
+
+    answerstable.appendChild(tablerow);
+  }
+
+  let answersreport = document.getElementById("review-answers-report");
+  answersreport.appendChild(answerstable);
+}
+
+function toggletablevisibility() {
+  let table = document.getElementById("answers-table");
+  // had to get rid of adding shown class because display: block caused weird alignment behavior
+  if (table.classList.contains("hidden")) {
+    table.classList.remove("hidden");
+  }
+  else if (!table.classList.contains("hidden")) {
+    table.classList.add("hidden");
+  }
+
+  let showtablebtn = document.getElementById("show-score-table");
+  if (showtablebtn.innerHTML === "Show Score Report") {
+    showtablebtn.innerHTML = "Hide Score Report";
+  }
+  else if (showtablebtn.innerHTML === "Hide Score Report") {
+    showtablebtn.innerHTML = "Show Score Report";
+  }
+}
+
+function getselectedanswers(year, test, grade, version, numproblems) {
+  let selectedanswers = [];
+  for (let i = 0; i < numproblems; i++) {
+    selectedanswers.push(0);
+  }
+
+  // TODO: WHEN IMPLEMENTING OTHER CONTESTS (e.g. AIME), ADD MORE TESTS
+  if (test === "AMC") {
+    let letters = ["A", "B", "C", "D", "E"];
+    let buttonid;
+    let currentbutton;
+    for (let i = 0; i < numproblems; i++) {
+
+      for (let j = 0; j < letters.length; j++) {
+        buttonid = letters[j] + "-button-" + i;
+
+        currentbutton = document.getElementById(buttonid);
+        if (currentbutton.classList.contains("selected") && !currentbutton.classList.contains("deselected")) {
+          selectedanswers[i] = letters[j];
+
+          break;
+        }
+      }
+    }
+  }
+  return selectedanswers;
+}
+
+async function getcorrectanswers(year, test, grade, version, numproblems) {
+  let endpoint = "https://artofproblemsolving.com/wiki/api.php";
+  let page = year + "_" + test + "_" + grade + version + "_Answer_Key";
+  let params = `action=parse&page=${page}&format=json`;
+
+  let response = await fetch(`${endpoint}?${params}&origin=*`);
+
+  let responsejson = await response.json();
+
+  let pagehtml = responsejson.parse.text["*"];
+  if (pagehtml.includes("redirectMsg")) {
+    let redirectuncutstartloc = pagehtml.indexOf("<a href=\"/wiki/index.php/") + 25;
+    let redirectcut = pagehtml.substring(redirectuncutstartloc);
+    let redirectcutendloc = redirectcut.indexOf("\"");
+    let redirect = redirectcut.substring(0, redirectcutendloc);
+    params = `action=parse&page=${redirect}&format=json`;
+    response = await fetch(`${endpoint}?${params}&origin=*`);
+    responsejson = await response.json();
+    pagehtml = responsejson.parse.text["*"];
+  }
+
+  let correctanswers = [];  
+  let cutloc;
+  for (let i = 0; i < numproblems; i++) {
+    cutloc = pagehtml.indexOf("<li>") + 4;
+    pagehtml = pagehtml.substring(cutloc);
+    correctanswers.push(pagehtml.substring(0, 1));
+  }
+
+  return correctanswers;
+}
+
+function checkanswers(selectedanswers, correctanswers) {
+  let correctnum = 0;
+  let skippednum = 0;
+  let wrongnum = 0;
+  for (let i = 0; i < selectedanswers.length; i++) {
+    if (selectedanswers[i] === 0) {
+      skippednum++;
+    }
+    else if (selectedanswers[i] === correctanswers[i]) {
+      correctnum++;
+    }
+    else if (selectedanswers[i] != correctanswers[i]) {
+      wrongnum++;
+    }
+  }
+  let score = 6*correctnum + 1.5*skippednum;
+  return score;
+}
