@@ -7,7 +7,7 @@ I'm very confused right now. I've been putting of messing around with MathJax to
 MathJax.typeset();
 [/code]
 call. Why was I confused again?
-<img src="https://enigmatology.github.io/blog-posts-personal/imgs/think.png" alt=":thonk:" style="width: 400px; height: auto; margin: auto;">
+<img src="https://enigmatology.github.io/blog-posts-personal/imgs/think.png" alt=":thonk:" style="width: 150px; height: auto; margin: auto; display: block;">
 Well then, it should work now:
 \[\int_0^\infty {\frac{1}{x^2}\,dx},\]
 so I can post math now :D
