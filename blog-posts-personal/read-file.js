@@ -18,7 +18,7 @@ var f = (function(){
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          posts[i-1] = this.responseText;
+          posts[NUMBEROFPOSTS - i] = this.responseText;
           
           addcontent(posts, hides);
           
