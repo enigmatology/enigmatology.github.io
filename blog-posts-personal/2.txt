@@ -9,5 +9,5 @@ MathJax.typeset();
 call. Why was I confused again?
 <img src="https://enigmatology.github.io/blog-posts-personal/imgs/think.png" alt=":thonk:" style="width: 400px; height: auto; margin: auto;">
 Well then, it should work now:
-\[\int_0^\infty {\frac{1}{x^2}\,dx}\],
+\[\int_0^\infty {\frac{1}{x^2}\,dx},\]
 so that's a plus :D
