@@ -3,11 +3,11 @@ Dynamic Content with MathJax
 May 9, 2021
 
 I'm very confused right now. I've been putting of messing around with MathJax to render math on my blogposts, but this entire time, it was literally just a simple
-[javascript]
+[code=javascript]
 MathJax.typeset();
-[/javascript]
+[/code]
 call. Why was I confused again?
-<img src="https://enigmatology.github.io/blog-posts-personal/imgs/thonk.png" alt=":thonk:" style="width: 400px; height: auto;">
+<img src="https://enigmatology.github.io/blog-posts-personal/imgs/think.png" alt=":thonk:" style="width: 400px; height: auto; margin: auto;">
 Well then, it should work now:
 \[\int_0^\infty {\frac{1}{x^2}\,dx}\],
 so that's a plus :D
