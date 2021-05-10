@@ -4,7 +4,7 @@ May 9, 2021
 
 I'm very confused right now. I've been putting of messing around with MathJax to render math on my blogposts, but this entire time, it was literally just a simple
 [javascript]
-MathJax.render()
+MathJax.typeset();
 [/javascript]
 call. Why was I confused again?
 <img src="https://enigmatology.github.io/blog-posts-personal/imgs/thonk.png" alt=":thonk:" style="width: 400px; height: auto;">
