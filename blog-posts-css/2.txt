@@ -11,7 +11,7 @@ Let's take a look at what CSS can do. I'm going to take an extremely simple desi
 
 Here's what you would traditionally see, with CSS:
 <img src="blog-posts-css/imgs/navbar.png" alt="Navbar example">
-This is a very typical navbar that you can see online. It's not the most fancy thing, but it looks ok.
+This is the navigation bar that you see above for this website.
 
 Now let's look at it without CSS:
 <img src="blog-posts-css/imgs/navbar_nocss.png" alt="Navbar without CSS">
