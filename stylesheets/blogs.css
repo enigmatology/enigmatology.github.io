@@ -112,9 +112,4 @@ img {
   .shown {
     width: calc(100% - 30px);
   }
-  
-  img {
-    width: 75% !important;
-    height: auto !important;
-  }
 }
