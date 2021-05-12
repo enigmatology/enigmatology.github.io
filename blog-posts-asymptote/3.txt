@@ -6,12 +6,10 @@ May 12, 2021
 [i][size=100]Basic Syntax[/size][/i][/center]
 
 In this lesson, we'll introduce the basics to drawing, including points, lines, and circles. However, before we do the drawing, we have to learn some universal syntax expectations that Asymptote will throw an error if not done correctly.
-
 <ol>
 <li> All lines you write must end with a semicolon, or a ;. If not included at the end of a single line, your program will not run and will fail to generate the diagram you are trying to create.
 <li> If you haven't ever learned another coding language, you need to be careful that your parenthesis match up. If you are missing an opening or closing parenthesis, the code will not run.
 </ol>
-
 Alright, let's get into the drawing. :)
 
 [b]Drawing Points[/b]. A point is probably the most basic command in Asymptote, and yet it is quite important. Here is the syntax:
