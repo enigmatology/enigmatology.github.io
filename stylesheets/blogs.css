@@ -84,6 +84,11 @@ code {
   font-size: 15px;
 }
 
+img {
+  display: block;
+  margin: auto;
+}
+
 @media only screen and (max-width: 775px) {
   .post-header {
     width: calc(100% - 35px);
