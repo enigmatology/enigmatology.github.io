@@ -1,3 +1,7 @@
+Lesson 2: Basic Syntax
+
+May 12, 2021
+
 [center][size=200][color=#c00]Lesson 2[/color][/size]
 [i][size=100]Basic Syntax[/size][/i][/center]
 
