@@ -26,7 +26,7 @@ This diagram, when run, should look like [hide=this]<img src="https://latex.arto
 [code=asymptote]draw((x-coor-1, y-coor-1)--(x-coor-2, y-coor-2));[/code]
 Instead of the function [b]dot[/b], we use the function [b]draw[/b]. This time, we also have two points: the two endpoints of the line, and 2 horizontal dashes separating the points.
 
-When draw, the diagram looks like [hide=this]<img src="https://latex.artofproblemsolving.com/c/2/0/c201977bd22357a3a2ab9164b378947277852dab.png" alt="draw((0, 3)--(2, 0));"/>[/hide]. I just picked two random endpoints for my line, your line's direction/length will probably be different.
+When drawn, the diagram looks like [hide=this]<img src="https://latex.artofproblemsolving.com/c/2/0/c201977bd22357a3a2ab9164b378947277852dab.png" alt="draw((0, 3)--(2, 0));"/>[/hide]. I just picked two random endpoints for my line, your line's direction/length will probably be different.
 
 [b]Drawing Circles[/b]. Circles, like lines, use the [b]draw[/b] function. However, unlike lines, you need to specify as an argument that you are drawing a circle. The syntax is like this:
 [code=asymptote]draw(circle((center-x, center-y), radius));[/code]
