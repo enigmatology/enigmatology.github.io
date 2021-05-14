@@ -3,6 +3,10 @@ form {
   padding: 15px;
 }
 
+form * {
+  font-family: 'Rubik', sans-serif; 
+}
+
 input[type=text], input[type=password] {
   width: 75%;
   padding: 12px 20px;
@@ -11,14 +15,12 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
   float: right;
-  font-family: 'Rubik', sans-serif; 
 }
 
 label > * {
   width: 25%;
   float: left;
   line-height: 60px;
-  font-family: 'Rubik', sans-serif;
   font-weight: 500 !important;
 }
 
@@ -36,7 +38,6 @@ label > * {
   width: 36%;
   float: right;
   margin-right: 3%;
-  font-family: 'Rubik', sans-serif; 
   font-weight: 100;
 }
 
@@ -56,8 +57,8 @@ label > * {
   cursor: pointer;
   float: right;
   width: 36%;
-  font-family: 'Rubik', sans-serif; 
   text-decoration: none;
+  font-weight: 100;
 }
 
 #login:hover {
