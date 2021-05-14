@@ -28,7 +28,7 @@
  
 <script>
 function highlight(element) {
-  let content = element.contentWindow.document.body.innerHTML;
+  let content = element.contentWindow.document.body.firstChild.innerHTML;
   let newelement = document.createElement("div");
   newelement.innerHTML = content;
   document.body.insertBefore(newelement, element);
