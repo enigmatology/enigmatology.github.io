@@ -57,6 +57,7 @@ label > * {
   float: right;
   width: 36%;
   font-family: 'Rubik', sans-serif; 
+  text-decoration: none;
 }
 
 #login:hover {
