@@ -10,16 +10,40 @@ function toggledisplay(element) {
 }
 
 function register() {
-  let email = document.getElementById("email");
-  let password = document.getElementById("password");
-  let confirmpass = document.getElementById("confirm-pass");
+  let emailele = document.getElementById("email");
+  let passwordele = document.getElementById("password");
+  let confirmpassele = document.getElementById("confirm-pass");
 
   let passnoequal = document.getElementById("passwords-not-equal");
   let invalidemail = document.getElementById("invalid-email");
+  let missingfield = document.getElementById("missing-field");
 
-  if (!validateemail(email.value)) {
+  let email = emailele.value;
+  let password = passwordele.value;
+  let confirmpass = confirmpassele.value;
+
+  let elements = [email, password, confirmpass];
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === "") {
+      if (passnoequal.classList.contains("shown")) {
+      toggledisplay(passnoequal);
+      }
+      if (invalidemail.classList.contains("shown")) {
+        toggledisplay(invalidemail);
+      }
+      if (missingfield.classList.contains("hidden")) {
+        toggledisplay(missingfield);
+      }
+      return;
+    }
+  }
+
+  if (!validateemail(email)) {
     if (passnoequal.classList.contains("shown")) {
       toggledisplay(passnoequal);
+    }
+    if (missingfield.classList.contains("shown")) {
+      toggledisplay(missingfield);
     }
     if (invalidemail.classList.contains("hidden")) {
       toggledisplay(invalidemail);
@@ -27,9 +51,12 @@ function register() {
     return;
   }
 
-  if (password.value != confirmpass.value) {   
+  if (password != confirmpass) {   
     if (invalidemail.classList.contains("shown")) {
       toggledisplay(invalidemail);
+    }
+    if (missingfield.classList.contains("shown")) {
+      toggledisplay(missingfield);
     }
     if (passnoequal.classList.contains("hidden")) {
       toggledisplay(passnoequal);
@@ -46,6 +73,6 @@ function register() {
 }
 
 function validateemail(email) {
-  let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return regex.test(String(email).toLowerCase());
+  let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }
