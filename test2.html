@@ -32,9 +32,7 @@ function highlight(element) {
   let newelement = document.createElement("div");
   newelement.innerHTML = content;
   document.body.insertBefore(newelement, element);
-  document.querySelectorAll('pre code').forEach((el) => {
-         hljs.highlightElement(el);
-      });
+  hljs.highlightAll();
 }
 </script>
 </body>
