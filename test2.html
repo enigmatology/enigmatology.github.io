@@ -18,14 +18,15 @@
 
 <body>
 <pre><code>System.out.println("test");</code></pre>
-<iframe src="https://enigmatology.github.io/test.html" onload="highlight()" id="file"></iframe>
+<iframe src="https://enigmatology.github.io/test.html" onload="highlight(this)" id="file"></iframe>
 <div id="test"></div>
  
 <script>
-function highlight() {
-  let frame = document.getElementById("file");
-  let content = frame.contentWindow.document.body.innerHTML;
-  document.getElementById("test").innerHTML = content;
+function highlight(element) {
+  let content = element.contentWindow.document.body.innerHTML;
+  let newelement = document.createElement("div");
+  newelement.innerHTML = content;
+  document.body.insertBefore(newelement, element);
   document.querySelectorAll('pre code').forEach((el) => {
          hljs.highlightElement(el);
       });
