@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+
+</head>
+
+<body>
+<pre><code>System.out.println("test");</code></pre>
+<iframe src="https://enigmatology.github.io/test.html" onload="highlight()" id="file"></iframe>
+<div id="test"></div>
+ 
+<script>
+function highlight() {
+  document.querySelectorAll('pre code').forEach((block) => {
+         hljs.highlightBlock(block);
+      });
+}
+</script>
+</body>
+
+</html>
