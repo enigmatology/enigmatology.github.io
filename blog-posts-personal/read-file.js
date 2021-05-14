@@ -80,9 +80,6 @@ function addcontent(posts, hides) {
   
   if (finished === true) {
     MathJax.typeset();
-    //document.querySelectorAll('pre code').forEach((block) => {
-    // 	hljs.highlightBlock(block);
-  	//});
     hljs.highlightAll();
     for (let i = 1; i <= hides.length; i++) {
       var element = document.getElementById(i + "hide");
