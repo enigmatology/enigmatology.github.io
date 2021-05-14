@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+form {
+  padding: 15px;
+}
+
+input[type=text], input[type=password] {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  float: right;
+  font-family: 'Rubik', sans-serif; 
+}
+
+label > * {
+  width: 25%;
+  float: left;
+  line-height: 60px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500 !important;
+}
+
+.field {
+  overflow: auto;
+}
+
+#register {
+  display: block;
+  background-color: #1D3461;
+  color: white;
+  padding: 14px 20px;
+  border: solid #1D3461 2px;
+  cursor: pointer;
+  width: 36%;
+  float: right;
+  margin-right: 3%;
+  font-family: 'Rubik', sans-serif; 
+  font-weight: 100;
+}
+
+#register:hover {
+  background-color: white;
+  color: #1D3461;
+  border: solid #1D3461 2px;
+}
+
+#login {
+  float: right;
+  display: block;
+  background-color: white;
+  color: #1D3461;
+  border: solid #1D3461 2px;
+  padding: 14px 20px;
+  cursor: pointer;
+  float: right;
+  width: 36%;
+  font-family: 'Rubik', sans-serif; 
+}
+
+#login:hover {
+  background-color: #1D3461;
+  color: white;
+  border: solid #1D3461 2px;
+}
