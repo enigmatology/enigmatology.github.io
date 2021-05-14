@@ -4,11 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="stylesheets/style.css" rel="stylesheet">
     <title>Login/Register | enigmatology</title>
-  </head>
-  
-  <body>
-    <div id="navbar"></div>
-    <script src="file-snippets/addnavbar.js"></script>
     
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
@@ -33,5 +28,13 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
+    
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+  </head>
+  
+  <body>
+    <div id="navbar"></div>
+    <script src="file-snippets/addnavbar.js"></script>
   </body>
 </html>
