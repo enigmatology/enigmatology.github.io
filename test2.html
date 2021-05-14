@@ -14,13 +14,13 @@
   </head>
  
   <body>
-    <pre><code><iframe src="https://enigmatology.github.io/test.html" onload="highlight(this)"></iframe></code></pre>
+    <iframe src="https://enigmatology.github.io/test.html" onload="highlight(this)"></iframe>
  
 <script>
 function highlight(element) {
   let content = element.contentWindow.document.body.innerHTML;
-  let newelement = document.createElement("div");
-  newelement.innerHTML = content;
+  let newelement = document.createElement("pre");
+  newelement.innerHTML = "<code>" + content + "</code>";
   element.parentElement.insertBefore(newelement, element);
   hljs.highlightAll();
 }
