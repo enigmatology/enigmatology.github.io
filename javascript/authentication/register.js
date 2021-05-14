@@ -80,7 +80,7 @@ function validateemail(email) {
 }
 
 function createaccount(email, password) {
-  /*firebase.auth().createUserWithEmailAndPassword(email, password)
+  firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in 
     var user = userCredential.user;
@@ -90,7 +90,7 @@ function createaccount(email, password) {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ..
-  });*/
+  });
   
   var user = firebase.auth().currentUser;
 
