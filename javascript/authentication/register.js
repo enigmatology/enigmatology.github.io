@@ -19,7 +19,6 @@ function register() {
 
   if (!validateemail(email.value)) {
     if (passnoequal.classList.contains("shown")) {
-    document.getElementById("test").innerHTML = "a";
       toggledisplay(passnoequal);
     }
     if (invalidemail.classList.contains("hidden")) {
