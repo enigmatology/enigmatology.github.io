@@ -23,8 +23,8 @@
  
 <script>
 function highlight() {
-  document.querySelectorAll('pre code').forEach((block) => {
-         hljs.highlightBlock(block);
+  document.querySelectorAll('pre code').forEach((el) => {
+         hljs.highlightElement(el);
       });
 }
 </script>
