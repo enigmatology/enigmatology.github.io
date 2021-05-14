@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+      <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/atom-one-dark.min.css"/>
+            <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
+            <script>hljs.highlightAll();</script>
 
+            <style>
+              iframe {
+                display: none;
+              }
+            </style>
+      </head>
 
-<link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/atom-one-dark.min.css"
-    />
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
+      <body>
+            <iframe src="https://enigmatology.github.io/test.html" onload="highlight(this)" id="file"></iframe>
 
-
-<style>
-  iframe {
-    display: none;
-  }
-</style>
-</head>
-
-<body>
-<pre><code>System.out.println("test");</code></pre>
-<iframe src="https://enigmatology.github.io/test.html" onload="highlight(this)" id="file"></iframe>
-<div id="test"></div>
- 
-<script>
-function highlight(element) {
-  let content = element.contentWindow.document.body.innerHTML;
-  let newelement = document.createElement("div");
-  newelement.innerHTML = content;
-  document.body.insertBefore(newelement, element);
-  hljs.highlightAll();
-}
-</script>
-</body>
+            <script>
+            function highlight(element) {
+              let content = element.contentWindow.document.body.innerHTML;
+              let newelement = document.createElement("div");
+              newelement.innerHTML = content;
+              document.body.insertBefore(newelement, element);
+              hljs.highlightAll();
+            }
+            </script>
+      </body>
 
 </html>
