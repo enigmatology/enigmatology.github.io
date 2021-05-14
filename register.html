@@ -32,6 +32,28 @@
   
   <body>
     <div id="navbar"></div>
+    
+    <form id="login-form">
+      <div id="email-div" class="field">
+        <label><b>Email:</b></label>
+        <input type="text" placeholder="Enter email address" name="email" required>
+      </div>
+      
+      <div id="password-div" class="field">
+        <label><b>Password:</b></label>
+        <input type="password" placeholder="Enter password" name="password" required>
+      </div>
+      
+      <div id="confirm-password" class="field">
+        <label><b>Confirm Password:</b></label>
+        <input type="password" placeholder="Confirm password" name="confirm-pass" required>
+      </div>
+      <button id="login">Already have an account? Login</button>
+      <button type="submit" id="register">Register</button>
+    </form>
+    
+    
+    
     <script src="file-snippets/addnavbar.js"></script>
   </body>
 </html>
