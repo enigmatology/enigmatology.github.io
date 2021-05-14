@@ -23,12 +23,12 @@
 
 <body>
 <pre><code>System.out.println("test");</code></pre>
-<iframe src="https://enigmatology.github.io/test.txt" onload="highlight(this)" id="file"></iframe>
+<iframe src="https://enigmatology.github.io/test.html" onload="highlight(this)" id="file"></iframe>
 <div id="test"></div>
  
 <script>
 function highlight(element) {
-  let content = element.contentWindow.document.body.firstChild.innerHTML;
+  let content = element.contentWindow.document.body.innerHTML;
   let newelement = document.createElement("div");
   newelement.innerHTML = content;
   document.body.insertBefore(newelement, element);
