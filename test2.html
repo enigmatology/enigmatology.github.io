@@ -25,7 +25,7 @@
 function highlight() {
   let frame = document.getElementById("file");
   let content = frame.contentWindow.document.body.innerHTML;
-  document.getElementById("test").textContent = content;
+  document.getElementById("test").innerHTML = content;
   document.querySelectorAll('pre code').forEach((el) => {
          hljs.highlightElement(el);
       });
