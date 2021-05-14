@@ -14,13 +14,14 @@ function register() {
   let password = document.getElementById("password");
   let confirmpass = document.getElementById("confirm-pass");
 
+  let passnoequal = document.getElementById("passwords-not-equal");
+  let invalidemail = document.getElementById("invalid-email");
+
   if (!validateemail(email.value)) {
-    let passnoequal = document.getElementById("passwords-not-equal");
     if (passnoequal.classList.contains("shown")) {
+    document.getElementById("test").innerHTML = "a";
       toggledisplay(passnoequal);
     }
-
-    let invalidemail = document.getElementById("invalid-email");
     if (invalidemail.classList.contains("hidden")) {
       toggledisplay(invalidemail);
     }
@@ -28,18 +29,21 @@ function register() {
   }
 
   if (password.value != confirmpass.value) {   
-    let invalidemail = document.getElementById("invalid-email");
     if (invalidemail.classList.contains("shown")) {
       toggledisplay(invalidemail);
     }
-
-    let passnoequal = document.getElementById("passwords-not-equal");
     if (passnoequal.classList.contains("hidden")) {
       toggledisplay(passnoequal);
     }
-
     return;
-  }        
+  }
+
+  if (passnoequal.classList.contains("shown")) {
+    toggledisplay(passnoequal);
+  }
+  if (invalidemail.classList.contains("shown")) {
+    toggledisplay(invalidemail);
+  }
 }
 
 function validateemail(email) {
