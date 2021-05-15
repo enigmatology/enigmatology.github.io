@@ -79,7 +79,7 @@ function validateemail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-function createaccount(email, password) {
+/*function createaccount(email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in 
@@ -99,4 +99,11 @@ function createaccount(email, password) {
   });
 
   
+}*/
+
+function createaccount(email, password) {
+  let auth = firebase.auth();
+  let createpromise = auth.createUserWithEmailAndPassword(email, password);
+  
+  createaccount.catch(e => console.log(e.message));
 }
