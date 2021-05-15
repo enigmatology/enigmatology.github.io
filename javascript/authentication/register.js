@@ -83,14 +83,14 @@ function createaccount(email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in 
-    /*var user = userCredential.user;
+    var user = userCredential.user;
     user.sendEmailVerification().then(function() {
       // Email sent.
     }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorCode + ", " + errorMessage);
-    });*/
+    });
   })
   .catch((error) => {
     var errorCode = error.code;
