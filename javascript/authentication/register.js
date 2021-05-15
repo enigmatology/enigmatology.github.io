@@ -87,13 +87,15 @@ function createaccount(email, password) {
     user.sendEmailVerification().then(function() {
       // Email sent.
     }).catch(function(error) {
-      // An error happened.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode + ", " + errorMessage);
     });
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    // ..
+    console.log(errorCode + ", " + errorMessage);
   });
 
   
