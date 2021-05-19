@@ -102,16 +102,21 @@ function validateemail(email) {
 }
 
 function createaccount(email, password) {
+  let infodiv = document.getElementById("info");
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function() {
     let user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function() {
       console.log("Verification email successfully sent.");
+      
+      info.innerHTML = "Email successfully sent. Please check your email to activate your account.");
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
+      
+      info.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.");
     });
   }).catch(function(error) {
-    console.log(error);
+    info.innerHTML = "There was an error when creating the account. Please private message CoolCarsOnTheRun with information.");
   });
   
   
