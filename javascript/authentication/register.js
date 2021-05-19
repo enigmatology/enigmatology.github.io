@@ -117,7 +117,12 @@ function validateemail(email) {
 }*/
 
 function createaccount(email, password) {
-  firebase.auth().createUserWithEmailAndPassword(email, password);
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(function() {
+    console.log("Successfully created account");
+  }).catch(function(error) {
+    console.log(error);
+  });
   
-  //createpromise.catch(e => console.log(e.message));
+  
 }
