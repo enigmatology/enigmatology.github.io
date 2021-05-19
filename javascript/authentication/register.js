@@ -119,7 +119,12 @@ function validateemail(email) {
 function createaccount(email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function() {
-    console.log("Successfully created account");
+    let user = firebase.auth().currentUser;
+    user.sendEmailVerification().then(function() {
+      console.log("Verification email successfully sent.");
+    }).catch(function(error) {
+      console.log("There was an error when sending the verification email.");
+    });
   }).catch(function(error) {
     console.log(error);
   });
