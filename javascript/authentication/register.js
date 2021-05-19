@@ -113,10 +113,10 @@ function createaccount(email, password) {
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
       
-      info.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.");
+      info.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.";
     });
   }).catch(function(error) {
-    info.innerHTML = "There was an error when creating the account. Please private message CoolCarsOnTheRun with information.");
+    info.innerHTML = "There was an error when creating the account. Please private message CoolCarsOnTheRun with information.";
   });
   
   
