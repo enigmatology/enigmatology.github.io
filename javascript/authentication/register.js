@@ -102,7 +102,7 @@ function validateemail(email) {
 }*/
 
 function createaccount(email, password) {
-  let auth = firebase.auth();
+  const auth = firebase.auth();
   const createpromise = auth.createUserWithEmailAndPassword(email, password);
   
   //createpromise.catch(e => console.log(e.message));
