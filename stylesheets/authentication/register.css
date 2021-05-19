@@ -79,7 +79,7 @@ label > * {
   border: solid #1D3461 2px;
 }
 
-#passwords-not-equal, #invalid-email, #missing-field {
+#passwords-not-equal, #invalid-email, #missing-field, #error {
   color: red;
   width: 75%;
   float: right;
