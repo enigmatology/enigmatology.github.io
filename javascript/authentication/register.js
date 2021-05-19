@@ -105,5 +105,5 @@ function createaccount(email, password) {
   let auth = firebase.auth();
   let createpromise = auth.createUserWithEmailAndPassword(email, password);
   
-  //createpromise.catch(e => console.log(e.message));
+  createpromise.catch(e => console.log(e.message));
 }
