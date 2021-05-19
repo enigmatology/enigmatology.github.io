@@ -109,7 +109,7 @@ function createaccount(email, password) {
     user.sendEmailVerification().then(function() {
       console.log("Verification email successfully sent.");
       
-      info.innerHTML = "Email successfully sent. Please check your email to activate your account.");
+      info.innerHTML = "Email successfully sent. Please check your email to activate your account.";
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
       
