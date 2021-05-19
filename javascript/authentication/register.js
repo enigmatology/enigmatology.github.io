@@ -25,6 +25,8 @@ function toggledisplay(element) {
 }
 
 function register() {
+  let errorele = document.getElementById("error");
+  
   let emailele = document.getElementById("email");
   let passwordele = document.getElementById("password");
   let confirmpassele = document.getElementById("confirm-pass");
@@ -40,7 +42,7 @@ function register() {
   let elements = [email, password, confirmpass];
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === "") {
-      if (passnoequal.classList.contains("shown")) {
+      /*if (passnoequal.classList.contains("shown")) {
       toggledisplay(passnoequal);
       }
       if (invalidemail.classList.contains("shown")) {
@@ -48,13 +50,14 @@ function register() {
       }
       if (missingfield.classList.contains("hidden")) {
         toggledisplay(missingfield);
-      }
+      }*/
+      errorele.innerHTML = "One or more fields are empty. Please fill out all fields and try again.";
       return;
     }
   }
 
   if (!validateemail(email)) {
-    if (passnoequal.classList.contains("shown")) {
+    /*if (passnoequal.classList.contains("shown")) {
       toggledisplay(passnoequal);
     }
     if (missingfield.classList.contains("shown")) {
@@ -62,12 +65,13 @@ function register() {
     }
     if (invalidemail.classList.contains("hidden")) {
       toggledisplay(invalidemail);
-    }
+    }*/
+    errorele.innerHTML = "Invalid email. Please enter a different one."
     return;
   }
 
   if (password != confirmpass) {   
-    if (invalidemail.classList.contains("shown")) {
+    /*if (invalidemail.classList.contains("shown")) {
       toggledisplay(invalidemail);
     }
     if (missingfield.classList.contains("shown")) {
@@ -75,16 +79,19 @@ function register() {
     }
     if (passnoequal.classList.contains("hidden")) {
       toggledisplay(passnoequal);
-    }
+    }*/
+    errorele.innerHTML = "Your passwords do not match. Please try again."
     return;
   }
 
-  if (passnoequal.classList.contains("shown")) {
+  /*if (passnoequal.classList.contains("shown")) {
     toggledisplay(passnoequal);
   }
   if (invalidemail.classList.contains("shown")) {
     toggledisplay(invalidemail);
-  }
+  }*/
+  
+  errorele.innerHTML = "";
   
   createaccount(email, password);
 }
