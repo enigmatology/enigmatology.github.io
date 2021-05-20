@@ -105,10 +105,13 @@ function createaccount(email, password) {
   let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
   let logindiv = document.getElementById("login-form");
+  
+  toggledisplay(logindiv);
+  infodiv.innerHTML = "Creating account... please wait.";
+  
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function() {
     let user = firebase.auth().currentUser;
-    toggledisplay(logindiv);
     infodiv.innerHTML = "Sending email verification... please wait.";
     user.sendEmailVerification().then(function() {
       console.log("Verification email successfully sent.");
