@@ -92,7 +92,7 @@ function createaccount(email, password) {
       actiondiv.innerHTML = "Please try again with a different email.";
     }
     else if (code === "auth/weak-password") {
-      infodiv.innerHTML = "The password you tried was too weak (e.g. must be more than 6 characters).";
+      infodiv.innerHTML = "The password you tried was too weak.";
       actiondiv.innerHTML = "Please try again with a different password.";
     }
     else if (code === "auth/invalid-email") {
