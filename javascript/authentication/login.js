@@ -1,0 +1,88 @@
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyDRtckGECYdhgZAGTKUpO60NT5NQAsnFd0",
+  authDomain: "enigmatology-95018.firebaseapp.com",
+  projectId: "enigmatology-95018",
+  storageBucket: "enigmatology-95018.appspot.com",
+  messagingSenderId: "563230550022",
+  appId: "1:563230550022:web:109ff2a5bb073f5f237b87",
+  measurementId: "G-8PKK0H9346"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+function toggledisplay(element) {
+  if (element.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+    element.classList.add("shown");
+  }
+  else {
+    element.classList.remove("shown");
+    element.classList.add("hidden");
+  }
+}
+
+function register() {
+  let errorele = document.getElementById("error");
+  
+  let emailele = document.getElementById("email");
+  let passwordele = document.getElementById("password");
+
+  let email = emailele.value;
+  let password = passwordele.value;
+
+  let elements = [email, password];
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === "") {
+      errorele.innerHTML = "One or more fields are empty. Please fill out all fields and try again.";
+      return;
+    }
+  }
+
+  if (!validateemail(email)) {
+    errorele.innerHTML = "Invalid email. Please enter a different one."
+    return;
+  }  
+  
+  errorele.innerHTML = "";
+  
+  login(email, password);
+}
+
+function validateemail(email) {
+  let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+function login(email, password) {
+  /*let infodiv = document.getElementById("info");
+  let actiondiv = document.getElementById("info-action");
+  let logindiv = document.getElementById("login-form");
+  
+  toggledisplay(logindiv);
+  infodiv.innerHTML = "Creating account... please wait.";
+  
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(function() {
+    let user = firebase.auth().currentUser;
+    infodiv.innerHTML = "Sending email verification... please wait.";
+    user.sendEmailVerification().then(function() {
+      console.log("Verification email successfully sent.");
+      
+      infodiv.innerHTML = "Verification email successfully sent.";
+      actiondiv.innerHTML = "Please check your email to activate your account.";
+    }).catch(function(error) {
+      console.log("There was an error when sending the verification email.");
+      
+      infodiv.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.";
+      actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
+    });
+  }).catch(function(error) {
+    infodiv.innerHTML = "There was an error when creating the account.";
+    actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
+  });*/
+  
+  
+} 
