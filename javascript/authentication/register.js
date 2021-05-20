@@ -93,7 +93,7 @@ function createaccount(email, password) {
       }
       else {
         infodiv.innerHTML = "There was an error when sending the verification email.";
-        actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with the following error message:<br>" + code;
+        actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with the following error message:<br>" + code.message;
       }
     });
   }).catch(function(error) {
