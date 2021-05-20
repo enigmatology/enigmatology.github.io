@@ -20,27 +20,10 @@
         <input type="password" placeholder="Enter password" id="password" required>
       </div>
       
-      <div id="confirm-password" class="field">
-        <label><b>Confirm Password:</b></label>
-        <input type="password" placeholder="Confirm password" id="confirm-pass" required>
-      </div>
-      
-      <div id="missing-field" class="hidden">
-        One or more fields are empty. Please fill out all fields and try again.
-      </div>
-      
-      <div id="passwords-not-equal" class="hidden">
-        Your passwords do not match. Please try again.
-      </div>
-      
-      <div id="invalid-email" class="hidden">
-        Invalid email. Please enter a different one.
-      </div>
-      
       <div id="error"></div>
       
-      <a href="#" id="login">Already have an account? Login</a>
-      <button type="submit" id="register" onclick="register()">Register</button>
+      <a href="register" id="login">Need an account? Register</a>
+      <button type="submit" id="login" onclick="login()">Register</button>
     </div>
     
     <div id="info"></div>
@@ -63,6 +46,6 @@
 
     
     
-    <script src="javascript/authentication/register.js"></script>
+    <script src="javascript/authentication/login.js"></script>
   </body>
 </html>
