@@ -121,7 +121,7 @@ function createaccount(email, password) {
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
       
-      infodiv.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.";
+      infodiv.innerHTML = "There was an error when sending the verification email.";
       actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
     });
   }).catch(function(error) {
