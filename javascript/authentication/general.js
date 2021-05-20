@@ -20,10 +20,10 @@ function showusername() {
 
   headdiv = document.getElementById("auth");
 
-  if (user && user.emailVerified) {
+  //if (user && user.emailVerified) {
     headdiv.innerHTML = user.displayName;
-  }
+  /*}
   else {
     headdiv.innerHTML = "Currently logged out";
-  }
+  }*/
 }
