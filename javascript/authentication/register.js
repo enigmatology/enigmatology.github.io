@@ -82,13 +82,23 @@ function createaccount(email, password) {
       actiondiv.innerHTML = "Please check your email to activate your account.";
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
-      
-      infodiv.innerHTML = "There was an error when sending the verification email.";
-      actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
+      let code = error.message;
+      if (code === "EMAIL_EXISTS") {
+        infodiv.innerHTML = "The email you tried already has an account associated with it.";
+        actiondiv.innerHTML = "Please try again with a different email.";
+      }
+      else if (code === "WEAK_PASSWORD") {
+        infodiv.innerHTML = "The password you tried was too weak (e.g. must be more than 6 characters).";
+        actiondiv.innerHTML = "Please try again with a different password.";
+      }
+      else {
+        infodiv.innerHTML = "There was an error when sending the verification email.";
+        actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with the following error message:<br>" + code;
+      }
     });
   }).catch(function(error) {
     infodiv.innerHTML = "There was an error when creating the account.";
-    actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
+    actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with the following error message:<br>" + error;
   });
   
   
