@@ -9,13 +9,20 @@ hr {
 }
 
 @media only screen and (min-width: 775.0000001px) {
-
   body {font-family: Arial, Helvetica, sans-serif; padding: 0; margin: 0;}
   * {box-sizing: border-box;}
 
   .top-header {
     font-family: 'Source Code Pro', monospace;
     margin-left: 15px;
+    width: 50%;
+    float: left;
+  }
+  #auth {
+    background-color: black;
+    height: 83px;
+    width: 40%;
+    float: right;
   }
 
   #topnav {
@@ -56,8 +63,6 @@ hr {
   #openbtn {
     display: none;
   }
-  
-  
 }
 
 @media only screen and (max-width: 775px) {
