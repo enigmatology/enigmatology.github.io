@@ -13,17 +13,19 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-let auth = firebase.auth();
-let user = auth.currentUser;
-let headdiv;
+function showusername() {
+  let auth = firebase.auth();
+  let user = auth.currentUser;
+  let headdiv;
 
-while (headdiv == null) {
-  headdiv = document.getElementById("auth");
-}
+  while (headdiv == null) {
+    headdiv = document.getElementById("auth");
+  }
 
-if (user && user.emailVerified) {
-  headdiv.innerHTML = user.displayName;
-}
-else {
-  headdiv.innerHTML = "Currently logged out";
+  if (user && user.emailVerified) {
+    headdiv.innerHTML = user.displayName;
+  }
+  else {
+    headdiv.innerHTML = "Currently logged out";
+  }
 }
