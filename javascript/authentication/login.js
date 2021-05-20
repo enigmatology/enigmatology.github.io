@@ -65,7 +65,7 @@ function loginserver(email, password) {
   toggledisplay(logindiv);
   infodiv.innerHTML = "Logging in... please wait.";
   
-  auth.signInUserWithEmailAndPassword(email, password)
+  auth.signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // signed in
   })
