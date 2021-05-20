@@ -81,19 +81,23 @@ function createaccount(email, password) {
       infodiv.innerHTML = "Verification email successfully sent.";
       actiondiv.innerHTML = "Please check your email to activate your account.";
     }).catch(function(error) {
-      let code = error.message;
+      let code = error.code;
       infodiv.innerHTML = "There was an error when sending the verification email.";
       actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with the following error message:<br>" + code;
     });
   }).catch(function(error) {
-    let code = error.message;
-    if (code === "EMAIL_EXISTS") {
+    let code = error.code;
+    if (code === "auth/email-already-in-use") {
       infodiv.innerHTML = "The email you tried already has an account associated with it.";
       actiondiv.innerHTML = "Please try again with a different email.";
     }
-    else if (code === "WEAK_PASSWORD") {
+    else if (code === "auth/weak-password") {
       infodiv.innerHTML = "The password you tried was too weak (e.g. must be more than 6 characters).";
       actiondiv.innerHTML = "Please try again with a different password.";
+    }
+    else if (code === "auth/invalid-email") {
+      infodiv.innerHTML = "The email you tried does not exist.";
+      actiondiv.innerHTML = "Please try again with a different email.";
     }
     else {
       infodiv.innerHTML = "There was an error when sending the verification email.";
