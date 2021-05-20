@@ -93,10 +93,12 @@ label > * {
   font-family: 'Rubik', sans-serif;
   font-size: 35px;
   font-weight: 400;
+  margin-top: 20px;
 }
 
 #info-action {
   font-family: 'Rubik', sans-serif;
   font-size: 15px;
   text-align: center;
+  margin-top: 10px;
 }
