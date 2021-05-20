@@ -87,3 +87,9 @@ label > * {
   text-align: center;
   font-family: 'Rubik', sans-serif; 
 }
+
+#info {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 75px;
+}
