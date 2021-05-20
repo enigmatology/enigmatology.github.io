@@ -13,14 +13,16 @@ function register() {
   let errorele = document.getElementById("error");
   
   let emailele = document.getElementById("email");
+  let usernameele = document.getElementById("username");
   let passwordele = document.getElementById("password");
   let confirmpassele = document.getElementById("confirm-pass");
 
   let email = emailele.value;
+  let username = username.value;
   let password = passwordele.value;
   let confirmpass = confirmpassele.value;
 
-  let elements = [email, password, confirmpass];
+  let elements = [email, username, password, confirmpass];
   for (let i = 0; i < elements.length; i++) {
     if (elements[i] === "") {
       errorele.innerHTML = "One or more fields are empty. Please fill out all fields and try again.";
@@ -40,7 +42,7 @@ function register() {
   
   errorele.innerHTML = "";
   
-  createaccount(email, password);
+  createaccount(email, password, username);
 }
 
 function validateemail(email) {
@@ -48,7 +50,7 @@ function validateemail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-function createaccount(email, password) {
+function createaccount(email, password, username) {
   let auth = firebase.auth();
   
   let infodiv = document.getElementById("info");
@@ -61,17 +63,23 @@ function createaccount(email, password) {
   auth.createUserWithEmailAndPassword(email, password)
   .then(function() {
     let user = auth.currentUser;
-    infodiv.innerHTML = "Sending email verification... please wait.";
-    user.sendEmailVerification().then(function() {
-      console.log("Verification email successfully sent.");
-      
-      infodiv.innerHTML = "Verification email successfully sent.";
-      actiondiv.innerHTML = "Please check your email to activate your account.";
+    user.updateProfile({
+      displayName: username
+    }).then(function() {
+      infodiv.innerHTML = "Sending email verification... please wait.";
+      user.sendEmailVerification().then(function() {
+        infodiv.innerHTML = "Verification email successfully sent.";
+        actiondiv.innerHTML = "Please check your email to activate your account.";
+      }).catch(function(error) {
+        let code = error.code;
+        infodiv.innerHTML = "There was an error when sending the verification email.";
+        actiondiv.innerHTML = "Please private message CoolCarsOnTheRun on AoPS with the following error message:<br>" + code;
+      });
     }).catch(function(error) {
       let code = error.code;
-      infodiv.innerHTML = "There was an error when sending the verification email.";
+      infodiv.innerHTML = "There was an error when creating the account.";
       actiondiv.innerHTML = "Please private message CoolCarsOnTheRun on AoPS with the following error message:<br>" + code;
-    });
+    })
   }).catch(function(error) {
     let code = error.code;
     if (code === "auth/email-already-in-use") {
@@ -87,10 +95,8 @@ function createaccount(email, password) {
       actiondiv.innerHTML = "Please try again with a different email.";
     }
     else {
-      infodiv.innerHTML = "There was an error when sending the verification email.";
+      infodiv.innerHTML = "There was an error when creating the account.";
       actiondiv.innerHTML = "Please private message CoolCarsOnTheRun on AoPS with the following error message:<br>" + code;
     }
   });
-  
-  
 }
