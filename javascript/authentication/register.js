@@ -103,23 +103,27 @@ function validateemail(email) {
 
 function createaccount(email, password) {
   let infodiv = document.getElementById("info");
+  let actiondiv = document.getElementById("info-action");
   let logindiv = document.getElementById("login-form");
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function() {
     let user = firebase.auth().currentUser;
     toggledisplay(logindiv);
-    info.innerHTML = "Sending email verification... please wait.";
+    infodiv.innerHTML = "Sending email verification... please wait.";
     user.sendEmailVerification().then(function() {
       console.log("Verification email successfully sent.");
       
-      info.innerHTML = "Verification email successfully sent. Please check your email to activate your account.";
+      infodiv.innerHTML = "Verification email successfully sent.";
+      actiondiv.innerHTML = "Please check your email to activate your account.";
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
       
-      info.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.";
+      infodiv.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.";
+      actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
     });
   }).catch(function(error) {
-    info.innerHTML = "There was an error when creating the account. Please private message CoolCarsOnTheRun with information.";
+    infodiv.innerHTML = "There was an error when creating the account.";
+    actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
   });
   
   
