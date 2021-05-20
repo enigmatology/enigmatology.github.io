@@ -87,7 +87,7 @@ function createaccount(email, password) {
     });
   }).catch(function(error) {
     let code = error.code;
-    /*if (code === "auth/email-already-in-use") {
+    if (code === "auth/email-already-in-use") {
       infodiv.innerHTML = "The email you tried already has an account associated with it.";
       actiondiv.innerHTML = "Please try again with a different email.";
     }
@@ -99,10 +99,10 @@ function createaccount(email, password) {
       infodiv.innerHTML = "The email you tried does not exist.";
       actiondiv.innerHTML = "Please try again with a different email.";
     }
-    else {*/
+    else {
       infodiv.innerHTML = "There was an error when sending the verification email.";
       actiondiv.innerHTML = "Please private message CoolCarsOnTheRun on AoPS with the following error message:<br>" + code;
-    //}
+    }
   });
   
   
