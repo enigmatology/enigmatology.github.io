@@ -14,14 +14,14 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 function showusername() {
-  let auth = firebase.auth();
+  /*let auth = firebase.auth();
   let user = auth.currentUser;
   let headdiv;
 
   headdiv = document.getElementById("auth");
 
   //if (user && user.emailVerified) {
-    headdiv.innerHTML = user.displayName;
+    headdiv.innerHTML = user.displayName;*/
   /*}
   else {
     headdiv.innerHTML = "Currently logged out";
