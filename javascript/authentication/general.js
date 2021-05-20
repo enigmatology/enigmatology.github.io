@@ -12,3 +12,15 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
+let auth = firebase.auth();
+let user = auth.currentUser;
+
+let headdiv = document.getElementById("auth");
+
+if (user && user.emailVerified) {
+  headdiv.innerHTML = user.displayName;
+}
+else {
+  headdiv.innerHTML = "Currently logged out";
+}
