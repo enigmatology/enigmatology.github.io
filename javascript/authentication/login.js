@@ -67,7 +67,16 @@ function loginserver(email, password) {
   
   auth.signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
-    // signed in
+    let user = auth.currentUser;    
+    if (user != null) {
+      if (!user.emailVerified) {
+        infodiv.innerHTML = "The email address associated with your account has not been verified.";
+        actiondiv.innerHTML = "Please check your email to verify your email and activate your account.";
+      }
+      else {
+        window.location = "https://enigmatology.github.io";
+      }
+    }
   })
   .catch((error) => {
     let code = error.code;
