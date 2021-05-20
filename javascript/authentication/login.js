@@ -45,6 +45,7 @@ function loginserver(email, password) {
   let auth = firebase.auth();
   let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
+  let errordiv = document.getElementById("error");
   let logindiv = document.getElementById("login-form");
   
   toggledisplay(logindiv);
@@ -72,6 +73,16 @@ function loginserver(email, password) {
     else if (code === "auth/user-not-found") {
       infodiv.innerHTML = "The account you tried does not exist.";
       actiondiv.innerHTML = "Please try again, or if you do not have an account, create one."; // TODO: add link to create account here
+    }
+    else if (code === "auth/wrong-password") {
+      errordiv.innerHTML = "Incorrect password. Please try again.";
+      document.getElementById("password").value = "";
+      infodiv.innerHTML = "";
+      toggledisplay(logindiv);
+    }
+    else {
+      infodiv.innerHTML = "There was an error when logging you in.";
+      actiondiv.innerHTML = "Please private message CoolCarsOnTheRun on AoPS with the following error message:<br>" + code;
     }
   });
   
