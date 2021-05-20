@@ -64,6 +64,8 @@ function validateemail(email) {
 }
 
 function createaccount(email, password) {
+  let auth = firebase.auth();
+  
   let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
   let logindiv = document.getElementById("login-form");
@@ -71,9 +73,9 @@ function createaccount(email, password) {
   toggledisplay(logindiv);
   infodiv.innerHTML = "Creating account... please wait.";
   
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  auth.createUserWithEmailAndPassword(email, password)
   .then(function() {
-    let user = firebase.auth().currentUser;
+    let user = auth.currentUser;
     infodiv.innerHTML = "Sending email verification... please wait.";
     user.sendEmailVerification().then(function() {
       console.log("Verification email successfully sent.");
