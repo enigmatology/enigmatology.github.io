@@ -103,13 +103,16 @@ function validateemail(email) {
 
 function createaccount(email, password) {
   let infodiv = document.getElementById("info");
+  let logindiv = document.getElementById("login-form");
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function() {
     let user = firebase.auth().currentUser;
+    toggledisplay(logindiv);
+    info.innerHTML = "Sending email verification... please wait.";
     user.sendEmailVerification().then(function() {
       console.log("Verification email successfully sent.");
       
-      info.innerHTML = "Email successfully sent. Please check your email to activate your account.";
+      info.innerHTML = "Verification email successfully sent. Please check your email to activate your account.";
     }).catch(function(error) {
       console.log("There was an error when sending the verification email.");
       
