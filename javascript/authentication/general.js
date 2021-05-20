@@ -15,8 +15,11 @@ firebase.analytics();
 
 let auth = firebase.auth();
 let user = auth.currentUser;
+let headdiv;
 
-let headdiv = document.getElementById("auth");
+while (headdiv == null) {
+  headdiv = document.getElementById("auth");
+}
 
 if (user && user.emailVerified) {
   headdiv.innerHTML = user.displayName;
