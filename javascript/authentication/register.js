@@ -18,7 +18,7 @@ function register() {
   let confirmpassele = document.getElementById("confirm-pass");
 
   let email = emailele.value;
-  let username = username.value;
+  let username = usernameele.value;
   let password = passwordele.value;
   let confirmpass = confirmpassele.value;
 
