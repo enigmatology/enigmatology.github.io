@@ -24,7 +24,7 @@ function toggledisplay(element) {
   }
 }
 
-function register() {
+function login() {
   let errorele = document.getElementById("error");
   
   let emailele = document.getElementById("email");
@@ -56,7 +56,7 @@ function validateemail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-function login(email, password) {
+function loginserver(email, password) {
   /*let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
   let logindiv = document.getElementById("login-form");
