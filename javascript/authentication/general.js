@@ -18,9 +18,7 @@ function showusername() {
   let user = auth.currentUser;
   let headdiv;
 
-  while (headdiv == null) {
-    headdiv = document.getElementById("auth");
-  }
+  headdiv = document.getElementById("auth");
 
   if (user && user.emailVerified) {
     headdiv.innerHTML = user.displayName;
