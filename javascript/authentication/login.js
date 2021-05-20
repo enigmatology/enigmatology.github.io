@@ -57,32 +57,29 @@ function validateemail(email) {
 }
 
 function loginserver(email, password) {
-  /*let infodiv = document.getElementById("info");
+  let auth = firebase.auth();
+  let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
   let logindiv = document.getElementById("login-form");
   
   toggledisplay(logindiv);
-  infodiv.innerHTML = "Creating account... please wait.";
+  infodiv.innerHTML = "Logging in... please wait.";
   
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then(function() {
-    let user = firebase.auth().currentUser;
-    infodiv.innerHTML = "Sending email verification... please wait.";
-    user.sendEmailVerification().then(function() {
-      console.log("Verification email successfully sent.");
-      
-      infodiv.innerHTML = "Verification email successfully sent.";
-      actiondiv.innerHTML = "Please check your email to activate your account.";
-    }).catch(function(error) {
-      console.log("There was an error when sending the verification email.");
-      
-      infodiv.innerHTML = "There was an error when sending the verification email. Please private message CoolCarsOnTheRun with information.";
-      actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
-    });
-  }).catch(function(error) {
-    infodiv.innerHTML = "There was an error when creating the account.";
-    actiondiv.innerHTML = "Please private message CoolCarsOnTheRun with information.";
-  });*/
+  auth.signInUserWithEmailAndPassword(email, password);
+  .then((userCredential) => {
+    // signed in
+  })
+  .catch((error) => {
+    let code = error.code;
+    if (code === "auth/user-disabled") {
+      infodiv.innerHTML = "The account you tried has been disabled.";
+      actiondiv.innerHTML = "If you believe that this was an error, private message CoolCarsOnTheRun on AoPS with your email.";
+    }
+    else if (code === "auth/user-not-found") {
+      infodiv.innerHTML = "The account you tried does not exist.";
+      actiondiv.innerHTML = "Please try again, or if you do not have an account, create one."; // TODO: add link to create account here
+    }
+  });
   
   
 } 
