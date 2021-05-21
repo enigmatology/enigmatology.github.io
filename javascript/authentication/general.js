@@ -17,12 +17,13 @@ function showusername() {
   let auth = firebase.auth();
   let headdiv = document.getElementById("auth");
   auth.onAuthStateChanged(function(user) {
-    headdiv.innerHTML = "<div id=\"vertical-separator\"></div>";
+    headdiv.innerHTML = "<div id=\"vertical-separator\"></div><div id=\"username\">";
     if (user) {
       headdiv.innerHTML += user.displayName;
     }
     else {
       headdiv.innerHTML += "Currently logged out";
     }
+    headdiv.innerHTML += "</div>";
   });
 }
