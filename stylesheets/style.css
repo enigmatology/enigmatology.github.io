@@ -22,6 +22,7 @@ hr {
     height: 83px;
     width: 40%;
     float: right;
+    font-family: 'Rubik', sans-serif;
   }
 
   #topnav {
@@ -61,6 +62,11 @@ hr {
 
   #openbtn {
     display: none;
+  }
+  
+  #vertical-separator {
+    border-left: 2px solid black;
+    height: 75px;
   }
 }
 
