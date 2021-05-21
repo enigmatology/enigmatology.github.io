@@ -24,6 +24,7 @@ hr {
     float: right;
     font-family: 'Rubik', sans-serif;
     font-weight: 100;
+    text-transform: uppercase;
   }
 
   #topnav {
