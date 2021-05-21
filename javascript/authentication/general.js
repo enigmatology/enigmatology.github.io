@@ -18,11 +18,11 @@ function showusername() {
   let headdiv = document.getElementById("auth");
   auth.onAuthStateChanged(function(user) {
     if (user) {
-      headdiv.innerHTML += "<div id=\"logged-in\">" + user.displayName + "</div>";
+      headdiv.innerHTML = "<div id=\"logged-in\">" + user.displayName + "</div>";
     }
     else {
-      headdiv.innerHTML += "<div id=\"logged-in\">" + "Currently logged out" + "</div>";
+      headdiv.innerHTML = "<div id=\"logged-in\">" + "Currently logged out" + "</div>";
     }
-    headdiv.innerHTML = "<div id=\"vertical-separator\"></div>";
+    headdiv.innerHTML += "<div id=\"vertical-separator\"></div>";
   });
 }
