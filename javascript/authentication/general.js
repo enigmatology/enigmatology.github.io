@@ -16,8 +16,8 @@ firebase.analytics();
 function showusername() {
   let auth = firebase.auth();
   let headdiv = document.getElementById("auth");
-  headdiv.innerHTML = "<div id=\"vertical-separator\"></div>";
   auth.onAuthStateChanged(function(user) {
+    headdiv.innerHTML = "<div id=\"vertical-separator\"></div>";
     if (user) {
       headdiv.innerHTML += user.displayName;
     }
