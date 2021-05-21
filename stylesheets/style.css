@@ -28,17 +28,19 @@ hr {
   }
   
   #vertical-separator {
-    width: 0;
+    width: 15px;
     display: inline-block;
     float: right;
     border-left: 1px solid black;
     height: 66px;
+    margin-top: 8.5px;
   }
 
   #logged-in {
     height: 100%;
-    border-style: solid;
     float: right;
+    margin-right: 15px;
+    padding: auto;
   }
 
   #topnav {
