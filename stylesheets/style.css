@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;1,300&display=swap');
 
 hr {
-  height:1px;
-  border-width:0;
-  color:gray;
-  background-color:gray;
+  height: 1px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
 }
 
 @media only screen and (min-width: 775.0000001px) {
@@ -23,6 +23,7 @@ hr {
     width: 40%;
     float: right;
     font-family: 'Rubik', sans-serif;
+    font-weight: 100;
   }
 
   #topnav {
@@ -65,8 +66,8 @@ hr {
   }
   
   #vertical-separator {
-    border-left: 2px solid black;
-    height: 50px;
+    border-left: 1px solid black;
+    height: 60px;
   }
 }
 
