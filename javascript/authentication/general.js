@@ -14,6 +14,15 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 function showusername() {
+  let auth = firebase.auth();
+  auth.onAuthStateChanged(function(user) {
+    if (user) {
+      headdiv.innerHTML = user.displayName;
+    }
+    else {
+      headdiv.innerHTML = "Currently logged out";
+    }
+  });
   /*let auth = firebase.auth();
   let user = auth.currentUser;
   let headdiv;
