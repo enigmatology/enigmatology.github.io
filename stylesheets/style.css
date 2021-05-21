@@ -48,7 +48,7 @@ hr {
     color: #6290C8;
   }
   #login-register:hover {
-    color: #d6d6d6;
+    text-decoration: underline;
   }
 
   #topnav {
