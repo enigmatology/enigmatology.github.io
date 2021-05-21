@@ -35,7 +35,7 @@ hr {
     height: 66px;
   }
 
-  #username {
+  #logged-in {
     height: 100%;
     border-style: solid;
     float: right;
