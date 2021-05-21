@@ -26,6 +26,10 @@ hr {
     font-weight: 100;
     text-transform: uppercase;
   }
+  
+  #username, #vertical-separator {
+    float: right;
+  }
 
   #topnav {
     width: 100% !important;
