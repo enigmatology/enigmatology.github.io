@@ -21,7 +21,7 @@ function showusername() {
       headdiv.innerHTML = "<div id=\"logged-in\">" + user.displayName + "</div>";
     }
     else {
-      headdiv.innerHTML = "<div id=\"logged-in\">" + "<a href=\"https://enigmatology.github.io/login\">Login/Register</a>" + "</div>";
+      headdiv.innerHTML = "<div id=\"logged-in\">" + "<a id=\"login-register\" href=\"https://enigmatology.github.io/login\">Login/Register</a>" + "</div>";
     }
     headdiv.innerHTML += "<div id=\"vertical-separator\"></div>";
   });
