@@ -27,7 +27,17 @@ hr {
     text-transform: uppercase;
   }
   
-  #username, #vertical-separator {
+  #vertical-separator {
+    width: 0;
+    display: inline-block;
+    float: right;
+    border-left: 1px solid black;
+    height: 66px;
+  }
+
+  #username {
+    height: 100%;
+    border-style: solid;
     float: right;
   }
 
@@ -70,10 +80,7 @@ hr {
     display: none;
   }
   
-  #vertical-separator {
-    border-left: 1px solid black;
-    height: 60px;
-  }
+  
 }
 
 @media only screen and (max-width: 775px) {
