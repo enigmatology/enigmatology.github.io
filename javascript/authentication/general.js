@@ -16,24 +16,13 @@ firebase.analytics();
 function showusername() {
   let auth = firebase.auth();
   let headdiv = document.getElementById("auth");
+  headdiv.innerHTML = "<div id=\"vertical-separator\"></div>";
   auth.onAuthStateChanged(function(user) {
     if (user) {
-      headdiv.innerHTML = user.displayName;
+      headdiv.innerHTML += user.displayName;
     }
     else {
-      headdiv.innerHTML = "Currently logged out";
+      headdiv.innerHTML += "Currently logged out";
     }
   });
-  /*let auth = firebase.auth();
-  let user = auth.currentUser;
-  let headdiv;
-
-  headdiv = document.getElementById("auth");
-
-  //if (user && user.emailVerified) {
-    headdiv.innerHTML = user.displayName;*/
-  /*}
-  else {
-    headdiv.innerHTML = "Currently logged out";
-  }*/
 }
