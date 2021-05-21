@@ -42,6 +42,14 @@ hr {
     margin-right: 15px;
     padding-top: 30px;
   }
+  
+  #login-register {
+    text-decoration: none;
+    color: #1D3461;
+  }
+  #login-register:hover {
+    color: #376996;
+  }
 
   #topnav {
     width: 100% !important;
