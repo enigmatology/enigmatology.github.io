@@ -53,6 +53,12 @@ hr {
   
   #logout-dropdown {
     display: none;
+    position: absolute;
+    top: 55px;
+  }
+  
+  #user-wrapper {
+    float: right;
   }
 
   #topnav {
