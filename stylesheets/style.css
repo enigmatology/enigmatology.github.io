@@ -50,6 +50,10 @@ hr {
   #login-register:hover {
     text-decoration: underline;
   }
+  
+  #logout-dropdown {
+    display: none;
+  }
 
   #topnav {
     width: 100% !important;
