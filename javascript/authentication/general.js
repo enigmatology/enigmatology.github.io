@@ -18,7 +18,7 @@ function showusername() {
   let headdiv = document.getElementById("auth");
   auth.onAuthStateChanged(function(user) {
     if (user) {
-      headdiv.innerHTML = "<div id=\"logged-in\">" + user.displayName + "</div><div id=\"logout-dropdown\"><button onclick=\"logout()\">Sign out</button></div>";
+      headdiv.innerHTML = "<div id=\"user-wrapper\"><div id=\"logged-in\">" + user.displayName + "</div><div id=\"logout-dropdown\"><button onclick=\"logout()\">Sign out</button></div></div>";
     }
     else {
       headdiv.innerHTML = "<div id=\"logged-in\">" + "<a id=\"login-register\" href=\"https://enigmatology.github.io/login\">Login/Register</a>" + "</div>";
