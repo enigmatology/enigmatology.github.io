@@ -37,10 +37,9 @@ hr {
   }
 
   #logged-in {
-    height: 100%;
     float: right;
     margin-right: 15px;
-    padding-top: 30px;
+    margin-top: 30px;
   }
   
   #login-register {
