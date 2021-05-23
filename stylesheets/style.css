@@ -66,6 +66,10 @@ hr {
     /*display: block;
     REMOVE THIS COMMENT ONCE HOVERING STUFF IS FIGURED OUT */
   }
+
+  #user-compress-wrapper:hover #logged-in {
+    height: 50px;
+  }
   
   #user-wrapper {
     float: right;
