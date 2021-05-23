@@ -62,7 +62,7 @@ hr {
     right: 5px;
   }
 
-  #user-wrapper:hover #logout-dropdown, #logout-dropdown:hover {
+  #user-compress-wrapper:hover #logout-dropdown, #logout-dropdown:hover {
     /*display: block;
     REMOVE THIS COMMENT ONCE HOVERING STUFF IS FIGURED OUT */
   }
