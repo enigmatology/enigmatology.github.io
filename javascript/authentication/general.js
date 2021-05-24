@@ -27,3 +27,14 @@ function showusername() {
     headdiv.innerHTML += "<div id=\"vertical-separator\"></div>";
   });
 }
+
+function logout() {
+  let auth = firebase.auth();
+  auth.signOut()
+  .then(() => {
+    window.location = "https://enigmatology.github.io";
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
