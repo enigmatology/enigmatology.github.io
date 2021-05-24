@@ -81,6 +81,8 @@ hr {
     width: 100%;
     font-family: 'Rubik', sans-serif;
     font-weight: 0;
+    border: none;
+    text-align: left;
   }
 
   #topnav {
