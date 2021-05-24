@@ -63,8 +63,7 @@ hr {
   }
 
   #user-compress-wrapper:hover #logout-dropdown, #logout-dropdown:hover {
-    /*display: block;
-    REMOVE THIS COMMENT ONCE HOVERING STUFF IS FIGURED OUT */
+    display: block;
   }
 
   #user-compress-wrapper:hover #logged-in {
