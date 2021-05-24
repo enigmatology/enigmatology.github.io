@@ -226,11 +226,11 @@ I'll start with IDs. For example, let's say you wanted to add the ID of "color-o
 </html>
 [/code]
 Now, we want to style this particular h1. We do this by using a [b]CSS selector[/b] - in the style tags, we'll do:
-[css]
+[code=css]
 #color-orange {
   background-color: orange;
 }
-[/css]
+[/code]
 First, note that this is basically the same as selecting the body tag. The only difference is the selector, or the #. This # basically tells CSS that you're looking for an ID. After the hashtag, you put the name of the ID you're looking for. Similar to styling the body, CSS will look for the element with ID color-orange, and style that element with everything inside of the curly brackets:
 [code=html]
 <!DOCTYPE html>
@@ -273,11 +273,11 @@ Now for classes. The way you use classes are effectively the same as ids, just w
 </html>
 [/code]
 However, different from ids, you style classes with a different selector: a period (.). For example, to color the background orange, you would do
-[css]
+[code=css]
 .color-orange {
   background-color: orange;
 }
-[/css]
+[/code]
 The full code is as follows:
 [code=html]
 <!DOCTYPE html>
