@@ -29,7 +29,7 @@ This is basically the skeleton of every single webpage that you're going to see.
 
 First, every single webpage must start with the code <!DOCTYPE html>. What that line effectively does is that it tells the browser that this is an HTML document. Although many browsers still theoretically render the page even without that line, it helps with compatability and such.
 
-Next, you'll see that this looks a lot like bbCode, or the language that you write forums in. For example, you use the [verbatim][b][/b][/verbatim] tag in order to bold things (bolding things in HTML is actually very similar - you use the [verbatim]<b></b>[/verbatim] tag). This is because HTML is a [b]tag language[/b], which bbCode also is. You specify all elements in your document using HTML tags - you start each element with <>, and you end it with </>. Everything in between those two tags will be inside of that element.
+Next, you'll see that this looks a lot like bbCode, or the language that you write forums in. This is because HTML is a [b]tag language[/b], which bbCode also is. You specify all elements in your document using HTML tags - you start each element with <>, and you end it with </>. Everything in between those two tags will be inside of that element.
 
 OK, I'm now going to split this explanation into two sections:
 
