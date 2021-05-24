@@ -51,7 +51,7 @@ The body of a HTML document is the meat of the entire thing - it's what is displ
 [/code]
 
 This would display as follows:
-[img]https://i.ibb.co/qF09KxK/test1.jpg[/img]
+<img src="https://i.ibb.co/qF09KxK/test1.jpg"/>
 You can also use some pre-formatted tags in order to accomplish different tasks - say that you wanted to make the Hello World! very important, and on the next line, put My First HTML Program smaller. This would be done as follows:
 
 [code=html]
@@ -69,7 +69,7 @@ You can also use some pre-formatted tags in order to accomplish different tasks 
 In this example, I used the h1 tag (which stands for header 1, the 1 indicating importance - there's also h2 for header 2 which is smaller, h3, etc.) for the Hello World! in order to raise it's importance. I used the p tag (or paragraph tag) for the simple content of the post that I wanted to show.
 
 This would display like this:
-[img]https://i.ibb.co/n1S1xvg/test2.jpg[/img]
+<img src="https://i.ibb.co/n1S1xvg/test2.jpg"/>
 
 I'm going to introduce one last tag that's particularly important, and then I'll move on, as it's very easy to find tags that do what you want - just go on Google and search up "______ tag html" and something should come up (e.g. search up "link tag html" to find how to make a hyperlink and you'll get an answer).
 
@@ -134,7 +134,7 @@ Let's go back to the question of making the background of the webpage orange. Le
 OK. First, we'll see that we have the word body, followed by curly brackets - {}. This is how CSS understands WHAT you want to style - you want to style the body. So CSS will go into the html document, and say "where's the body of this HTML?" and find the <body></body> tags. CSS will then take that body, and apply all styles that we put [b]inside[/b] of the curly brackets to it. In this case, we're telling it to make the background color orange, by using background-color: orange; (we'll get more into details on that in a future lesson).
 
 As we know that the body is the entire meat of what is displayed in the webpage, it's going to make the entire background color of the body orange, as follows:
-[img]https://i.ibb.co/m4b15zz/test3.jpg[/img]
+<img src="https://i.ibb.co/m4b15zz/test3.jpg"/>
 We can also do the same thing with the h1 tags, for example, by doing
 [code=html]
 <!DOCTYPE html>
@@ -175,7 +175,7 @@ Note that this will make the background color of EVERY SINGLE h1 inside of your 
 </html>
 [/code]
 it will make the background color of both of those h1s orange:
-[img]https://i.ibb.co/6sKvX7s/test4.jpg[/img]
+<img src="https://i.ibb.co/6sKvX7s/test4.jpg"/>
 You can also add multiple styles and style multiple elements, as follows (we'll get deeper into that in another lesson):
 [code=html]
 <!DOCTYPE html>
@@ -203,7 +203,7 @@ You can also add multiple styles and style multiple elements, as follows (we'll 
 </html>
 [/code]
 which creates
-[img]https://i.ibb.co/JxKxMXn/test5.jpg[/img]
+<img src="https://i.ibb.co/JxKxMXn/test5.jpg"/>
 Alright, now we know how to style all of one element. But this begs the question: what if we wanted to style one particular element differently, or a couple different elements differently and everything else leave normal?
 
 The answer is HTML IDs and classes. IDs are used when there is exactly one element you want to make that style, and classes are used when there are multiple. The way you do it is add something after the label of the tag. 
@@ -252,7 +252,7 @@ First, note that this is basically the same as selecting the body tag. The only 
 </html>
 [/code]
 This will result in the following:
-[img]https://i.ibb.co/W3xcJcM/test6.jpg[/img]
+<img src="https://i.ibb.co/W3xcJcM/test6.jpg"/>
 Additionally, you should not put the same id on multiple elements, as an id is supposed to style only one element. If you want to style multiple elements, you should use the class selector.
 
 Now for classes. The way you use classes are effectively the same as ids, just with slightly different syntax:
@@ -299,7 +299,7 @@ The full code is as follows:
 </html>
 [/code]
 This would result in:
-[img]https://i.ibb.co/W3xcJcM/test6.jpg[/img]
+<img src="https://i.ibb.co/W3xcJcM/test6.jpg"/>
 Note that you can assign this class to multiple elements, such as the p element:
 [code=html]
 <!DOCTYPE html>
@@ -321,7 +321,7 @@ Note that you can assign this class to multiple elements, such as the p element:
 </html>
 [/code]
 creating:
-[img]https://i.ibb.co/Xtg187c/test7.jpg[/img]
+<img src="https://i.ibb.co/Xtg187c/test7.jpg"/>
 You're able to assign classes and ids to any elements - divs, h1s, ps, h2s, etc.
 
 And now you understand the basics of HTML! This should be enough to get you started in learning how to create a blog's CSS, which is effectively what we were working with inside of the <style></style> tags. We're lucky that we don't need to mess with anything else, as AoPS has already coded the entire HTML document, including the body and such.
