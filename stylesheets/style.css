@@ -137,6 +137,10 @@ hr {
     position: relative;
     height: 100px;
   }
+  
+  #headdiv {
+    display: none;
+  }
 
   .top-header {
     font-family: 'Source Code Pro', monospace;
