@@ -178,6 +178,7 @@ function convertbbCode(orig, i, currentcontents) {
     }
     codetext.replaceAll("<", "&lt;");
     codetext.replaceAll(">", "&gt;");
+    console.log(codetext);
     converted = converted.replace(slicedcode, "<div><pre><code class=\"" + language + "\">" + codetext + "</code></pre></div>");
     
   }
