@@ -176,9 +176,8 @@ function convertbbCode(orig, i, currentcontents) {
     if (codetext.slice(0, 1) === "\n") {
       codetext = codetext.slice(1, codetext.length);
     }
-    codetext.replaceAll("<", "&lt;");
-    codetext.replaceAll(">", "&gt;");
-    console.log(codetext);
+    codetext = codetext.replaceAll("<", "&lt;");
+    codetext = codetext.replaceAll(">", "&gt;");
     converted = converted.replace(slicedcode, "<div><pre><code class=\"" + language + "\">" + codetext + "</code></pre></div>");
     
   }
