@@ -326,4 +326,4 @@ You're able to assign classes and ids to any elements - divs, h1s, ps, h2s, etc.
 
 And now you understand the basics of HTML! This should be enough to get you started in learning how to create a blog's CSS, which is effectively what we were working with inside of the <style></style> tags. We're lucky that we don't need to mess with anything else, as AoPS has already coded the entire HTML document, including the body and such.
 
-Next lesson, we'll get into the actual CSS. Also, if something doesn't make sense or there's a typo, feel free to shout or leave a comment, and I'll be sure to get to it sometime in the near future :)
+Next lesson, we'll get into the actual CSS :)
