@@ -77,11 +77,10 @@ hr {
   }
   #logout-btn {
     background-color: transparent;
-    padding: 5px 0 0 5px;
+    padding: 5px 0 5px 0;
     width: 100%;
     font-family: 'Rubik', sans-serif;
     font-weight: 0;
-    border: none;
   }
 
   #topnav {
