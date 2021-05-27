@@ -291,6 +291,115 @@ img {
   background-color: #dddddd;
 }
 
+/* --- POPUP AND SETTINGS CSS --- */
+#settings {
+  position: absolute;
+  bottom: 15px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22.666666666666666666666666666667px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17.333333333333333333333333333333px;
+  width: 17.333333333333333333333333333333px;
+  left: 2.6666666666666666666666666666667px;
+  bottom: 2.6666666666666666666666666666667px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #376996;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #376996;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17.333333333333333333333333333333px);
+  -ms-transform: translateX(17.333333333333333333333333333333px);
+  transform: translateX(17.333333333333333333333333333333px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 22.666666666666666666666666666667px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#settings-popup {
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#gray-fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 196, 196, 0.5);
+  top: 0;
+  z-index: 4327473289479238749823747938274239;
+}
+
+#close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 30px;
+  padding: 0;
+  cursor: pointer;
+}
+#popup-header {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 30px;
+}
+
+#settings-popup td {
+  width: 50%;
+}
+
 /* --- PRINT CSS --- */
 @media print {
   #navbar, #timer, .bubbles, #finish-test {
