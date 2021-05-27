@@ -240,9 +240,12 @@ function starttimer(year, test, grade, version, numproblems, totalseconds) {
   let contesthead = document.getElementById("contest-heading-text");
   contesthead.innerHTML = year + " " + test + " " + grade + version + " Mock Contest";
 
-  let timer = document.getElementById("timer");
+  let timer = document.getElementById("clock");
+  let settingsbtn = document.getElementById("settings");
+  
+  settingsbtn.innerHTML = "<i class=\"fa fa-gear\" style=\"font-size:30px\"></i>";
 
-let testscreendiv = document.getElementById("test-screen");
+  let testscreendiv = document.getElementById("test-screen");
   toggledisplay(testscreendiv);
 
   let interval = setInterval(function() {
@@ -480,4 +483,34 @@ function checkanswers(selectedanswers, correctanswers) {
   }
   let score = 6*correctnum + 1.5*skippednum;
   return score;
+}
+
+var rotating = false;
+function rotate(element) {
+  if (!rotating) {
+    element.innerHTML = "<i class=\"fa fa-gear fa-spin\" style=\"font-size:30px\"></i>";
+    rotating = true;
+  }
+}
+function unrotate(element) {
+  if (rotating) {
+    element.innerHTML = "<i class=\"fa fa-gear\" style=\"font-size:30px\"></i>";
+    rotating = false;
+  }
+}
+function togglesettings() {
+  let cover = document.getElementById("gray-fullscreen");
+  toggledisplay(cover);
+}
+function togglestickytimer() {
+  let timer = document.getElementById("timer");
+  let checkele = document.getElementById("sticky-timer-checkbox");
+  let checked = checkele.checked;
+  
+  if (!checked) {
+    timer.style.position = "relative";
+  }
+  else {
+    timer.style.position = "sticky";
+  }
 }
