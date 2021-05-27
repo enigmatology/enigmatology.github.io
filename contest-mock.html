@@ -54,7 +54,10 @@
       
       <div id="test-screen" class="hidden">
         <div id="contest-heading-text"></div>
-        <div id="timer"></div>
+        <div id="timer">
+          <div id="clock"></div>
+          <div id="settings" onmouseover="rotate(this)" onmouseout="unrotate(this)" onclick="togglesettings()"></div>
+        </div>
         <div id="questions"></div>
       </div>
       
@@ -62,6 +65,26 @@
         <div id="finished-heading-text"></div>
         <div id="finished-score"></div>
         <button id="view-scores">View Results</button>
+      </div>
+      
+      <div id="gray-fullscreen" class="hidden">
+        <div id="settings-popup">
+          <div id="close-btn" onclick="togglesettings()">×</div>
+          <div id="popup-header">Online Mock Contest Settings</div>
+          <table style="width: 100%;">
+            <tr>
+              <td>Sticky Timer</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" id="sticky-timer-checkbox" onclick="togglestickytimer()" checked>
+                  <span class="slider round"></span>
+                </label>
+              </td>
+            </tr>
+          </table>
+          
+          
+        </div>
       </div>
     </div>
 
