@@ -92,31 +92,38 @@
     <div id="test"></div>
 
     <script>
-    
-switchparams("AMC", 10, "A", 2005);
+      
+function initiateparamstest() {
+  let params = getparams();
+  if (getparams() != null) {
+      starttest(params[0], params[1], params[2], params[3], params[4], params[5]);
+  }
+}
+      
 function getparams() {
   let url = new URLSearchParams(window.location.search);
   let test = url.get("test");
   let grade = url.get("grade");
   let version = url.get("version");
   let year = url.get("year");
+  let hours = url.get("hours");
+  let minutes = url.get("minutes");
   
-  if (!test || !grade || !version || !year) {
+  if (!test || !grade || !version || !year || !hours || !minutes) {
     return null;
   }
-  return [test, grade, version, year];
+  return [test, grade, version, year, hours, minutes];
 }
 
-function switchparams(test, grade, version, year) {
+function switchparams(test, grade, version, year, hours, minutes) {
   let params = new URLSearchParams();
   params.set("test", test);
   params.set("grade", grade);
   params.set("version", version);
-  params.set("year", year);
-  document.getElementById("test").innerHTML = params;
-  
+  params.set("year", year);  
+  params.set("hours", hours);
+  params.set("minutes", minutes);  
   window.history.replaceState({}, '', `${location.pathname}?${params}`);
-  console.log("here");
 }
 
 function switchtest(element) {
@@ -155,8 +162,8 @@ function toggledisplay(element) {
   }
 }
 
-function starttest() {
-  let homescreen = document.getElementById("home-screen");
+function starttest(test, grade, version, year, hours, minutes) {
+  /*let homescreen = document.getElementById("home-screen");
   toggledisplay(homescreen);
 
   let testelement = document.getElementById("test-names");
@@ -201,7 +208,9 @@ function starttest() {
     test = "AMC";
     grade = 10;
     version = "A";
-  }
+  }*/
+  
+  // CONTINUE WORKING HERE
 
 
   let numproblems = 0;
