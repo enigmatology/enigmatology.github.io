@@ -396,8 +396,8 @@ input:checked + .slider:before {
   font-size: 30px;
 }
 
-#settings-popup td {
-  width: 50%;
+#settings:hover {
+  cursor: pointer;
 }
 
 /* --- PRINT CSS --- */
