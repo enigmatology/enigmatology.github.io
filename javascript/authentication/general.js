@@ -22,7 +22,7 @@ function showusername() {
       // ▼
     }
     else {
-      headdiv.innerHTML = "<div id=\"logged-in\">" + "<a id=\"login-register\" href=\"https://enigmatology.github.io/login\">Login/Register</a>" + "</div>";
+      headdiv.innerHTML = "<div id=\"logged-in\">" + "<a id=\"login-register\" href=\"https://enigmatology.github.io/account/login\">Login/Register</a>" + "</div>";
     }
     headdiv.innerHTML += "<div id=\"vertical-separator\"></div>";
   });
