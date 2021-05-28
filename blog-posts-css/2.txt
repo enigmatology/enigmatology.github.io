@@ -34,7 +34,7 @@ Next, you'll see that this looks a lot like bbCode, or the language that you wri
 OK, I'm now going to split this explanation into two sections:
 
 [u]The Head[/u]
-The head of a HTML document is contained in the <head></head> tags, as you can see inside of the example previously. Inside of this head will be everything that the user can't see - the CSS that styles the document, any imported fonts, etc. I'll try to be more specific on that later.
+The head of a HTML document is contained in the &lt;head&gt;&lt;/head&gt; tags, as you can see inside of the example previously. Inside of this head will be everything that the user can't see - the CSS that styles the document, any imported fonts, etc. I'll try to be more specific on that later.
 
 [u]The Body[/u]
 The body of a HTML document is the meat of the entire thing - it's what is displayed in your browser. You put everything that you want to be seen here. For example, let's say you wanted your website to say "Hello World!" You'd do this:
