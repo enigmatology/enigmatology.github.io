@@ -1,0 +1,73 @@
+Lesson 3: Creating and Using Variables
+
+June 17th, 2021
+
+[center][size=200][color=#c00]Lesson 3[/color][/size]
+[i]Creating and Using Variables[/i][/center]
+
+In Asymptote, it's quite handy to name variables, whether it's for a value, for a point, or for a path. This is useful because you may need to use a point many times - with variables, instead of needing to type the coordinates every single time, you can just create a variable once and use the variable instead.
+
+Next, we need to learn how to create a variable. The syntax is simple:
+[code=asymptote]variableType variableName = variableValue;[/code]
+I'm going to break this up into three parts: the variable type, name, and value.
+
+If you've learned Java or something similar to it, you'll know what the variable type is. When creating a variable, Asymptote needs to know what kind of variable you're creating - for example, the four main types I'm going to be going over in this tutorial are [b]ints[/b], [b]reals[/b], [b]pairs[/b], and [b]paths[/b]. We'll get to that soon.
+
+The variable name is the name of the variable you're creating. This is effectively it's identifier - just as we identify each other by our names, Asymptote identifies variables by their names. NAMES CAN BE ANYTHING, BUT CANNOT CONTAIN SPACES.
+
+The variable value is what is being stored inside that value, which you retrieve by referring to its name. We'll get to that soon.
+
+[b][u]Creating Variables[/u][/b]
+[b]Ints.[/b] Other languages such as Java also have this data type. It's name is quite self-explanatory, the int stands for integer - in this kind of data type, you can store any integer you want, such as 5, -2, or 18430. To create an int, all you need to do is type this:
+[code=asymptote]int variableName = integerValue;[/code]
+The variableName is what you want to call this variable - try to call it something that makes sense. For example, if it's the x-coordinate of a point, you may want to call it x_coor.
+
+[b]Reals.[/b] If you want to create a variable that stores a real number but isn't an integer, use the real type. Just like ints, the syntax is as follows:
+[code=asymptote]real variableName = numberValue;[/code]
+If you know Python, reals are somewhat similar to floats in a sense. It can contain numbers such as 5, 5.5, or 3.141592 (note that you can store an int inside of a real).
+
+[b]Pairs.[/b] A pair is a data type that stores a coordinate pair. This is the data type that I use the most frequently in Asymptote, as Asymptote uses a coordinate system to tell where you want to draw. The syntax is as follows:
+[code=asymptote]pair variableName = (xCoord, yCoord);[/code]
+Note that you must use parenthesis around your variable value, or Asymptote will error.
+
+[b]Paths.[/b] A path is a drawing, such as a line or circle. This variable type is more open-ended, but the basic syntax is like this:
+[code=asymptote]path variableName = variableValue;[/code]
+For example, to create a variable containing a circle, you would do
+[code=asymptote]path circle = circle((center_x, center_y), radius);[/code]
+And to create a line,
+[code=asymptote]path line = (x_1, y_1) -- (x_2, y_2);[/code]
+Additionally, if you want to create multiple variables of the same type in a row, you can do this:
+[code=asymptote]variableType name1 = value1, name2 = value2, name3 = value3;[/code]
+where name1, name2, and name3 are the names of the variables and value1, value2, and value3 are the values of the variables respectively (you can create more or less than just 3 variables in one line).
+
+[b][u]Using Created Variables[/u][/b]
+To use a created variable, all you need to do is put the variable name wherever you want its value to be used. For example, you could do this:
+[code=asymptote]pair center = (0, 0);
+int radius = 5;
+path circle = circle(center, radius);
+draw(circle);
+dot(center);[/code]
+which would give you [hide=this]
+<img src="https://latex.artofproblemsolving.com/d/1/1/d1151a3346cb3ff7d2ffcb55dbd37f18a499794e.png"/>
+[/hide]
+Notice how I use a variable inside the creation of another variable.
+
+[b][u]Practice Problems[/u][/b]
+Problem 1: Create a variable of type int with name radius and value 5, and draw a dot using that variable at (radius, radius). [hide=Solution]
+Code:
+[code=asymptote]int radius = 5;
+dot((radius, radius));[/code]
+Result:
+<img src="https://latex.artofproblemsolving.com/b/0/f/b0f85348cddf6da3d29d72f627d52a1999123cc7.png"/>[/hide]
+Problem 2: Create 2 pairs in one line: one with coordinates (1, 2) and the other with coordinates (3, 1). Draw a line between those two points with the variables. [hide=Solution]
+Code:
+[code=asymptote]pair point1 = (1, 2), point2 = (3, 1);
+draw(point1--point2);[/code]
+Result:
+<img src="https://latex.artofproblemsolving.com/a/f/6/af6d4f621f488e44b65486f5b09bbf8bc933d422.png"/>[/hide]
+Problem 3: Create a variable of type path that contains a circle with center (4, 1) and radius 2. Draw that circle. [hide=Solution]
+Code:
+[code=asymptote]path circle = circle((4, 1), 2);
+draw(circle);[/code]
+Result:
+<img src="https://latex.artofproblemsolving.com/a/7/2/a723cfbf06ca1d6a97785caca8c7aaff0d4b1438.png"/>[/hide]
