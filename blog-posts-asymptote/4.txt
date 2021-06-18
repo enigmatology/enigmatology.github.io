@@ -1,6 +1,6 @@
 Lesson 3: Creating and Using Variables
 
-June 17th, 2021
+June 17, 2021
 
 [center][size=200][color=#c00]Lesson 3[/color][/size]
 [i]Creating and Using Variables[/i][/center]
