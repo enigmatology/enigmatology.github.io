@@ -5,14 +5,16 @@ July 20, 2021
 [center][size=200][color=#c00]Lesson 4[/color][/size]
 [i]The dir() Function[/i][/center]
 
+<!---- I had to change all of the languages to Java because making them Asymptote was causing strange behavior and Java syntax is at least somewhat similar to Asymptote ---->
+
 This lesson will cover the dir() function, which, due to it's immense importance, will get a lesson of it's own. It will be slightly shorter due to the fact a) the function really isn't that hard, and b) most of the advanced commands are in the olympiad.asy package which is coming in a later lesson.
 
 [b]The dir() Function.[/b] The dir() function is a very useful function that allows you to draw points using angles rather than coordinates. If you know what polar coordinates are, the dir() function runs off of them, effectively. If you look at this diagram, you'll see a preview of how it works:
 <img src="https://latex.artofproblemsolving.com/3/3/1/331ced584049ea60cc6a0406d03cf31b52b77d14.png"/>
 The dir() function creates a point that is of a certain angle counterclockwise from the point (1, 0) of distance 1 from the origin. The syntax is as follows:
-[asymptote]dir(direction);[/asymptote]
+[code=java]dir(direction);[/code]
 where the direction is measured in degrees. For example,
-[code=asymptote]
+[code=java]
 // the lines draw the axis, so they don't affect the dir
 // ignore the lines with the backslashes, they're called comments and we'll get to them later
 draw((-2, 0)--(2, 0));
@@ -25,14 +27,14 @@ As you can see, the dot created is 50 degrees counterclockwise of the x-axis. Th
 Note: you're also able to put negative angle measures in the argument of the dir() function, which will measure the angle clockwise rather than counterclockwise.
 
 The dir() function comes as a pair, so when creating a variable, you'd want to do this:
-[code=asymptote]pair variableName = dir(direction);[/code]
+[code=java]pair variableName = dir(direction);[/code]
 
 If you want the length of your function to be longer or shorter than just 1 unit, you can multiply your dir() function by a number, such as this:
-[code=asymptote]pair point = sqrt(2)*dir(50);[/code]
+[code=java]pair point = sqrt(2)*dir(50);[/code]
 
 [b][u]Practice Problems[/u][/b]
 Problem 1: Draw a dot that is 37 degrees counter-clockwise from the origin. [hide=Solution]
 Code:
-[code=asymptote]dot(dir(37));[/code]
+[code=java]dot(dir(37));[/code]
 Result:
 <img src="https://latex.artofproblemsolving.com/6/3/c/63ceebac9ed2512327fe577a4af19f9f10228deb.png"/>[/hide]
