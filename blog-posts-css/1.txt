@@ -7,7 +7,7 @@ April 6, 2021
 
 CSS, or Cascading Stylesheets, is extremely powerful. If you're familiar with basically any website, you've seen CSS in action. For example, almost every single AoPS webpage contains something like 10 CSS files, all working to make the site look like what it is now.
 
-Let's take a look at what CSS can do. I'm going to take an extremely simple design that I made (code may or may not be from w3schools because I'm lazy), one with CSS, and one without CSS.
+Let's take a look at what CSS can do. I'm going to take the navbar of this website, one with CSS, and one without CSS.
 
 Here's what you would traditionally see, with CSS:
 <img src="blog-posts-css/imgs/navbar.png" alt="Navbar example">
