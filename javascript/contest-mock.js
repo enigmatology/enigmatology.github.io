@@ -418,7 +418,7 @@ function showreview(numproblems, selectedanswers, correctanswers, score, year, t
     tablecell3 = document.createElement("td");
 
     tablecell1.innerHTML = (i+1) + ".";
-    if ((test === "AMC" && selectedanswers[i] === 0) || (test === "AIME" && selectedanswers[i] === -2)) {
+    if ((test === "AMC" && selectedanswers[i] === -1) || (test === "AIME" && selectedanswers[i] === -2)) {
       tablecell2.innerHTML = "Skipped";
     }
     else {
