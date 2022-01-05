@@ -35,7 +35,6 @@ img {
   text-align: center;
   font-size: 30px;
   font-family: roboto, sans-serif;
-  
 }
 
 /* test selection */
@@ -71,7 +70,7 @@ img {
   font-size: 12px;
 }
 .dropdown-shown {
-  max-height: 200px !important;
+  max-height: 300px !important;
   transition: max-height 0.5s ease;
 }
 .dropdown-hidden {
@@ -127,6 +126,16 @@ img {
 }
 
 /* --- TEST SCREEN CSS --- */
+/* overall */
+#test-screen {
+  margin-left: 185px;
+  margin-right: 185px;
+}
+
+#questions {
+  border: solid gray 1px;
+}
+
 /* heading */
 #contest-heading-text {
   margin-top: 15px;
@@ -163,16 +172,19 @@ img {
   padding: 15px;
 }
 .problem-body {
-  margin-bottom: 25px;
-  width: 80%;
+  margin-bottom: 50px;
+  width: calc(3 / 4 * (100% - 30px));
   float: right;
   display: block;
   font-family: roboto, sans-serif;
 }
+.problem-body > p {
+  margin: 0 0 15px 0;
+}
+
 .problem-number {
-  font-size: 25px;
-  width: 80%;
-  float: right;
+  width: 30px;
+  float: left;
   font-family: roboto, sans-serif;
 }
 .problem {
@@ -182,18 +194,17 @@ img {
 
 /* bubbles */
 .bubbles {
-  width: 20%;
+  width: calc(2 / 10 * calc(100% - 30px));
   float: left;
   font-family: roboto, sans-serif;
 }
 .bubbles > button {
   float: left;
   border: solid black;
-  border-radius: 13px;
-  padding: 15px;
+  border-radius: 20px;
+  padding: 9px 20px 9px 20px;
   font-size: 15px;
-  width: 60px;
-  margin: 10px;
+  margin: 5px;
   transition-property: none !important;
   color: black;
 }
@@ -222,6 +233,23 @@ img {
 }
 .deselected:active {
   background-color: #c2c2c2;
+}
+
+/* aime answer field */
+.answer-input {
+  width: 100px;
+  padding: 3px 5px;
+  box-sizing: border-box;
+  border-color: black;
+  border-radius: 0;
+  border-width: 1px;
+}
+
+.answer-input-wrapper {
+  position: relative;
+  width: calc(2 / 10 * calc(100% - 30px));
+  float: left;
+  font-family: roboto, sans-serif;
 }
 
 /* ending */

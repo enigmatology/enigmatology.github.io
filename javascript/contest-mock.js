@@ -76,6 +76,16 @@ function starttest() {
     grade = 12;
     version = "B";
   }
+  else if (chosentest === "AIME I") {
+    test = "AIME";
+    grade = "";
+    version = "I";
+  }
+  else if (chosentest === "AIME II") {
+    test = "AIME";
+    grade = "";
+    version = "II";
+  }
   else {
     test = "AMC";
     grade = 10;
@@ -91,14 +101,19 @@ function starttest() {
     numproblems = 15;
   }
 
+  /*year = "2019";
+  test = "AMC";
+  grade = "10";
+  version = "A";
+  numproblems = 25;
+  totalseconds = 100000000000000;*/
+
   for (let i = 0; i < numproblems; i++) {
     problems.push(0);
   }
 
   let loading = document.getElementById("loading-screen");  
   toggledisplay(loading);
-
-
 
   getcontest(year, test, grade, version, numproblems, totalseconds);
 }
@@ -108,6 +123,11 @@ function getcontest(year, test, grade, version, numproblems, totalseconds) {
     (async () => {
       let apiurl = year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i;
       problems[i-1] = await getproblem(year + "_" + test + "_" + grade + version + "_Problems/Problem_" + i, i);
+
+      //if (i === 7) {
+        console.log(i + ": " + problems[i-1]);
+      //}
+
       addcontent(problems, year, test, grade, version, numproblems, totalseconds);
     })()
   }
@@ -170,7 +190,16 @@ function convertmathjax(problemtext) {
     let imgendcutloc = imgcut.indexOf(" />");
     let img = imgcut.substring(0, imgendcutloc + 3);
 
-    problemtext = problemtext.replace(img, "\\[" + latex + "\\]");
+    let replacelatex = latex;
+    // TODO: extremely hacky way to deal with \begin{align*} statements, find a better way later
+    if (replacelatex.includes("egin{align*}")) {
+      replacelatex = "\\b" + replacelatex + "*}";
+    }
+    else {
+      replacelatex = "\\[" + replacelatex + "\\]"
+    }
+
+    problemtext = problemtext.replace(img, replacelatex);
 
   }
 
@@ -190,8 +219,15 @@ function addcontent(problems, year, test, grade, version, numproblems, totalseco
 
       // TODO: WHEN IMPLEMENTING OTHER CONTESTS (e.g. AIME), ADD MORE TESTS
       if (test === "AMC") {
-        questions.innerHTML += "<div class=\"problem\"><div class=\"bubbles\"><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"A-button-" + i + "\">A</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"B-button-" + i + "\">B</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"C-button-" + i + "\">C</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"D-button-" + i + "\">D</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"E-button-" + i + "\">E</button></div><div class=\"problem-number\">Problem " + (i+1) + "</div><div class=\"problem-body\">" + problems[i] + "</div></div>";
+        questions.innerHTML += "<div class=\"problem\"><div class=\"problem-number\">" + (i+1) + ".</div><div class=\"bubbles\"><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"A-button-" + i + "\">A</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"B-button-" + i + "\">B</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"C-button-" + i + "\">C</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"D-button-" + i + "\">D</button><button onclick=\"togglecolor(this.id)\" type=\"button\" class=\"deselected\" id=\"E-button-" + i + "\">E</button></div><div class=\"problem-body\">" + problems[i] + "</div></div>";
       }
+      else if (test === "AIME") {
+        questions.innerHTML += "<div class=\"problem\"><div class=\"problem-number\">" + (i+1) + ".</div><div class=\"answer-input-wrapper\"><input autocomplete=\"off\" class=\"answer-input\" maxlength=\"3\" id=\"answer-input-" + i + "\"></input></div><div class=\"problem-body\">" + problems[i] + "</div></div>";
+      }
+
+      /*if (i !== (problems.length - 1)) {
+        questions.innerHTML += "<hr class=\"problem-splitter\">";
+      }*/
     }
     questions.innerHTML += "<button id=\"finish-test\" onclick=\"finishTest()\">Submit Test</button>";
     MathJax.typeset();
@@ -289,7 +325,7 @@ function showresults(year, test, grade, version, numproblems) {
   (async () => {
     let correctanswers = await getcorrectanswers(year, test, grade, version, numproblems);
     let selectedanswers = getselectedanswers(year, test, grade, version, numproblems);
-    let score = checkanswers(selectedanswers, correctanswers);
+    let score = checkanswers(selectedanswers, correctanswers, test);
 
     let finishedheading = document.getElementById("finished-heading-text");
     finishedheading.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
@@ -316,7 +352,7 @@ function showreview(numproblems, selectedanswers, correctanswers, score, year, t
         let buttonid = letters[j] + "-button-" + i;
         let buttonelement = document.getElementById(buttonid);
         buttonelement.disabled = true;
-        if (selectedanswers[i] != 0 && buttonelement.classList.contains("selected")) {
+        if (selectedanswers[i] != -1 && buttonelement.classList.contains("selected")) {
           if (selectedanswers[i] === correctanswers[i]) {
             buttonelement.style.backgroundColor = "#b1e6bc";
           }
@@ -326,6 +362,20 @@ function showreview(numproblems, selectedanswers, correctanswers, score, year, t
         }      
       }
     }
+  }
+  else if (test === "AIME") {
+      for (let i = 0; i < numproblems; i++) {
+        let fieldid = "answer-input-" + i;
+        let fieldelement = document.getElementById(fieldid);
+        fieldelement.disabled = true;
+        
+        if (selectedanswers[i] == correctanswers[i]) {
+          fieldelement.style.backgroundColor = "#b1e6bc";
+        }
+        else {
+          fieldelement.style.backgroundColor = "#f5958e";
+        }
+      }
   }
 
   let reviewheading = document.getElementById("review-heading-text");
@@ -368,7 +418,7 @@ function showreview(numproblems, selectedanswers, correctanswers, score, year, t
     tablecell3 = document.createElement("td");
 
     tablecell1.innerHTML = (i+1) + ".";
-    if (selectedanswers[i] === 0) {
+    if ((test === "AMC" && selectedanswers[i] === 0) || (test === "AIME" && selectedanswers[i] === -2)) {
       tablecell2.innerHTML = "Skipped";
     }
     else {
@@ -409,7 +459,7 @@ function toggletablevisibility() {
 function getselectedanswers(year, test, grade, version, numproblems) {
   let selectedanswers = [];
   for (let i = 0; i < numproblems; i++) {
-    selectedanswers.push(0);
+    selectedanswers.push(-1);
   }
 
   // TODO: WHEN IMPLEMENTING OTHER CONTESTS (e.g. AIME), ADD MORE TESTS
@@ -431,6 +481,21 @@ function getselectedanswers(year, test, grade, version, numproblems) {
       }
     }
   }
+  else if (test === "AIME") {
+    for (let i = 0; i < numproblems; i++) {
+      let fieldid = "answer-input-" + i;
+      let currentfield = document.getElementById(fieldid);
+      let currentanswer = currentfield.value;
+
+      if (currentanswer != "") {
+        selectedanswers[i] = Number(currentanswer);
+      }
+      else {
+        selectedanswers[i] = -2;
+      }
+    }
+  }
+
   return selectedanswers;
 }
 
@@ -460,18 +525,24 @@ async function getcorrectanswers(year, test, grade, version, numproblems) {
   for (let i = 0; i < numproblems; i++) {
     cutloc = pagehtml.indexOf("<li>") + 4;
     pagehtml = pagehtml.substring(cutloc);
-    correctanswers.push(pagehtml.substring(0, 1));
+    if (test === "AMC") {
+      correctanswers.push(pagehtml.substring(0, 1));
+    }
+    else {
+      correctanswers.push(Number(pagehtml.substring(0, 3)));
+    }
   }
 
   return correctanswers;
 }
 
-function checkanswers(selectedanswers, correctanswers) {
+function checkanswers(selectedanswers, correctanswers, test) {
   let correctnum = 0;
   let skippednum = 0;
   let wrongnum = 0;
   for (let i = 0; i < selectedanswers.length; i++) {
-    if (selectedanswers[i] === 0) {
+    console.log(selectedanswers[i] + " " + correctanswers[i]);
+    if (selectedanswers[i] === -1) {
       skippednum++;
     }
     else if (selectedanswers[i] === correctanswers[i]) {
@@ -481,7 +552,14 @@ function checkanswers(selectedanswers, correctanswers) {
       wrongnum++;
     }
   }
-  let score = 6*correctnum + 1.5*skippednum;
+  let score = "";
+  if (test === "AMC") {
+    score = 6*correctnum + 1.5*skippednum;
+  }
+  else if (test === "AIME") {
+    score = correctnum;
+  }
+
   return score;
 }
 
