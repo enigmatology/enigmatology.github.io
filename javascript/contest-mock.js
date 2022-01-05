@@ -340,6 +340,7 @@ function showresults(year, test, grade, version, numproblems) {
 
     let loadingscreen = document.getElementById("loading-screen");
     toggledisplay(loadingscreen);
+    console.log("1");
 
     let correctanswers = await getcorrectanswers(year, test, grade, version, numproblems);
 
@@ -358,6 +359,8 @@ function showresults(year, test, grade, version, numproblems) {
 
     let finishedscreen = document.getElementById("finished-screen");
     toggledisplay(finishedscreen);
+
+    toggledisplay(loadingscreen);
 
     let viewreport = document.getElementById("view-scores");
     viewreport.onclick = function() {showreview(numproblems, selectedanswers, correctanswers, score, year, test, grade, version)};
