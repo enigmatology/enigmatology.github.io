@@ -337,7 +337,6 @@ function showresults(year, test, grade, version, numproblems) {
   (async () => {
     let loadingtext = document.getElementById("loading-text");
     loadingtext.innerHTML = "Checking answers...";
-    console.log("here");
 
     let loadingscreen = document.getElementById("loading-screen");
     toggledisplay(loadingscreen);
@@ -354,7 +353,6 @@ function showresults(year, test, grade, version, numproblems) {
 
     if (correctanswers === 400) {
       loadingtext.innerHTML = "There was an error when retrieving correct answers.";
-      console.log("here2");
       return;
     }
 
@@ -526,7 +524,7 @@ function getselectedanswers(year, test, grade, version, numproblems) {
 
 async function getcorrectanswers(year, test, grade, version, numproblems) {
   try {
-    let endpoint = "https://artofproblemsolving.com/wiki/api.phpd";
+    let endpoint = "https://artofproblemsolving.com/wiki/api.php";
     let page = year + "_" + test + "_" + grade + version + "_Answer_Key";
     let params = `action=parse&page=${page}&format=json`;
 
@@ -571,7 +569,6 @@ function checkanswers(selectedanswers, correctanswers, test) {
   let skippednum = 0;
   let wrongnum = 0;
   for (let i = 0; i < selectedanswers.length; i++) {
-    console.log(selectedanswers[i] + " " + correctanswers[i]);
     if (selectedanswers[i] === -1) {
       skippednum++;
     }
