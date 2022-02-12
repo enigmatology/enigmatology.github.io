@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="enigmatology, asymptote, tutorial, math, programming, coding, blog, css, coolcarsontherun">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico?">
+    <title>enigmatology</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3170NMGK41');
+    </script>
+  </head>
+  
+  <body>
+
+    <div id="navbar"></div>
+    
+    <div id="top-section">
+      <div id="header"></div>
+      <div id="description">a blog of random tutorials</div>
+      <div id="top-links">
+        <a id="about" href="about"><div class="link-text">About Me</div></a>
+        <a id="life" href="personal-blog"><div class="link-text">Random Blog</div></a>
+        <a id="web-design" href="css-blog"><div class="link-text">Web Design Tutorials</div></a>
+        <a id="asymptote" href="asymptote-blog"><div class="link-text">Asymptote Tutorials</div></a>
+      </div>
+    </div>
+    
+    <div id="aopsuser">
+    	<div id="usernametext">AoPS: @CoolCarsOnTheRun</div>
+        <a id="mobile-aops" href="https://artofproblemsolving.com/community/user/CoolCarsOnTheRun" target="_blank">AoPS: @CoolCarsOnTheRun</a>
+    	<a id="desktop-aops" href="https://artofproblemsolving.com/community/user/CoolCarsOnTheRun" target="_blank"><br>https://artofproblemsolving.com/community/user/CoolCarsOnTheRun</a>
+    </div>
+    
+    <script>
+    var i = 0;
+    var txt = 'enigmatology';
+    var speed = 100;
+
+    window.onload = function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("header").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    </script>
+    
+    
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    
+    
+    
+    <script href="../js/authentication/general.js"></script>
+    <script href="../components/addnavbar.js"></script>
+   
+</body>
+</html>
