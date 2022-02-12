@@ -1,7 +1,7 @@
 var hides = [];
 var posts = [];
 var iterations = 0;
-var NUMBEROFPOSTS = 5;
+var NUMBEROFPOSTS = 2;
 
 for (var i = 0; i < NUMBEROFPOSTS; i++) {
   posts.push(0);
@@ -24,7 +24,7 @@ var f = (function(){
           
         }
       };
-      xhttp.open("GET", "https://enigmatology.github.io/blog-posts-asymptote/" + i + ".txt", true);
+      xhttp.open("GET", "https://enigmatology.github.io/blogs/blog-posts-css/" + i + ".txt", true);
       xhttp.send();
     })(i);
   }
@@ -176,6 +176,8 @@ function convertbbCode(orig, i, currentcontents) {
     if (codetext.slice(0, 1) === "\n") {
       codetext = codetext.slice(1, codetext.length);
     }
+    codetext = codetext.replaceAll("<", "&lt;");
+    codetext = codetext.replaceAll(">", "&gt;");
     converted = converted.replace(slicedcode, "<div><pre><code class=\"" + language + "\">" + codetext + "</code></pre></div>");
     
   }

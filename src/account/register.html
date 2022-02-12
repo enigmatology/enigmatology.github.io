@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/stylesheets/style.css" rel="stylesheet">
-    <link href="/stylesheets/authentication/login.css" rel="stylesheet">
-    <title>Login | enigmatology</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/authentication/register.css" rel="stylesheet">
+    <title>Register | enigmatology</title>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"></script>
@@ -22,23 +22,33 @@
     <div id="login-form" class="shown">
       <div id="email-div" class="field">
         <label><b>Email:</b></label>
-        <input type="text" placeholder="Enter email address" id="email" required>
+        <input type="text" placeholder="Enter email address" id="email">
+      </div>
+      
+      <div id="username-div" class="field">
+        <label><b>Username:</b></label>
+        <input type="text" placeholder="Enter username" id="username">
       </div>
       
       <div id="password-div" class="field">
         <label><b>Password:</b></label>
-        <input type="password" placeholder="Enter password" id="password" required>
+        <input type="password" placeholder="Enter password" id="password">
+      </div>
+      
+      <div id="confirm-password" class="field">
+        <label><b>Confirm Password:</b></label>
+        <input type="password" placeholder="Confirm password" id="confirm-pass">
       </div>
       
       <div id="error"></div>
       
-      <a href="register" id="register">Need an account? Register</a>
-      <button type="submit" id="login" onclick="login()">Login</button>
+      <a href="login" id="login">Already have an account? Login</a>
+      <button type="submit" id="register" onclick="register()">Register</button>
     </div>
     
     <div id="info"></div>
     <div id="info-action"></div>
-
+    
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -50,10 +60,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
     
     
-
-
-    <script src="/javascript/authentication/general.js"></script>
-    <script src="/javascript/authentication/login.js"></script>
-    <script src="https://enigmatology.github.io/file-snippets/addnavbar.js"></script>
+    
+    <script href="../js/authentication/general.js"></script>
+    <script href="../js/authentication/register.js"></script>
+    <script src="https://enigmatology.github.io/components/addnavbar.js"></script>
   </body>
 </html>

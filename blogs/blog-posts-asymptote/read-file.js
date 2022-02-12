@@ -1,7 +1,7 @@
 var hides = [];
 var posts = [];
 var iterations = 0;
-var NUMBEROFPOSTS = 6;
+var NUMBEROFPOSTS = 5;
 
 for (var i = 0; i < NUMBEROFPOSTS; i++) {
   posts.push(0);
@@ -24,7 +24,7 @@ var f = (function(){
           
         }
       };
-      xhttp.open("GET", "https://enigmatology.github.io/blog-posts-personal/" + i + ".txt", true);
+      xhttp.open("GET", "https://enigmatology.github.io/blogs/blog-posts-asymptote/" + i + ".txt", true);
       xhttp.send();
     })(i);
   }
@@ -80,6 +80,9 @@ function addcontent(posts, hides) {
   
   if (finished === true) {
     MathJax.typeset();
+    /*document.querySelectorAll('pre code').forEach((block) => {
+     	hljs.highlightBlock(block);
+  	});*/
     hljs.highlightAll();
     for (let i = 1; i <= hides.length; i++) {
       var element = document.getElementById(i + "hide");
