@@ -2,10 +2,26 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/authentication/login.css" rel="stylesheet">
-    <title>Login | enigmatology</title>
+    <meta name="keywords" content="enigmatology, coolcarsontherun, css, tutorial, math, programming, coding, blog, web design">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/blogs.css" rel="stylesheet">
+    <link href="css/scroll-arrows.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico?">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
     
+    <title>CSS Blog | enigmatology</title>
+    
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"></script>
     <script>
@@ -19,26 +35,11 @@
   
   <body>
     <div id="navbar"></div>
-    <div id="login-form" class="shown">
-      <div id="email-div" class="field">
-        <label><b>Email:</b></label>
-        <input type="text" placeholder="Enter email address" id="email" required>
-      </div>
-      
-      <div id="password-div" class="field">
-        <label><b>Password:</b></label>
-        <input type="password" placeholder="Enter password" id="password" required>
-      </div>
-      
-      <div id="error"></div>
-      
-      <a href="register" id="register">Need an account? Register</a>
-      <button type="submit" id="login" onclick="login()">Login</button>
-    </div>
-    
-    <div id="info"></div>
-    <div id="info-action"></div>
 
+    <button id="goToTop" onclick="scrollToTop()"><i class="arrow up"></i></button>
+    
+    <script href="blogs/blog-posts-css/read-file.js"></script>
+    
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -50,10 +51,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
     
     
-
-
-    <script href="../js/authentication/general.js"></script>
-    <script href="../js/authentication/login.js"></script>
-    <script src="https://enigmatology.github.io/components/addnavbar.js"></script>
+    
+    <script href="js/authentication/general.js"></script>
+    <script href="components/addnavbar.js"></script>
+    <script href="js/scroll-to-top.js"></script>
   </body>
 </html>

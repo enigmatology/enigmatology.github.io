@@ -10,11 +10,11 @@ CSS, or Cascading Stylesheets, is extremely powerful. If you're familiar with ba
 Let's take a look at what CSS can do. I'm going to take the navbar of this website, one with CSS, and one without CSS.
 
 Here's what you would traditionally see, with CSS:
-<img href="../blogs/blog-posts-css/imgs/navbar.png" alt="Navbar example">
+<img href="blogs/blog-posts-css/imgs/navbar.png" alt="Navbar example">
 This is the navigation bar that you see above for this website.
 
 Now let's look at it without CSS:
-<img href="../blogs/blog-posts-css/imgs/navbar_nocss.png" alt="Navbar without CSS">
+<img href="blogs/blog-posts-css/imgs/navbar_nocss.png" alt="Navbar without CSS">
 Whoa. That was different, and very ugly. If you look at it this way, a navbar is literally just a bunch of links that are put together. CSS is what makes it look the way it is.
 
 In this tutorial, I'm going to hopefully work from the ground up in how to build AoPS Blog CSS. Knowing how to make the CSS for a blog will hopefully also allow you to understand CSS enough that you can research and use CSS everywhere else. 
