@@ -115,6 +115,38 @@ img {
   }
 }
 
+/* other options */
+#other-resources {
+  width: 100%;
+}
+
+.info-header {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
+#results-link {
+  text-align: center !important;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #1F487E;
+  font-weight: 500;
+}
+
+#results-link:hover {
+  text-decoration: underline;
+}
+
+#results-link-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /* --- LOADING SCREEN CSS --- */
 /* heading */
 #loading-text {
