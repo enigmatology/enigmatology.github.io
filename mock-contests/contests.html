@@ -24,25 +24,7 @@
   </head>
 
   <body>
-    <div id="navbar">
-      <div id="top-wrapper">
-        <button id="openbtn" onclick="openNav()">☰</button>  
-        <h1 class="top-header">&lt;enigmatology&gt;</h1>
-        <div id="auth"></div>
-      </div>
-      
-      <div id="topnav">
-        <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">×</a>
-        <a href="https://enigmatology.github.io/">Home</a>
-        <a href="https://enigmatology.github.io/asymptote-blog">Asymptote Blog</a>
-        <a href="https://enigmatology.github.io/css-blog">CSS Blog</a>
-        <a href="https://enigmatology.github.io/personal-blog">Life Blog</a>
-        <a href="https://enigmatology.github.io/about">About Me</a>
-        <a href="https://enigmatology.github.io/mock-contests/contests">Mock Contest Platform</a>
-      </div>
-      
-
-    </div>
+    <div id="navbar"></div>
     
     <div id="mock-contest">
       <div id="home-screen" class="shown">
@@ -160,12 +142,8 @@
               </td>
             </tr>
           </table>
-          
-          
         </div>
       </div>
-      
-      
     </div>
 
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
@@ -179,16 +157,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
     
-    
-    <script src="../js/authentication/general.js"></script>
-
-    <script>
-      showusername();
-    </script>
-
     <script src="../components/addnavbar.js"></script>
-    <!---<script src="js/mathjax-init.js"></script>-->
-
+    <script src="../js/authentication/general.js"></script>
     <script src="../js/faq.js"></script>
     <script src="../js/mock-contests/contests.js"></script>
   </body>
