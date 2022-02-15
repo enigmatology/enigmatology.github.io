@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#page-header {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: roboto, sans-serif;
+}
+
+.section-header {
+    text-align: center;
+    font-weight: 400;
+}
+
+.results-table {
+    border-collapse: collapse;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    margin-top: 15px !important;
+    font-family: roboto, sans-serif;
+}
+.results-table th, .results-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+.results-table tr:nth-child(even) {
+    background-color: #dddddd;
+}
