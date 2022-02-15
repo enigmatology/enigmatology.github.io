@@ -19,6 +19,7 @@ button:hover {
   background-color: #1F487E;
   color: white;
   transition: background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
 }
 :focus {
   outline: none;
@@ -113,6 +114,45 @@ img {
     width: calc(calc(calc(100% - 30px) / 3) - 11.61px);
     margin-top: -6px;
   }
+}
+
+/* other options */
+#other-resources {
+  width: 100%;
+}
+
+.info-header {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
+#results-link {
+  background-color: white;
+  border-color: #1F487E;
+  border-radius: 0;
+  border-width: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+  padding: 15px;
+  border-width: 2px;
+  border-radius: 0;
+  box-sizing: border-box !important;
+  border-color: #1F487E;
+  border-style: solid;
+  color: black;
+  font-size: 13px !important;
+}
+#results-link:hover {
+  background-color: #1F487E;
+  color: white;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#results-link-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* --- LOADING SCREEN CSS --- */

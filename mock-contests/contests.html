@@ -3,12 +3,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/contest-mock.css" rel="stylesheet">
-    <link href="css/faq.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/mock-contests/contests.css" rel="stylesheet">
+    <link href="../css/mock-contests/faq.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Contest Mock | enigmatology</title>
+    <title>Mock Contest | enigmatology</title>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"></script>
@@ -28,7 +28,7 @@
     
     <div id="mock-contest">
       <div id="home-screen" class="shown">
-        <div id="page-header">Mock Contest Online Testing Platform</div>
+        <div id="page-header">Online Mock Contest Testing Platform</div>
         <div id="test-choice">
           <button id="test-names" class="select-btn" onclick="toggleselectshow()">Select test</button>
           <div id="test-dropdown" class="dropdown-hidden no-border">
@@ -42,11 +42,21 @@
           <input type="text" id="test-year" placeholder="Select year (e.g. 2021)" class="select-btn"></input>
           <input type="text" id="test-length-hours" placeholder="Select hours (e.g. 1)" class="select-btn"></input>
           <input type="text" id="test-length-minutes" placeholder="Select minutes (e.g. 15)" class="select-btn"></input>
-          <button id="start-test" onclick="starttest()" class="select-btn">Generate Test</button>
+          <button id="start-test" onclick="starttest()" class="select-btn">Retrieve Test</button>
+        </div>
+
+        <div id="other-resources">
+          <h2 id="other-header" class="info-header">Other Resources</h2>
+          <div id="results-link-container">
+            <a href="results" id="results-link">
+                View Past Mock Results
+            </a>
+          </div>
+          <p style="text-align: center;">NOTICE: I've currently disabled this feature, I need to figure out one thing before I enabled it.</p>
         </div>
   
         <div id="faq">
-          <h2 id="faq-header">Frequently Asked Questions</h2>
+          <h2 id="faq-header" class="info-header">Frequently Asked Questions</h2>
           <button class="open-faq-btn">What is this?<span class="plus-faq">+</span></button>
           <div class="content-faq no-border">
             <div class="content-wrapper">
@@ -133,16 +143,9 @@
               </td>
             </tr>
           </table>
-          
-          
         </div>
       </div>
-      
-      
     </div>
-
-    <script src="js/faq.js"></script>
-    <script src="js/contest-mock.js"></script>
 
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
@@ -153,12 +156,12 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
     
-    
-    
-    <script src="js/authentication/general.js"></script>
-    <script src="components/addnavbar.js"></script>
-    <!---<script src="js/mathjax-init.js"></script>-->
+    <script src="../components/addnavbar.js"></script>
+    <script src="../js/authentication/general.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/mock-contests/contests.js"></script>
   </body>
 
 </html>

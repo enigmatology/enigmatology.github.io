@@ -340,12 +340,13 @@ function showresults(year, test, grade, version, numproblems) {
 
     let loadingscreen = document.getElementById("loading-screen");
     toggledisplay(loadingscreen);
-    console.log("1");
 
     let correctanswers = await getcorrectanswers(year, test, grade, version, numproblems);
 
     let selectedanswers = getselectedanswers(year, test, grade, version, numproblems);
     let score = checkanswers(selectedanswers, correctanswers, test);
+
+    console.log(updateFirebase(score, year, test, grade, version, numproblems));
 
     let finishedheading = document.getElementById("finished-heading-text");
     finishedheading.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
@@ -591,6 +592,37 @@ function checkanswers(selectedanswers, correctanswers, test) {
   }
 
   return score;
+}
+
+function updateFirebase(score, year, test, grade, version, numproblems) {
+  let user = firebase.auth().currentUser;
+  if (user != null && user.emailVerified) {
+    let database = firebase.database();
+
+    let newScoreKey = firebase.database().ref().child('users').push().key;
+    let updates = {};
+    let date = new Date();
+    if (test === "AMC") {
+      updates['/users/' + user.uid + '/amcs/' + newScoreKey] = {
+        'date': date,
+        'year': year,
+        'grade': grade,
+        'version': version,
+        'score': score,
+      }
+    }
+    else if (test === "AIME") {
+      updates['/users/' + user.uid + '/aimes/' + newScoreKey] = {
+        'date': date,
+        'year': year,
+        'version': version,
+        'score': score,
+      }
+    }
+
+    return firebase.database().ref().update(updates);
+  }
+  return false;
 }
 
 var rotating = false;

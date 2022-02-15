@@ -34,11 +34,7 @@
   border-style: none solid solid solid;
   font-size: 15px;
 }
-#faq-header {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-}
+
 .faq-shown {
   max-height: 200px;
 

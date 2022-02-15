@@ -2,9 +2,13 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/authentication/login.css" rel="stylesheet">
-    <title>Login | enigmatology</title>
+    <link href="../css/mock-contests/results.css" rel="stylesheet">
+    <link href="../css/mock-contests/faq.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Past Mock Results | enigmatology</title>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"></script>
@@ -15,29 +19,27 @@
 
       gtag('config', 'G-3170NMGK41');
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
+    
   </head>
-  
+
   <body>
     <div id="navbar"></div>
-    <div id="login-form" class="shown">
-      <div id="email-div" class="field">
-        <label><b>Email:</b></label>
-        <input type="text" placeholder="Enter email address" id="email" required>
-      </div>
-      
-      <div id="password-div" class="field">
-        <label><b>Password:</b></label>
-        <input type="password" placeholder="Enter password" id="password" required>
-      </div>
-      
-      <div id="error"></div>
-      
-      <a href="register" id="register">Need an account? Register</a>
-      <button type="submit" id="login" onclick="login()">Login</button>
+
+    <div id="page-header">Online Mock Contest Past Results</div>
+    <p style="text-align: center;">NOTICE: I've currently disabled this feature, I need to figure out one thing before I enabled it.</p>
+    <div id="results">
+      <div id="loading-text"></div>
     </div>
-    
-    <div id="info"></div>
-    <div id="info-action"></div>
+
+    <div id="other-resources">
+      <h2 id="other-header" class="info-header">Other Resources</h2>
+      <div id="homepage-link-container">
+        <a href="contests" id="homepage-link">
+            Go Back to Homepage
+        </a>
+      </div>
+    </div>
 
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
@@ -49,12 +51,11 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
-    
-    
 
-
-    <script src="../js/authentication/general.js"></script>
-    <script src="../js/authentication/login.js"></script>
     <script src="../components/addnavbar.js"></script>
+    <script src="../js/authentication/general.js"></script>
+    <script src="../js/mock-contests/results.js"></script>
+    <!---<script src="js/mathjax-init.js"></script>-->
   </body>
+
 </html>

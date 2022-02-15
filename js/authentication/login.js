@@ -43,6 +43,7 @@ function validateemail(email) {
 
 function loginserver(email, password) {
   let auth = firebase.auth();
+  let database = firebase.database();
   let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
   let errordiv = document.getElementById("error");
@@ -60,6 +61,19 @@ function loginserver(email, password) {
         actiondiv.innerHTML = "Please check your email to verify your email and activate your account.";
       }
       else {
+        let userRef = database.ref('users/' + user.uid);
+        console.log(userRef);
+        userRef.on('value', (snapshot) => {
+          console.log(snapshot.exists());
+          if (!snapshot.exists()) {
+            console.log("Here");
+            userRef.set({
+              /*amcs: {},
+              aimes: {},*/
+            });
+          }
+        });
+
         window.location = "https://enigmatology.github.io";
       }
     }

@@ -52,6 +52,7 @@ function validateemail(email) {
 
 function createaccount(email, password, username) {
   let auth = firebase.auth();
+  let database = firebase.database();
   
   let infodiv = document.getElementById("info");
   let actiondiv = document.getElementById("info-action");
@@ -70,8 +71,15 @@ function createaccount(email, password, username) {
       user.sendEmailVerification().then(function() {
         infodiv.innerHTML = "Verification email successfully sent.";
         actiondiv.innerHTML = "Please check your email to activate your account.";
+
+        database.ref('users/' + user.uid).set({
+          amcs: {},
+          aimes: {},
+        });
       }).catch(function(error) {
+        console.log(error);
         let code = error.code;
+        console.log("here");
         infodiv.innerHTML = "There was an error when sending the verification email.";
         actiondiv.innerHTML = "Please private message CoolCarsOnTheRun on AoPS with the following error message:<br>" + code;
       });
