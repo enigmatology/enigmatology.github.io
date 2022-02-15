@@ -19,6 +19,7 @@ button:hover {
   background-color: #1F487E;
   color: white;
   transition: background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
 }
 :focus {
   outline: none;
@@ -127,18 +128,25 @@ img {
 }
 
 #results-link {
-  text-align: center !important;
-  display: flex;
-  align-items: center;
-  color: black;
+  background-color: white;
+  border-color: #1F487E;
+  border-radius: 0;
+  border-width: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  color: #1F487E;
-  font-weight: 500;
+  padding: 15px;
+  border-width: 2px;
+  border-radius: 0;
+  box-sizing: border-box !important;
+  border-color: #1F487E;
+  border-style: solid;
+  color: black;
+  font-size: 13px !important;
 }
-
 #results-link:hover {
-  text-decoration: underline;
+  background-color: #1F487E;
+  color: white;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #results-link-container {

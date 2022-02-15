@@ -1,6 +1,8 @@
 getUser();
 
 function getUser() {
+    let loading_div = document.getElementById("loading-text");
+    loading_div.innerHTML = "Retrieving results...";
     firebase.auth().onAuthStateChanged(function(user) {
         let results_div = document.getElementById("results");
         if (user == null) {
@@ -24,10 +26,12 @@ function getAMCResults(user, results_div) {
 }
 
 function showAMCResults(results_div, data) {
-    amc_h1 = document.createElement("h2");
-    amc_h1.setAttribute("class", "section-header");
-    amc_h1.innerHTML = "AMC Results";
-    results_div.appendChild(amc_h1);
+    let loading_div = document.getElementById("loading-text");
+
+    amc_div = document.createElement("div");
+    amc_div.setAttribute("class", "section-header");
+    amc_div.innerHTML = "AMC Results";
+    results_div.appendChild(amc_div);
 
     let table = document.createElement("table");
     table.setAttribute("id", "amc-results-table");
@@ -37,37 +41,51 @@ function showAMCResults(results_div, data) {
     let cell1 = document.createElement("th");
     let cell2 = document.createElement("th");
     let cell3 = document.createElement("th");
+    let cell4 = document.createElement("th");
 
-    cell1.innerHTML = "Year";
-    cell2.innerHTML = "Test";
-    cell3.innerHTML = "Your Score";
+    cell1.innerHTML = "Date";
+    cell2.innerHTML = "Year";
+    cell3.innerHTML = "Test";
+    cell4.innerHTML = "Your Score";
 
     row.appendChild(cell1);
     row.appendChild(cell2);
     row.appendChild(cell3);
+    row.appendChild(cell4);
 
     table.appendChild(row);
 
     for (const key in data) {
         if (data.hasOwnProperty(key)) {
+            let date = data[key]["date"];
+            date = new Date(date);
+            
+            var dd = String(date.getDate()).padStart(2, '0');
+            var mm = String(date.getMonth() + 1).padStart(2, '0');
+            var yyyy = date.getFullYear();
+
             row = document.createElement("tr");
             cell1 = document.createElement("td");
             cell2 = document.createElement("td");
             cell3 = document.createElement("td");
+            cell4 = document.createElement("td");
 
-            cell1.innerHTML = data[key]["year"];
-            cell2.innerHTML = "AMC " + data[key]["grade"] + data[key]["version"];
-            cell3.innerHTML = data[key]["score"];
+            cell1.innerHTML = mm + "/" + dd + "/" + yyyy;
+            cell2.innerHTML = data[key]["year"];
+            cell3.innerHTML = "AMC " + data[key]["grade"] + data[key]["version"];
+            cell4.innerHTML = data[key]["score"];
 
             row.appendChild(cell1);
             row.appendChild(cell2);
             row.appendChild(cell3);
+            row.appendChild(cell4);
 
             table.appendChild(row);
         }
     }
 
     results_div.appendChild(table);
+    loading_div.innerHTML = "";
 }
 
 function getAIMEResults(user, results_div) {
@@ -81,10 +99,13 @@ function getAIMEResults(user, results_div) {
 }
 
 function showAIMEResults(results_div, data) {
-    aime_h1 = document.createElement("h2");
-    aime_h1.setAttribute("class", "section-header");
-    aime_h1.innerHTML = "AIME Results";
-    results_div.appendChild(aime_h1);
+    let loading_div = document.getElementById("loading-text");
+
+    aime_div = document.createElement("div");
+    aime_div.setAttribute("class", "section-header");
+    aime_div.setAttribute("id", "aime-header");
+    aime_div.innerHTML = "AIME Results";
+    results_div.appendChild(aime_div);
 
     let table = document.createElement("table");
     table.setAttribute("id", "aime-results-table");
@@ -94,35 +115,49 @@ function showAIMEResults(results_div, data) {
     let cell1 = document.createElement("th");
     let cell2 = document.createElement("th");
     let cell3 = document.createElement("th");
+    let cell4 = document.createElement("th");
 
-    cell1.innerHTML = "Year";
-    cell2.innerHTML = "Test";
-    cell3.innerHTML = "Your Score";
+    cell1.innerHTML = "Date";
+    cell2.innerHTML = "Year";
+    cell3.innerHTML = "Test";
+    cell4.innerHTML = "Your Score";
 
     row.appendChild(cell1);
     row.appendChild(cell2);
     row.appendChild(cell3);
+    row.appendChild(cell4);
 
     table.appendChild(row);
 
     for (const key in data) {
         if (data.hasOwnProperty(key)) {
+            let date = data[key]["date"];
+            date = new Date(date);
+            
+            var dd = String(date.getDate()).padStart(2, '0');
+            var mm = String(date.getMonth() + 1).padStart(2, '0');
+            var yyyy = date.getFullYear();
+
             row = document.createElement("tr");
             cell1 = document.createElement("td");
             cell2 = document.createElement("td");
             cell3 = document.createElement("td");
+            cell4 = document.createElement("td");
 
-            cell1.innerHTML = data[key]["year"];
-            cell2.innerHTML = "AIME " + data[key]["version"];
-            cell3.innerHTML = data[key]["score"];
+            cell1.innerHTML = mm + "/" + dd + "/" + yyyy;
+            cell2.innerHTML = data[key]["year"];
+            cell3.innerHTML = "AIME " + data[key]["version"];
+            cell4.innerHTML = data[key]["score"];
 
             row.appendChild(cell1);
             row.appendChild(cell2);
             row.appendChild(cell3);
+            row.appendChild(cell4);
 
             table.appendChild(row);
         }
     }
 
     results_div.appendChild(table);
+    loading_div.innerHTML = "";
 }

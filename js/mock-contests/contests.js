@@ -601,8 +601,10 @@ function updateFirebase(score, year, test, grade, version, numproblems) {
 
     let newScoreKey = firebase.database().ref().child('users').push().key;
     let updates = {};
+    let date = new Date();
     if (test === "AMC") {
       updates['/users/' + user.uid + '/amcs/' + newScoreKey] = {
+        'date': date,
         'year': year,
         'grade': grade,
         'version': version,
@@ -611,8 +613,8 @@ function updateFirebase(score, year, test, grade, version, numproblems) {
     }
     else if (test === "AIME") {
       updates['/users/' + user.uid + '/aimes/' + newScoreKey] = {
+        'date': date,
         'year': year,
-        'grade': grade,
         'version': version,
         'score': score,
       }
