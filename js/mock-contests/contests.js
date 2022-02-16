@@ -604,6 +604,7 @@ function updateFirebase(score, year, test, grade, version, numproblems) {
     let date = new Date();
     if (test === "AMC") {
       updates['/users/' + user.uid + '/amcs/' + newScoreKey] = {
+        'username': user.displayName,
         'date': date,
         'year': year,
         'grade': grade,
@@ -613,6 +614,7 @@ function updateFirebase(score, year, test, grade, version, numproblems) {
     }
     else if (test === "AIME") {
       updates['/users/' + user.uid + '/aimes/' + newScoreKey] = {
+        'username': user.displayName,
         'date': date,
         'year': year,
         'version': version,
