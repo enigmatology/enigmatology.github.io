@@ -6,7 +6,7 @@ function getUser() {
     firebase.auth().onAuthStateChanged(function(user) {
         let results_div = document.getElementById("results");
         if (user == null) {
-            results_div.innerHTML = "You are not logged in. Sign in to view past results."
+            loading_div.innerHTML = "You are not logged in. Sign in to view past results."
         }
         else {
             getAMCResults(user, results_div);
