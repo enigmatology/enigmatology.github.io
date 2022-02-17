@@ -10,6 +10,7 @@
 .section-header {
     text-align: center;
     font-weight: 400;
+    font-family: roboto, sans-serif;
 }
 
 .results-table {
@@ -31,9 +32,18 @@
     background-color: #dddddd;
 }
 
+.results-table a {
+    text-decoration: none;
+    color: #1F487E;
+}
+
+.results-table a:hover {
+    color: rgb(141, 167, 202);
+}
+
 /* other options */
 #other-resources {
-width: 100%;
+    width: 100%;
 }
 
 .info-header {
@@ -45,18 +55,17 @@ width: 100%;
 #homepage-link {
     background-color: white;
     border-color: #1F487E;
-    border-radius: 0;
-    border-width: 2px;
     transition: background-color 0.25s ease, color 0.25s ease;
     text-decoration: none;
     padding: 15px;
     border-width: 2px;
     border-radius: 0;
     box-sizing: border-box !important;
-    border-color: #1F487E;
     border-style: solid;
     color: black;
     font-size: 13px !important;
+
+    margin-right: 15px;
 }
 #homepage-link:hover {
     background-color: #1F487E;
@@ -72,10 +81,19 @@ width: 100%;
 
 #results {
     text-align: center;
-    font-size: 20px;
     margin-top: 20px;
 }
 
 #aime-header {
     margin-top: 20px;
+}
+
+/* individual test results */
+.test-description, #notice-p {
+    font-style: italic;
+    font-size: 15px;
+}
+
+#notice-p {
+    margin-top: 25px;
 }

@@ -346,7 +346,7 @@ function showresults(year, test, grade, version, numproblems) {
     let selectedanswers = getselectedanswers(year, test, grade, version, numproblems);
     let score = checkanswers(selectedanswers, correctanswers, test);
 
-    console.log(updateFirebase(score, year, test, grade, version, numproblems));
+    updateFirebase(score, year, test, grade, version, numproblems, selectedanswers, correctanswers);
 
     let finishedheading = document.getElementById("finished-heading-text");
     finishedheading.innerHTML = year + " " + test + " " + grade + version + " Mock Results";
@@ -594,37 +594,44 @@ function checkanswers(selectedanswers, correctanswers, test) {
   return score;
 }
 
-function updateFirebase(score, year, test, grade, version, numproblems) {
-  let user = firebase.auth().currentUser;
-  if (user != null && user.emailVerified) {
-    let database = firebase.database();
-
-    let newScoreKey = firebase.database().ref().child('users').push().key;
-    let updates = {};
-    let date = new Date();
-    if (test === "AMC") {
-      updates['/users/' + user.uid + '/amcs/' + newScoreKey] = {
-        'username': user.displayName,
-        'date': date,
-        'year': year,
-        'grade': grade,
-        'version': version,
-        'score': score,
+function updateFirebase(score, year, test, grade, version, numproblems, selected_answers, correct_answers) {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user != null && user.emailVerified) {
+      console.log("601");
+      let database = firebase.database();
+  
+      let newScoreKey = firebase.database().ref().child('users').push().key;
+      let updates = {};
+      let date = new Date();
+      if (test === "AMC") {
+        updates['/users/' + user.uid + '/amcs/' + newScoreKey] = {
+          'username': user.displayName,
+          'date': date,
+          'year': year,
+          'grade': grade,
+          'version': version,
+          'score': score,
+          'selected-answers': selected_answers,
+          'correct-answers': correct_answers,
+        }
       }
-    }
-    else if (test === "AIME") {
-      updates['/users/' + user.uid + '/aimes/' + newScoreKey] = {
-        'username': user.displayName,
-        'date': date,
-        'year': year,
-        'version': version,
-        'score': score,
+      else if (test === "AIME") {
+        console.log("here");
+        updates['/users/' + user.uid + '/aimes/' + newScoreKey] = {
+          'username': user.displayName,
+          'date': date,
+          'year': year,
+          'version': version,
+          'score': score,
+          'selected-answers': selected_answers,
+          'correct-answers': correct_answers,
+        }
       }
+  
+      return firebase.database().ref().update(updates);
     }
-
-    return firebase.database().ref().update(updates);
-  }
-  return false;
+    return false;
+  });  
 }
 
 var rotating = false;
