@@ -1,14 +1,8 @@
-Welcome to my new blog!
+Blog Complete!
 
 March 22, 2021
 
-Hopefully this post works; the JavaScript was very finicky to deal with. I actually started blogging tutorials on the <a href="https://artofproblemsolving.com/online" target=_blank>Art of Problem Solving</a> website, which uses bbCode to format forum and blog posts, and I was kind of too lazy to convert all of the images and links and bold tags by hand (oops) so I ended up just making my own rendering engine. It turned out that this was a lot harder than I expected it to be (especially converting hide tags, because there's no easy HTML tag that works for hide tags), so it turned out to be a few-week-long project.
-
-Anyways, we've gotten here now, and the super satisfying thing to see is that there is basically virtually no HTML for this page. Everything is done using GET requests to the GitHub server to retrieve posts, and then are processed client-side using JavaScript and simply appended to the end of the HTML page. If you view the source of this page, it's very plain.
-
-I'm also still debating on whether to use MathJax or KaTeX to render math but that's for another time because dynamic content with client-side math rendering is a mess.
-
-As a simple example, here are all of the HTML tags that I've currently implemented.
+I've finally finished all of the JavaScript to get this webpage working! This includes retrieving blog posts with an HTTP request, parsing BBCode, and converting $\LaTeX$ with MathJax. Here's a quick preview of everything I've implemented:
 
 [b]Bold Tag[/b]
 
@@ -48,3 +42,5 @@ for (int i = 0; i <= 5; i++)
 for i in range(50):
   print(str(i) + '...')
 [/code]
+
+Math: \[\int_0^\infty {\frac{1}{x^2}\,dx},\]
