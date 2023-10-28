@@ -1,5 +1,5 @@
 # enigmatology.github.io
-A blog created by AoPS user CoolCarsOnTheRun, including in-progress tutorials for Asymptote and CSS, as well as a simple overall blog. Also includes other projects such as a mock competition online testing software to practice AMCs.
+A blog including in-progress tutorials for Asymptote and CSS, as well as a simple overall blog. Also includes other projects such as a mock competition online testing software to practice AMCs.
 
 ## Asymptote Tutorials
 Asymptote is a unique and powerful vector graphics programming language that allows you to make advanced graphics. Upon finding very limited resources to learn how to use the language, I decided to create my own. In this tutorial, I teach how to make simple diagrams for geometry problems using Asymptote, from the ground up.
