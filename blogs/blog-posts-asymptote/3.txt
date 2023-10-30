@@ -36,11 +36,7 @@ However, inside of the circle, you still need to specify the center and radius, 
 
 Once drawn, the diagram should look like [hide=this]<img src="https://latex.artofproblemsolving.com/a/4/b/a4bbcf29f663518a3b7b9e851a588614752f43d2.png" alt="draw(circle((0, 0), 2));"/>[/hide]. Again, my circle was chosen randomly, so your circle may look different.
 
-<ul>
-<li>[b]origin[/b] returns the pair $(0, 0)$. [hide=Example of origin]<img src="https://latex.artofproblemsolving.com/3/6/7/3670ab4f3d6c432735d35a3c162e0b2ba21275c2.png"/>[/hide]</li>
-<li>[b]foot(X, A, B)[/b] where $A$, $B$, and $X$ are pairs returns the foot of the altitude from $X$ to line $AB$. [hide=Example of foot]<img src="https://latex.artofproblemsolving.com/e/9/d/e9d80bac9767a3391020956d80a6ff7aa9fb99b8.png"/>[/hide]</li>
-<li>[b]midpoint(A--B)[/b] where $A$ and $B$ are pairs returns the midpoint of the segment $AB$. Note the two dashes between $A$ and $B$ instead of a comma. [hide=Example of midpoint]<img src="https://latex.artofproblemsolving.com/8/d/c/8dcd0c4aa6434526dcd5f70e0ea1b4e45d59c05f.png"/>[/hide]</li>
-</ul>
+<ul><li>[b]origin[/b] returns the pair $(0, 0)$. [hide=Example of origin]<img src="https://latex.artofproblemsolving.com/3/6/7/3670ab4f3d6c432735d35a3c162e0b2ba21275c2.png"/>[/hide]</li><li>[b]foot(X, A, B)[/b] where $A$, $B$, and $X$ are pairs returns the foot of the altitude from $X$ to line $AB$. [hide=Example of foot]<img src="https://latex.artofproblemsolving.com/e/9/d/e9d80bac9767a3391020956d80a6ff7aa9fb99b8.png"/>[/hide]</li><li>[b]midpoint(A--B)[/b] where $A$ and $B$ are pairs returns the midpoint of the segment $AB$. Note the two dashes between $A$ and $B$ instead of a comma. [hide=Example of midpoint]<img src="https://latex.artofproblemsolving.com/8/d/c/8dcd0c4aa6434526dcd5f70e0ea1b4e45d59c05f.png"/>[/hide]</li></ul>
 
 That's it for this lesson! There are a couple problems this week, so if you find yourself needing extra practice, you can do them :).
 
