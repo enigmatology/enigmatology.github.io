@@ -10,15 +10,15 @@ This is part two of the customization series.
 Sometimes, it's helpful to color a path or point, for example if you're modelling the path of a laser in a polygon, you may want to make the laser red. This lesson will tell you how to do that.
 
 [b]Coloring things.[/b] In essence, coloring something is very similar to labeling a point, but even easier. Again, you put an argument after the draw statement, like this:
-[code=asymptote]draw(item, color);[/code]
+[code=java]draw(item, color);[/code]
 Your color is going to be in words and all lowercase. For example, if you wanted to color a point red, you would do this:
-[code=asymptote]dot((0, 0), red);[/code]
+[code=java]dot((0, 0), red);[/code]
 This will create this:
 <img src="https://latex.artofproblemsolving.com/a/4/6/a46a8567cda4dcac780ed1350699e89342ad0785.png"/>
 What if you wanted to label the point as well? The arguments must go in a specific order:
-[code=asymptote]draw(label, item, label_direction, color);[/code]
+[code=java]draw(label, item, label_direction, color);[/code]
 For example, to label our dot earlier as point $A$, you would do this:
-[code=asymptote]dot("$A$", (0, 0), S, red);[/code]
+[code=java]dot("$A$", (0, 0), S, red);[/code]
 which gives you this:
 <img src="https://latex.artofproblemsolving.com/a/9/b/a9bc72a69cfe95ae0e1963deece60bc218384821.png"/>
 Notice how it also colors the label, so if you don't want the label to be colored, you must label the point after creating the object.
@@ -26,14 +26,14 @@ Notice how it also colors the label, so if you don't want the label to be colore
 [b]Marking right angles.[/b] Say you wanted to mark the measure of an angle. How would you do this? Asymptote has a package called the CSE5 package that contains a function to do this with (it also has the markangle() function in olympiad.asy, but we'll do that later). We won't cover this package at all because it's quite complex, but if you want to learn about it, you can do so in the AoPS Wiki found <a href="https://artofproblemsolving.com/wiki/index.php/Asymptote:_CSE5" target="_blank">here</a>.
 
 However, marking right angles is quite simple. It's done using the rightanglemark() function. Here's the syntax:
-[code=asymptote]draw(rightanglemark(first_vertex, vertex_of_right_angle, second_vertex, size));[/code]
+[code=java]draw(rightanglemark(first_vertex, vertex_of_right_angle, second_vertex, size));[/code]
 This marks the angle $\angle{\text{firstvertex vertexofrightangle secondvertex}}$ with a mark of size "size." The rightanglemark() function creates a path that's the mark, so you need to use the draw() function on it. Example:
 <img src="https://latex.artofproblemsolving.com/a/a/b/aabbd7f2c6023cd35ee38db7bb1a51afeda97c73.png"/>
 
 [b][u]Practice Problems[/u][/b]
 1. Draw an equilateral triangle with 3 different colored sides - red, blue, and green. [hide=Solution]
 Code:
-[code=asymptote]pair A = (0, 0), B = (1, sqrt(3)), C = (2, 0);
+[code=java]pair A = (0, 0), B = (1, sqrt(3)), C = (2, 0);
 draw(A--B, red);
 draw(A--C, blue);
 draw(B--C, green);[/code]
@@ -42,7 +42,7 @@ Result:
 [/hide]
 2. Draw a 45-45-90 right triangle and mark the 90 degree angle with a right angle mark. [hide=Solution]
 Code:
-[code=asymptote]pair A = (0, 0), B = (1, 0), C = (0, 1);
+[code=java]pair A = (0, 0), B = (1, 0), C = (0, 1);
 draw(A--B--C--A);
 draw(rightanglemark(B, A, C, 3));[/code]
 Result:

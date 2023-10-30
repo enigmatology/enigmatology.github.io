@@ -11,28 +11,27 @@ When coding in Asymptote, it's sometimes helpful to label a point or color a pat
 There are two main ways to label something. The first is to label it while creating the pair/path itself, the other is to label it afterwards.
 
 [b]Labeling while creating.[/b] To label a pair or a path while creating the pair/path itself, simply add another argument in front of all of the arguments of the draw function. The syntax looks like this:
-[code=asymptote]draw("label", item);[/code]
+[code=java]draw("label", item);[/code]
 Notice the quotes around the label - these indicate that the label is a [b]string[/b], a data type containing a sequence of characters.
 
 If you wanted to label a point as $A$, you would do this:
-[code=asymptote]dot("$A$", (0, 0))[/code]
+[code=java]dot("$A$", (0, 0))[/code]
 Notice that you need dollar signs around the A just as in $\LaTeX$.
 
 This will look like this:
 <img src="https://latex.artofproblemsolving.com/a/c/2/ac27bce202a7c75a8d2362712d482f386601df15.png"/>
-
 Notice what happens we draw another line, as follows:
 <img src="https://latex.artofproblemsolving.com/1/8/a/18a34f501eb148d7b139d7d8622470b0162f9911.png"/>
-The line can go straight through the label. To fix this, add another argument. This argument will tell Asymptote where to draw the label relative to your new point. [code=asymptote]draw("label", item, direction);[/code] To specify the direction of the label, use the [code=asymptote]dir()[/code] function. In the following example, we will use [code=asymptote]dir(180)[/code] to make the label appear directly left of the point.
+The line can go straight through the label. To fix this, add another argument. This argument will tell Asymptote where to draw the label relative to your new point. [code=java]draw("label", item, direction);[/code] To specify the direction of the label, use the [code=java]dir()[/code] function. In the following example, we will use [code=java]dir(180)[/code] to make the label appear directly left of the point.
 <img src="https://latex.artofproblemsolving.com/f/a/7/fa7b69cb832596ee83399a30031ecc4956b7149b.png"/>
 
 [b]Labeling afterwards.[/b] This is very similar to labeling while creating. SImply use the label command after creating the object:
-[code=asymptote]draw(item);
+[code=java]draw(item);
 label("label", item, direction);[/code]
 [b][u]Practice Problems[/u][/b]
 1. Label the point (0, 0) as point $A$ upwards directly while drawing. [hide=Solution]
 Code:
-[code=asymptote]
+[code=java]
 dot("$A$", (0, 0), dir(90));
 [/code]
 Result:
@@ -40,7 +39,7 @@ Result:
 [/hide]
 2. Label the point (0, 0) as point $A$ to the right and down after drawing. [hide=Solution]
 Code:
-[code=asymptote]
+[code=java]
 dot((0, 0));
 label("$A$", (0, 0), dir(315));
 [/code]
