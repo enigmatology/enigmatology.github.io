@@ -1,16 +1,16 @@
-Lesson 5: Customization I: Labelling Points
+Lesson 5: Customization I: Labeling Points
 
 October 11, 2022
 
 [center][size=200][color=#c00]Lesson 5[/color][/size]
-[i]Customization I: Labelling Points[/i][/center]
+[i]Customization I: labeling Points[/i][/center]
 
 When coding in Asymptote, it's sometimes helpful to label a point or color a path or label. Asymptote has the ability to do either of those things, using special arguments and/or commands inside of a function.
 
 [b][u]Labeling Pairs and Paths[/u][/b]
 There are two main ways to label something. The first is to label it while creating the pair/path itself, the other is to label it afterwards.
 
-[b]Labelling while creating.[/b] To label a pair or a path while creating the pair/path itself, simply add another argument in front of all of the arguments of the draw function. The syntax looks like this:
+[b]labeling while creating.[/b] To label a pair or a path while creating the pair/path itself, simply add another argument in front of all of the arguments of the draw function. The syntax looks like this:
 [code=asymptote]draw("label", item);[/code]
 Notice the quotes around the label - these indicate that the label is a [b]string[/b], a data type containing a sequence of characters.
 
@@ -28,7 +28,7 @@ The line can go straight through the label. To fix this, add another argument. T
 To specify the direction of the label, use the [code=asymptote]dir()[/code] function. In the following example, we will use [code=asymptote]dir(180)[/code] to make the label appear directly left of the point.
 <img src="https://latex.artofproblemsolving.com/f/a/7/fa7b69cb832596ee83399a30031ecc4956b7149b.png"/>
 
-[b]Labelling afterwards.[/b] This is very similar to labelling while creating. SImply use the label command after creating the object:
+[b]labeling afterwards.[/b] This is very similar to labeling while creating. SImply use the label command after creating the object:
 [code=asymptote]draw(item);
 label("label", item, direction);[/code]
 [b][u]Practice Problems[/u][/b]

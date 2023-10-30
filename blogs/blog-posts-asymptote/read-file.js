@@ -1,7 +1,7 @@
 var hides = [];
 var posts = [];
 var iterations = 0;
-var NUMBEROFPOSTS = 6;
+var NUMBEROFPOSTS = 7;
 
 for (var i = 0; i < NUMBEROFPOSTS; i++) {
   posts.push(0);
