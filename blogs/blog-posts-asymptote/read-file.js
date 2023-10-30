@@ -164,7 +164,7 @@ function convertbbCode(orig, i, currentcontents) {
     converted = converted.replace(slicedsize, "<div style=\"display: inline; font-size: " + size + "%;\">" + sizedtext + "</div>");
   }
   
-  if (i == 6) {
+  if (i == 5) {
     console.log(converted);
   }
   while (converted.includes("[code=")) {
