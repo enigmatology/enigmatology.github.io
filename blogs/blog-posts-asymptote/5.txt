@@ -1,4 +1,4 @@
-Lesson 5: The dir() Function
+Lesson 4: The dir() Function
 
 July 20, 2021
 
