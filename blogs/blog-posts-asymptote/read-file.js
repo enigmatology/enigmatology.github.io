@@ -115,15 +115,17 @@ function convertbbCode(orig, i, currentcontents) {
   var slicedcode;
   var language, codetext;
   
-  if (i == 1) {
-    console.log(converted);
+  if (i == 1 || i == 5) {
+    console.log(JSON.stringify(converted));
   }
   while (converted.includes("[/code]\n")) {
   	converted = converted.replace("[/code]\n", "[/code]");
   }
-  if (i == 1) {
-    console.log(converted);
+  if (i == 1 || i == 5) {
+    console.log(JSON.stringify(converted));
   }
+
+  console.log("---------------------------------");
   
   while (converted.includes("[b]")) {
     converted = converted.replace("[b]", "<b>");
