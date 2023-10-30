@@ -206,6 +206,7 @@ function convertbbCode(orig, i, currentcontents) {
   }
   
   while (converted.includes("\n"))  {
+    console.log(converted);
     converted = converted.replace("\n", "<br>");
   }
   return converted;
