@@ -12,6 +12,10 @@ In this lesson, we'll introduce the basics to drawing, including points, lines, 
 </ol>
 Alright, let's get into the drawing. :)
 
+[b]Coloring things.[/b] In essence, coloring something is very similar to labeling a point, but even easier. Again, you put an argument after the draw statement, like this:
+[code=java]draw(item, color);[/code]
+Your color is going to be in words and all lowercase. For example, if you wanted to color a point red, you would do this:
+
 [b]Drawing Points[/b]. A point is probably the most basic command in Asymptote, and yet it is quite important. Here is the syntax:
 [code=asymptote]dot((x-coordinate, y-coordinate));[/code]
 Note a couple things. Firstly, the line ends with a semicolon, which all Asymptote must. Second, there are 2 pairs of parenthesis. Why? you may ask. This is because there are two layers. The first pair of parenthesis, or the bolded ones: dot[b]([/b](x, y)[b])[/b]; are there because this is a [b]function[/b]. You'll be familiar with a function if you have used any other coding language, but if you haven't, all you need to know is that the functions are the stuff that draws stuff in Asymptote.
@@ -35,8 +39,6 @@ Here, you have 1 single argument: the circle. However, as we'll learn later the 
 However, inside of the circle, you still need to specify the center and radius, as without it, Asymptote will not know how to draw the circle.
 
 Once drawn, the diagram should look like [hide=this]<img src="https://latex.artofproblemsolving.com/a/4/b/a4bbcf29f663518a3b7b9e851a588614752f43d2.png" alt="draw(circle((0, 0), 2));"/>[/hide]. Again, my circle was chosen randomly, so your circle may look different.
-
-<ul><li>[b]origin[/b] returns the pair $(0, 0)$. [hide=Example of origin]<img src="https://latex.artofproblemsolving.com/3/6/7/3670ab4f3d6c432735d35a3c162e0b2ba21275c2.png"/>[/hide]</li><li>[b]foot(X, A, B)[/b] where $A$, $B$, and $X$ are pairs returns the foot of the altitude from $X$ to line $AB$. [hide=Example of foot]<img src="https://latex.artofproblemsolving.com/e/9/d/e9d80bac9767a3391020956d80a6ff7aa9fb99b8.png"/>[/hide]</li><li>[b]midpoint(A--B)[/b] where $A$ and $B$ are pairs returns the midpoint of the segment $AB$. Note the two dashes between $A$ and $B$ instead of a comma. [hide=Example of midpoint]<img src="https://latex.artofproblemsolving.com/8/d/c/8dcd0c4aa6434526dcd5f70e0ea1b4e45d59c05f.png"/>[/hide]</li></ul>
 
 That's it for this lesson! There are a couple problems this week, so if you find yourself needing extra practice, you can do them :).
 
