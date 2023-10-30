@@ -115,8 +115,14 @@ function convertbbCode(orig, i, currentcontents) {
   var slicedcode;
   var language, codetext;
   
+  if (i == 1) {
+    console.log(converted);
+  }
   while (converted.includes("[/code]\n")) {
   	converted = converted.replace("[/code]\n", "[/code]");
+  }
+  if (i == 1) {
+    console.log(converted);
   }
   
   while (converted.includes("[b]")) {
@@ -164,9 +170,6 @@ function convertbbCode(orig, i, currentcontents) {
     converted = converted.replace(slicedsize, "<div style=\"display: inline; font-size: " + size + "%;\">" + sizedtext + "</div>");
   }
   
-  if (i == 5) {
-    console.log(converted);
-  }
   while (converted.includes("[code=")) {
   
   	slicedcode = converted.slice(converted.indexOf("[code="), converted.indexOf("[/code]") + 7);
