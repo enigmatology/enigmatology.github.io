@@ -121,8 +121,6 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/code]\r\n")) {
   	converted = converted.replace("[/code]\r\n", "[/code]");
   }
-
-  console.log("---------------------------------");
   
   while (converted.includes("[b]")) {
     converted = converted.replace("[b]", "<b>");
