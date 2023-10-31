@@ -115,17 +115,11 @@ function convertbbCode(orig, i, currentcontents) {
   var slicedcode;
   var language, codetext;
   
-  if (i == 1 || i == 5) {
-    console.log(JSON.stringify(converted));
-  }
   while (converted.includes("[/code]\n")) {
   	converted = converted.replace("[/code]\n", "[/code]");
   }
   while (converted.includes("[/code]\r\n")) {
   	converted = converted.replace("[/code]\r\n", "[/code]");
-  }
-  if (i == 1 || i == 5) {
-    console.log(JSON.stringify(converted));
   }
 
   console.log("---------------------------------");
@@ -217,7 +211,6 @@ function convertbbCode(orig, i, currentcontents) {
   }
   
   while (converted.includes("\n"))  {
-    //console.log(converted);
     converted = converted.replace("\n", "<br>");
   }
   return converted;

@@ -1,63 +1,50 @@
-Lesson 2: Basic Syntax
+Lesson 6: Customization II: Color and Right Angles
 
-May 12, 2021
+January 3, 2023
 
-[center][size=200][color=#c00]Lesson 2[/color][/size]
-[i][size=100]Basic Syntax[/size][/i][/center]
+[center][color=#c00][size=200]Lesson 6[/size][/color]
+[i]Customization II: Color and Right Angles[/i][/center]
 
-In this lesson, we'll introduce the basics to drawing, including points, lines, and circles. However, before we do the drawing, we have to learn some universal syntax expectations that Asymptote will throw an error if not done correctly.
-<ol>
-<li> All lines you write must end with a semicolon, or a ;. If not included at the end of a single line, your program will not run and will fail to generate the diagram you are trying to create.
-<li> If you haven't ever learned another coding language, you need to be careful that your parenthesis match up. If you are missing an opening or closing parenthesis, the code will not run.
-</ol>
-Alright, let's get into the drawing. :)
+This is part two of the customization series.
+
+Sometimes, it's helpful to color a path or point, for example if you're modelling the path of a laser in a polygon, you may want to make the laser red. This lesson will tell you how to do that.
 
 [b]Coloring things.[/b] In essence, coloring something is very similar to labeling a point, but even easier. Again, you put an argument after the draw statement, like this:
 [code=java]draw(item, color);[/code]
 Your color is going to be in words and all lowercase. For example, if you wanted to color a point red, you would do this:
+[code=java]dot((0, 0), red);[/code]
+This will create this:
+<img src="https://latex.artofproblemsolving.com/a/4/6/a46a8567cda4dcac780ed1350699e89342ad0785.png"/>
+What if you wanted to label the point as well? The arguments must go in a specific order:
+[code=java]draw(label, item, label_direction, color);[/code]
+For example, to label our dot earlier as point $A$, you would do this:
+[code=java]dot("$A$", (0, 0), S, red);[/code]
+which gives you this:
+<img src="https://latex.artofproblemsolving.com/a/9/b/a9bc72a69cfe95ae0e1963deece60bc218384821.png"/>
+Notice how it also colors the label, so if you don't want the label to be colored, you must label the point after creating the object.
 
-[b]Drawing Points[/b]. A point is probably the most basic command in Asymptote, and yet it is quite important. Here is the syntax:
-[code=asymptote]dot((x-coordinate, y-coordinate));[/code]
-Note a couple things. Firstly, the line ends with a semicolon, which all Asymptote must. Second, there are 2 pairs of parenthesis. Why? you may ask. This is because there are two layers. The first pair of parenthesis, or the bolded ones: dot[b]([/b](x, y)[b])[/b]; are there because this is a [b]function[/b]. You'll be familiar with a function if you have used any other coding language, but if you haven't, all you need to know is that the functions are the stuff that draws stuff in Asymptote.
+[b]Marking right angles.[/b] Say you wanted to mark the measure of an angle. How would you do this? Asymptote has a package called the CSE5 package that contains a function to do this with (it also has the markangle() function in olympiad.asy, but we'll do that later). We won't cover this package at all because it's quite complex, but if you want to learn about it, you can do so in the AoPS Wiki found <a href="https://artofproblemsolving.com/wiki/index.php/Asymptote:_CSE5" target="_blank">here</a>.
 
-With this function, you'll see that inside of the parenthesis is the argument, or the input. Without this input, the function won't be able to run - in the case of drawing points, it needs the coordinates of where you want to draw the points. Otherwise, the program won't know where the point should be drawn. This is the second pair of parenthesis - they are part of the input, or the coordinates. Whenever you write down a coordinate pair, you need parenthesis around them (for example (0, 0), or the origin), and Asymptote is no different.
-
-There are more optional arguments for this function, but that's for a later lesson.
-
-This diagram, when run, should look like [hide=this]<img src="https://latex.artofproblemsolving.com/5/2/3/5235c2b611a1250026a5af93f1355cfaf0daedb5.png" alt="dot((0, 0));"/>[/hide].
-
-[b]Drawing Lines[/b]. Lines are quite similar to points: they have a function, and inside that function they have one single argument. Well, technically Asymptote doesn't draw lines. They draw line segments, as the lines are not infinite and have endpoints. The syntax is as follows:
-[code=asymptote]draw((x-coor-1, y-coor-1)--(x-coor-2, y-coor-2));[/code]
-Instead of the function [b]dot[/b], we use the function [b]draw[/b]. This time, we also have two points: the two endpoints of the line, and 2 horizontal dashes separating the points.
-
-When drawn, the diagram looks like [hide=this]<img src="https://latex.artofproblemsolving.com/c/2/0/c201977bd22357a3a2ab9164b378947277852dab.png" alt="draw((0, 3)--(2, 0));"/>[/hide]. I just picked two random endpoints for my line, your line's direction/length will probably be different.
-
-[b]Drawing Circles[/b]. Circles, like lines, use the [b]draw[/b] function. However, unlike lines, you need to specify as an argument that you are drawing a circle. The syntax is like this:
-[code=asymptote]draw(circle((center-x, center-y), radius));[/code]
-Here, you have 1 single argument: the circle. However, as we'll learn later the circle is something called a [b]path[/b], which, like a point, is a type of object. Therefore, you can put this circle inside of the draw by itself.
-
-However, inside of the circle, you still need to specify the center and radius, as without it, Asymptote will not know how to draw the circle.
-
-Once drawn, the diagram should look like [hide=this]<img src="https://latex.artofproblemsolving.com/a/4/b/a4bbcf29f663518a3b7b9e851a588614752f43d2.png" alt="draw(circle((0, 0), 2));"/>[/hide]. Again, my circle was chosen randomly, so your circle may look different.
-
-That's it for this lesson! There are a couple problems this week, so if you find yourself needing extra practice, you can do them :).
+However, marking right angles is quite simple. It's done using the rightanglemark() function. Here's the syntax:
+[code=java]draw(rightanglemark(first_vertex, vertex_of_right_angle, second_vertex, size));[/code]
+This marks the angle $\angle{\text{firstvertex vertexofrightangle secondvertex}}$ with a mark of size "size." The rightanglemark() function creates a path that's the mark, so you need to use the draw() function on it. Example:
+<img src="https://latex.artofproblemsolving.com/a/a/b/aabbd7f2c6023cd35ee38db7bb1a51afeda97c73.png"/>
 
 [b][u]Practice Problems[/u][/b]
-Problem 1: Draw a point at the coordinates (1, 2). [hide=Solution]
+1. Draw an equilateral triangle with 3 different colored sides - red, blue, and green. [hide=Solution]
 Code:
-[code=asymptote]dot((1, 2));[/code]
+[code=java]pair A = (0, 0), B = (1, sqrt(3)), C = (2, 0);
+draw(A--B, red);
+draw(A--C, blue);
+draw(B--C, green);[/code]
 Result:
-<img src="https://latex.artofproblemsolving.com/9/1/4/9144d23bc703d6f1bfbd60b8a3d796cb4d1f7a39.png" alt="dot((1, 2));"/>
+<img src="https://latex.artofproblemsolving.com/e/d/c/edc7d37d98241accc05474823ebe5cd1c0278fc2.png"/>
 [/hide]
-Problem 2: Draw a line with endpoints (4, 5) and (8, 2). [hide=Solution]
+2. Draw a 45-45-90 right triangle and mark the 90 degree angle with a right angle mark. [hide=Solution]
 Code:
-[code=asymptote]draw((4, 5)--(8, 2));[/code]
+[code=java]pair A = (0, 0), B = (1, 0), C = (0, 1);
+draw(A--B--C--A);
+draw(rightanglemark(B, A, C, 3));[/code]
 Result:
-<img src="https://latex.artofproblemsolving.com/b/e/d/bedb7e5d1d8d76c38ee0cb03b2eb275d1c2da2e8.png" alt="draw((4, 5)--(8, 2));"/>
-[/hide]
-Problem 3: Draw a circle with center (-3, 2) and radius 4. [hide=Solution]
-Code:
-[code=asymptote]draw(circle((-3, 2), 4));[/code]
-Result:
-<img src="https://latex.artofproblemsolving.com/7/f/7/7f7f5357ea8412773d7e8ca07cc7c6a5ef50f999.png" alt="draw(circle((-3, 2), 4));"/>
+<img src="https://latex.artofproblemsolving.com/5/0/0/500831bd0842760c70d407279000f193bb869eb0.png"/>
 [/hide]
