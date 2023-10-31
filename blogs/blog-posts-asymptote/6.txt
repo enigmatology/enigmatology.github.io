@@ -25,7 +25,7 @@ Notice what happens we draw another line, as follows:
 The line can go straight through the label. To fix this, add another argument. This argument will tell Asymptote where to draw the label relative to your new point. [code=java]draw("label", item, direction);[/code] To specify the direction of the label, use the [code=java]dir()[/code] function. In the following example, we will use [code=java]dir(180)[/code] to make the label appear directly left of the point.
 <img src="https://latex.artofproblemsolving.com/f/a/7/fa7b69cb832596ee83399a30031ecc4956b7149b.png"/>
 
-[b]Labeling afterwards.[/b] This is very similar to labeling while creating. SImply use the label command after creating the object:
+[b]Labeling afterwards.[/b] This is very similar to labeling while creating. Simply use the label command after creating the object:
 [code=java]draw(item);
 label("label", item, direction);[/code]
 [b][u]Practice Problems[/u][/b]
