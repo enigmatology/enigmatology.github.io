@@ -121,6 +121,9 @@ function convertbbCode(orig, i, currentcontents) {
   while (converted.includes("[/code]\n")) {
   	converted = converted.replace("[/code]\n", "[/code]");
   }
+  while (converted.includes("[/code]\r\n")) {
+  	converted = converted.replace("[/code]\r\n", "[/code]");
+  }
   if (i == 1 || i == 5) {
     console.log(JSON.stringify(converted));
   }
