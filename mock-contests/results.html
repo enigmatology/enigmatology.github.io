@@ -1,30 +1,109 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/mock-contests/results.css" rel="stylesheet">
-    <link href="../css/mock-contests/faq.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/mock-contests/results.css" rel="stylesheet" />
+    <link href="../css/mock-contests/faq.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Past Mock Results | enigmatology</title>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3170NMGK41"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-3170NMGK41');
+      gtag("config", "G-3170NMGK41");
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
-    
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      id="MathJax-script"
+    ></script>
+
+    <style>
+      #updated {
+        width: calc(100% - 30px);
+        margin: 15px;
+        background-color: #fc847c;
+        padding: 15px;
+        text-align: center;
+        border-radius: 15px;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      #updated-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      #updated-text a {
+        text-decoration: none;
+        color: #2f5c89;
+      }
+      #updated-text a:hover {
+        color: #4b76a1;
+      }
+    </style>
   </head>
 
   <body>
     <div id="navbar"></div>
+    <div id="updated">
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          width="24"
+          height="24"
+          style="vertical-align: middle"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+          />
+        </svg>
+      </span>
+      <div id="updated-text">
+        <b
+          >This platform has been updated! Go to
+          <a href="https://amctesseract.github.io/" target="_blank"
+            >https://amctesseract.github.io/</a
+          >
+          to use the new platform.</b
+        >
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        width="24"
+        height="24"
+        style="vertical-align: middle"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+        />
+      </svg>
+    </div>
 
     <div id="page-header">Online Mock Contest Past Results</div>
     <div id="results">
@@ -34,12 +113,8 @@
     <div id="other-resources">
       <h2 id="other-header" class="info-header">Other Resources</h2>
       <div id="homepage-link-container">
-        <a href="contests" id="homepage-link">
-          Homepage
-        </a>
-        <a href="results" id="homepage-link">
-          Results
-        </a>
+        <a href="contests" id="homepage-link"> Homepage </a>
+        <a href="results" id="homepage-link"> Results </a>
       </div>
     </div>
 
@@ -47,7 +122,7 @@
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    
+
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
@@ -59,5 +134,4 @@
     <script src="../js/mock-contests/results.js"></script>
     <!---<script src="js/mathjax-init.js"></script>-->
   </body>
-
 </html>
